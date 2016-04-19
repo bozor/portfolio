@@ -12,9 +12,20 @@
   <title>boris grudinin - {{title}}</title>
 </head>
 <body>
-  {{> nav }}
   
-	{{> body }}
+  <div id="outer">
+    <div id="inner">
+      <section id="top">
+        <a id="logo" title="logo" href="index.htm"></a>
+        {{> nav }}
+      </section>
+
+      <section class="content">
+        {{> body }}
+      </section
+
+		</div>
+	</div>
 
   <script type="text/javascript">
   	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
