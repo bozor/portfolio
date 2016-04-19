@@ -9,7 +9,13 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 5000,
-          base: 'public_html'
+          base: {
+            path: 'public_html',
+            options: {
+              index: 'index.htm'
+            }
+          },
+          livereload: true
         }
       }
     },
@@ -25,7 +31,7 @@ module.exports = function(grunt) {
 				options: {
           layout: 'src/layout/default.hbs',
           partials: ['src/partials/*.hbs'],
-          ext: '.html'
+          ext: '.htm'
 				},
 				files: [{
           expand: true,
@@ -88,7 +94,11 @@ module.exports = function(grunt) {
       }
     },
 
+    clean: {
+      all: 'public_html/' // remove the whole lot and start fresh
+    }
+
   });
 
-  grunt.registerTask('default', ['connect', 'assemble', 'sass', 'imagemin', 'watch']);
+  grunt.registerTask('default', ['clean', 'connect', 'assemble', 'sass', 'imagemin', 'watch']);
 }
