@@ -11,6 +11,7 @@
     "grunt-contrib-imagemin": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-newer": "^1.2.0",
     "load-grunt-tasks": "^3.2.0",
     "node-bourbon": "^4.2.8",
     "node-neat": "^1.7.2"
