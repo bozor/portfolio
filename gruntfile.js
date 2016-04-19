@@ -58,11 +58,17 @@ module.exports = function(grunt) {
       },
       stylesheets: {
         files: 'src/scss/**',
-        tasks: 'sass:dev'
+        tasks: 'sass'
       },
       assemble: {
         files: ['src/layout/*.hbs','src/pages/*.hbs','src/partials/*.hbs'],
         tasks: 'assemble'
+      },
+      configFiles: {
+        files: [ 'Gruntfile.js'],
+        options: {
+          reload: true
+        }
       }
     },
 
