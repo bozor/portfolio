@@ -8,6 +8,7 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
+          hostname: '0.0.0.0',
           port: 5000,
           base: {
             path: 'public_html',
@@ -15,7 +16,7 @@ module.exports = function(grunt) {
               index: 'index.htm'
             }
           },
-          livereload: true
+          livereload: 35729
         }
       }
     },
