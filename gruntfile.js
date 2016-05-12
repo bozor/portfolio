@@ -10,6 +10,7 @@ module.exports = function(grunt) {
         options: {
           hostname: '0.0.0.0',
           port: 5000,
+          open: true,
           base: {
             path: 'public_html',
             options: {
@@ -101,5 +102,5 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask('default', ['clean', 'connect', 'assemble', 'sass', 'imagemin', 'watch']);
+  grunt.registerTask('default', ['clean', 'assemble', 'sass', 'imagemin', 'connect', 'watch']);
 }
