@@ -1,5 +1,20 @@
+@import "bourbon";
+
 html {
   font-family: 'Roboto Condensed', sans-serif;
+  font-size: 100%;
   -webkit-text-size-adjust: 100%;
   background: $_bone;
+
+  @include media($md) {
+    font-size: 110%;
+  }
+
+  @include media($lg) {
+    font-size: 120%;
+  }
+
+  @include media($xl) {
+    font-size: 135%;
+  }
 }

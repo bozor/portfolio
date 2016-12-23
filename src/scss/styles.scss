@@ -1,4 +1,8 @@
-@import "third-party/_normalize";
+@import "bourbon";
+@import "neat";
+
+@import "third-party/normalize";
+@import "third-party/modular-scale";
 
 @import "includes/values";
 @import "includes/base";

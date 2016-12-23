@@ -1,0 +1,66 @@
+$_border-thickness: 0.75em;
+$_margin: 1em;
+
+$_vertical-border-width: $_border-thickness;
+$_vertical-border-height: calc(100% - calc(#{$_margin} * 2));
+
+$_horizontal-border-width: calc(100% - calc(#{$_margin} * 2) - calc(#{$_border-thickness} * 2));
+$_horizontal-border-height: $_border-thickness;
+
+$_horizontal-position: calc(#{$_margin} + #{$_border-thickness});
+
+.layout-outer {
+  position: relative;
+  margin: $_margin;
+
+  &:before,
+  &:after {
+    position: fixed;
+    content: '';
+    display: block;
+    background: rgba($_goldenrod, 0.8);
+  }
+
+  &:before {
+    width: $_vertical-border-width;
+    height: $_vertical-border-height;
+    top: $_margin;
+    left: $_margin;
+  }
+
+  &:after {
+    width: $_horizontal-border-width;
+    height: $_horizontal-border-height;
+    top: $_margin;
+    left: $_horizontal-position;
+  }
+}
+
+.layout-inner {
+  position: relative;
+  padding: calc(#{$_margin} + #{$_border-thickness});
+  z-index: 1;
+  width: 100%;
+
+  &:before,
+  &:after {
+    position: fixed;
+    content: '';
+    display: block;
+    background: rgba($_goldenrod, 0.8);
+  }
+
+  &:before {
+    width: $_vertical-border-width;
+    height: $_vertical-border-height;
+    top: $_margin;
+    right: $_margin;
+  }
+
+  &:after {
+    width: $_horizontal-border-width;
+    height: $_horizontal-border-height;
+    bottom: $_margin;
+    left: $_horizontal-position;
+  }
+}
