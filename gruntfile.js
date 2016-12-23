@@ -91,7 +91,7 @@ module.exports = function(grunt) {
           sourcemap: 'none'
         },
         files: {
-          'public_html/css/all.css' : 'src/scss/all.scss'
+          'public_html/css/styles.css' : 'src/scss/styles.scss'
         }
       }
     },
@@ -102,5 +102,5 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask('default', ['clean', 'assemble', 'sass', 'imagemin', 'connect', 'watch']);
+  grunt.registerTask('default', ['clean', 'newer:assemble', 'newer:sass', 'newer:imagemin', 'connect', 'watch']);
 }
