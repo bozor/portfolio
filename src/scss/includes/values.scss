@@ -2,14 +2,24 @@
 $sm: new-breakpoint(max-width rem(549));
 $md: new-breakpoint(min-width rem(550));
 $lg: new-breakpoint(min-width rem(850));
-$xl: new-breakpoint(min-width rem(1250));
+$xl: new-breakpoint(min-width rem(1100));
+
+/* margins/padding */
+$padding-xs: 0.25rem;
+$padding-sm: 0.5rem;
+$padding-md: 1.25rem;
+$padding-lg: 1.75rem;
+$padding-xl: 2.5rem;
+$padding-xxl: 4rem;
 
 // colour variables
+$_white: #fff;
 $_bone: #f4f4f4;
 $_alto: #dcdcdc;
 $_bandicoot: #7b7b6f;
 $_mako: #414449;
 $_goldenrod: #f9cc66;
+$_puerto-rico: #4fcfbd;
 
 // font sizes
 $ms-base: 1em;
@@ -20,3 +30,11 @@ $font-size-1: ms(2);
 $font-size-2: ms(3);
 $font-size-3: ms(4);
 $font-size-4: ms(5);
+
+// other sizes
+
+$site-border-thickness: 16px;
+$nav-border-thickness: calc(#{$site-border-thickness} / 2);
+
+$logo-dimension-sm: 50px;
+$logo-dimension-lg: 70px;

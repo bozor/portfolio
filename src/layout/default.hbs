@@ -11,14 +11,16 @@
 
   <title>boris grudinin - {{title}}</title>
 </head>
-<body>
+<body class={{bodyClass}}>
 
 
   <div class="layout-outer">
     <div class="layout-inner">
-      <section class="layout-top">
-        <a class="logo" title="logo" href="index.htm"></a>
-        {{> nav }}
+      <section class="layout-nav">
+        <div class="layout-nav-inner">
+          <a class="logo" title="boris grudinin" href="index.htm"></a>
+          {{> nav }}
+        </div>
       </section>
 
       <section class="layout-content">
