@@ -1,66 +1,68 @@
-$_border-thickness: 0.75em;
+$_border-thickness: 17px;
 $_margin: 1em;
-
-$_vertical-border-width: $_border-thickness;
-$_vertical-border-height: calc(100% - calc(#{$_margin} * 2));
-
-$_horizontal-border-width: calc(100% - calc(#{$_margin} * 2) - calc(#{$_border-thickness} * 2));
-$_horizontal-border-height: $_border-thickness;
-
-$_horizontal-position: calc(#{$_margin} + #{$_border-thickness});
 
 .layout-outer {
   position: relative;
-  margin: $_margin;
 
-  &:before,
-  &:after {
-    position: fixed;
-    content: '';
-    display: block;
-    background: rgba($_goldenrod, 0.8);
+  @include media($md) {
+    margin: 0 $_margin;
+  }
+
+  @include media($xl) {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   &:before {
-    width: $_vertical-border-width;
-    height: $_vertical-border-height;
+    position: fixed;
+    content: '';
+    display: block;
+    width: 100%;
     top: $_margin;
-    left: $_margin;
-  }
+    bottom: $_margin;
+    border-top: $_border-thickness solid rgba($_goldenrod, 0.9);
+    border-bottom: $_border-thickness solid rgba($_goldenrod, 0.9);
 
-  &:after {
-    width: $_horizontal-border-width;
-    height: $_horizontal-border-height;
-    top: $_margin;
-    left: $_horizontal-position;
+    @include media($md) {
+      width: calc(100% - calc(#{$_margin} * 2));
+      border: $_border-thickness solid rgba($_goldenrod, 0.9);
+    }
+
+    @include media($xl) {
+      width: 1200px;
+    }
   }
 }
 
 .layout-inner {
   position: relative;
-  padding: calc(#{$_margin} + #{$_border-thickness});
+  padding: $_margin;
   z-index: 1;
   width: 100%;
 
-  &:before,
+  @include media($md) {
+    padding: calc(#{$_margin} + #{$_border-thickness});
+  }
+
   &:after {
     position: fixed;
     content: '';
     display: block;
-    background: rgba($_goldenrod, 0.8);
-  }
-
-  &:before {
-    width: $_vertical-border-width;
-    height: $_vertical-border-height;
-    top: $_margin;
-    right: $_margin;
-  }
-
-  &:after {
-    width: $_horizontal-border-width;
-    height: $_horizontal-border-height;
+    background: rgba($_mako, 0.8);
+    width: calc(100% - calc(#{$_margin} * 2));
+    height: $_border-thickness;
     bottom: $_margin;
-    left: $_horizontal-position;
+
+    @include media($md) {
+      width: calc(100% - calc(#{$_margin} * 4) - calc(#{$_border-thickness} * 2));
+    }
+
+    @include media($xl) {
+      width: calc(1200px - calc(#{$_margin} * 2) - calc(#{$_border-thickness} * 2));
+    }
+  }
+
+  img { // temp
+    max-width: 100%;
   }
 }
