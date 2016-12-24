@@ -103,4 +103,5 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['clean', 'newer:assemble', 'newer:sass', 'newer:imagemin', 'connect', 'watch']);
+  grunt.registerTask('build', ['clean', 'newer:assemble', 'newer:sass', 'newer:imagemin']);
 }
