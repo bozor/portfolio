@@ -62,44 +62,24 @@ nav {
 
 .page-about {
   .nav-about {
-    border-bottom-color: $_puerto-rico;
-    border-right-color: $_puerto-rico;
-
-    a {
-      color: $_mako;
-    }
+    @include nav-over-active();
   }
 }
 
 .page-web {
   .nav-web {
-    border-bottom-color: $_puerto-rico;
-    border-right-color: $_puerto-rico;
-
-    a {
-      color: $_mako;
-    }
+    @include nav-over-active();
   }
 }
 
 .page-apps {
   .nav-apps {
-    border-bottom-color: $_puerto-rico;
-    border-right-color: $_puerto-rico;
-
-    a {
-      color: $_mako;
-    }
+    @include nav-over-active();
   }
 }
 
 .page-print {
   .nav-print {
-    border-bottom-color: $_puerto-rico;
-    border-right-color: $_puerto-rico;
-
-    a {
-      color: $_mako;
-    }
+    @include nav-over-active();
   }
 }

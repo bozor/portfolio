@@ -133,7 +133,7 @@ $_nav-width-lg: 100px;
   }
 
   @include media($lg) {
-    padding: 0 0 0 calc(#{$_nav-width-lg} + #{$_margin});
+    padding: $_margin 0 0 calc(#{$_nav-width-lg} + #{$_margin});
   }
 
   img { // temp

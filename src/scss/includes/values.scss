@@ -17,19 +17,22 @@ $_white: #fff;
 $_bone: #f4f4f4;
 $_alto: #dcdcdc;
 $_bandicoot: #7b7b6f;
-$_mako: #414449;
+$_ironside: #55545d;
+$_mako: #313339;
 $_goldenrod: #f9cc66;
 $_puerto-rico: #4fcfbd;
 
 // font sizes
 $ms-base: 1em;
-$ms-ratio: $major-third;
+$ms-ratio: $minor-third;
 
-$font-size-0: ms(1);
-$font-size-1: ms(2);
-$font-size-2: ms(3);
-$font-size-3: ms(4);
-$font-size-4: ms(5);
+$font-size-0: ms(0);
+$font-size-1: ms(1);
+$font-size-2: ms(2);
+$font-size-3: ms(3);
+$font-size-4: ms(6);
+$font-size-5: ms(7);
+$font-size-6: ms(8);
 
 // other sizes
 

@@ -1,0 +1,19 @@
+// index
+
+.role {
+  margin-bottom: $padding-md;
+  
+  p {
+    margin: 0;
+  }
+
+  &:last-of-type {
+    &:after {
+      content: '...';
+      display: block;
+      text-align: center;
+      letter-spacing: 1em;
+      margin: 0 0 $padding-md;
+    }
+  }
+}
