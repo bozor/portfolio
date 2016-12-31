@@ -23,16 +23,22 @@ $_goldenrod: #f9cc66;
 $_puerto-rico: #4fcfbd;
 
 // font sizes
-$ms-base: 1em;
-$ms-ratio: $minor-third;
+//$ms-base: 1em;
+//$ms-ratio: $minor-third;
+//
+//$font-size-0: ms(0);
+//$font-size-1: ms(1);
+//$font-size-2: ms(2);
+//$font-size-3: ms(6);
+//$font-size-4: ms(7);
+//$font-size-5: ms(8);
 
-$font-size-0: ms(0);
-$font-size-1: ms(1);
-$font-size-2: ms(2);
-$font-size-3: ms(3);
-$font-size-4: ms(6);
-$font-size-5: ms(7);
-$font-size-6: ms(8);
+$font-size-0: 0.75em;
+$font-size-1: 1em;
+$font-size-2: 1.2em;
+$font-size-3: 1.5em;
+$font-size-4: 2.2em;
+$font-size-5: 3em;
 
 // other sizes
 

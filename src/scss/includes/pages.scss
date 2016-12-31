@@ -2,7 +2,14 @@
 
 .role {
   margin-bottom: $padding-md;
-  
+
+  .role-date {
+    display: inline-block;
+    color: $_ironside;
+    font-size: $font-size-0;
+    border: 1px solid $_alto;
+  }
+
   p {
     margin: 0;
   }
