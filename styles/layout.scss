@@ -1,0 +1,144 @@
+@import "bourbon";
+
+$_margin: 24px;
+$_max-width: 1050px;
+$_nav-width-lg: 100px;
+
+.layout-outer {
+  position: relative;
+
+  @include for-md {
+    margin: 0 $_margin;
+  }
+
+  @include for-xl {
+    max-width: $_max-width;
+    margin: 0 auto;
+  }
+
+  &:before {
+    position: fixed;
+    content: '';
+    display: block;
+    width: 100%;
+    top: $_margin;
+    bottom: $_margin;
+    border-top: $site-border-thickness solid rgba($_goldenrod, 0.9);
+    border-bottom: $site-border-thickness solid rgba($_goldenrod, 0.9);
+
+
+    @include for-md {
+      width: calc(100% - calc(#{$_margin} * 2));
+      border: $site-border-thickness solid rgba($_goldenrod, 0.9);
+    }
+
+    @include for-xl {
+      width: $_max-width;
+    }
+  }
+}
+
+.layout-inner {
+  position: relative;
+  padding: $_margin;
+  z-index: 1;
+
+  @include for-md {
+    padding: $_margin $site-border-thickness;
+  }
+
+  @include for-lg {
+    padding: calc(#{$_margin} + #{$site-border-thickness});
+  }
+
+  &:after {
+    position: fixed;
+    content: '';
+    display: block;
+    width: calc(100% - calc(#{$_margin} * 2));
+    height: $site-border-thickness;
+    background: rgba($_goldenrod, 0.8);
+    bottom: $_margin;
+
+    @include for-md {
+      margin-left: $_margin;
+      width: calc(100% - calc(#{$_margin} * 4) - calc(#{$site-border-thickness} * 2));
+    }
+
+    @include for-lg {
+      margin-left: 0;
+    }
+
+    @include for-xl {
+      width: calc(#{$_max-width} - calc(#{$_margin} * 2) - calc(#{$site-border-thickness} * 2));
+    }
+  }
+}
+
+.layout-nav {
+  position: fixed;
+  background: rgba($_bone, 0.95);
+  width: calc(100% - calc(calc(#{$_margin} * 2)));
+  height: calc(#{$logo-dimension-sm} + #{$_margin});
+  margin-top: calc(#{$_margin} + #{$site-border-thickness});
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    background: rgba($_alto, 0.85);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $nav-border-thickness;
+  }
+
+  @include for-md {
+    width: calc(100% - calc(calc(#{$_margin} * 4) + calc(#{$site-border-thickness} * 2)));
+    margin-left: $_margin;
+  }
+
+  @include for-lg {
+    width: $_nav-width-lg;
+    height: calc(100% - calc(calc(#{$_margin} * 4) + calc(#{$site-border-thickness} * 2)));
+    top: calc(calc(#{$_margin} * 2) + #{$site-border-thickness});
+    margin-top: 0;
+    margin-left: 0;
+
+    &:after {
+      top: 0;
+      right: 0;
+      left: auto;
+      bottom: auto;
+      height: 100%;
+      width: $nav-border-thickness;
+    }
+  }
+
+  .layout-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include for-lg {
+      display: block;
+    }
+  }
+}
+
+.layout-content {
+  padding: calc(calc(#{$logo-dimension-sm} * 2) + calc(#{$_margin} + #{$site-border-thickness})) 0 $_margin;
+
+  @include for-md {
+    padding-left: $_margin;
+    padding-right: $_margin;
+  }
+
+  @include for-lg {
+    padding: $_margin 0 0 calc(#{$_nav-width-lg} + #{$_margin});
+  }
+
+  img { // temp
+    max-width: 100%;
+  }
+}

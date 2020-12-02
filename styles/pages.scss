@@ -1,0 +1,26 @@
+@import "bourbon";
+
+.role {
+  margin-bottom: $padding-md;
+
+  .role-date {
+    display: inline-block;
+    color: $_ironside;
+    font-size: $font-size-0;
+    border: 1px solid $_alto;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &:last-of-type {
+    &:after {
+      content: '...';
+      display: block;
+      text-align: center;
+      letter-spacing: 1em;
+      margin: 0 0 $padding-md;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@import 'vendor/_bourbon.scss';
+@import 'vendor/_neat.scss';
+
+@import './mixins.scss';
+
+html {
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  background: $_bone;
+
+  @include for-md {
+    font-size: 110%;
+  }
+
+  @include for-lg {
+    font-size: 120%;
+  }
+
+  @include for-xl {
+    font-size: 135%;
+  }
+}
+
+a {
+  transition: 150ms all;
+  color: $_puerto-rico;
+
+  &:hover {
+    opacity: 0.65;
+    text-decoration: none;
+  }
+}
+
+#__next {
+  height: 100%;
+}
+
+// html {
+//   background: $bg;
+//   color: $text-color;
+//   height: 100%;
+
+//   &.work-sans-loaded {
+//     font-family: 'Work Sans', sans-serif;
+//   }
+
+//   body {
+//     width: 100%;
+//     min-height: 100%;
+//     height: 1px;
+//   }
+
+//   /* normalize divs surrounding the content*/
+//   #__next {
+//     height: 100%;
+//   }
+
+//   .row {
+//     @include grid-column(6);
+//   }
+
+//   .main {
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+//     justify-content: center;
+//     height: 100%;
+
+//     h1 {
+//       font-size: 3.5em;
+//       margin-top: 0;
+
+//       > span {
+//         color: $text-color-alt;
+//         text-shadow: 0 0 1px rgba(0,0,0,1);
+//       }
+//     }
+
+//     p {
+//       font-size: 1.5em;
+
+//       a {
+//         color: $link-color;
+//       }
+//     }
+
+//     .image {
+//       height: 200px;
+
+//       > img {
+//         height: 100%;
+//         width: auto;
+//       }
+//     }
+//   }
+// }
