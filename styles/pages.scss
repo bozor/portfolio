@@ -1,13 +1,33 @@
 @import "bourbon";
 
 .role {
-  margin-bottom: $padding-md;
+  position: relative;
+  margin-bottom: $padding-lg;
 
   .role-date {
+    position: absolute;
     display: inline-block;
-    color: $_ironside;
+    right: 0;
+    top: 0;
+    color: $_bandicoot;
     font-size: $font-size-0;
-    border: 1px solid $_alto;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    margin: 0 0 $padding-sm;
+    // border: 1px solid $_alto;
+
+    // &:before{
+    //   position: absolute;
+    //   content: '';
+    //   display: block;
+    //   background: rgba($_alto, 0.75);
+    //   top: 50%;
+    //   left: 3px;
+    //   width: 100%;
+    //   height: 50%;
+    //   z-index: -1;
+    //   // transform: rotate(1.5deg);
+    // }
   }
 
   p {
@@ -17,10 +37,12 @@
   &:last-of-type {
     &:after {
       content: '...';
+      font-size: $font-size-3;
+      font-weight: 200;
       display: block;
       text-align: center;
       letter-spacing: 1em;
-      margin: 0 0 $padding-md;
+      margin: 0 0 $padding-xl;
     }
   }
 }

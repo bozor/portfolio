@@ -1,21 +1,6 @@
 @import "bourbon";
 @import './mixins.scss';
 
-.logo {
-  display: block;
-  width: $logo-dimension-sm;
-  height: $logo-dimension-sm;
-  background: $_alto;
-  margin-bottom: calc(#{$nav-border-thickness} * 3);
-
-  @include for-lg {
-    width: $logo-dimension-lg;
-    height: $logo-dimension-lg;
-    margin-top: 0;
-    margin-bottom: $padding-md;
-  }
-}
-
 nav {
   display: flex;
   position: relative;
@@ -27,17 +12,17 @@ nav {
   }
 
   .nav-item {
-    height: 74px;
-    line-height: $logo-dimension-sm;
+    position: relative;
     margin-bottom: -$nav-border-thickness;
-    margin-left: $padding-md;
+    margin-right: $padding-md;
     border-bottom: $nav-border-thickness solid transparent;
     transition: 150ms all;
+    z-index: 1;
 
     @include for-lg {
       height: auto;
       line-height: normal;
-      margin-left: 0;
+      margin-right: 0;
       border-bottom: none;
       border-right: $nav-border-thickness solid transparent;
     }

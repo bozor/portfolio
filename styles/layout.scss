@@ -1,14 +1,20 @@
 @import "bourbon";
+@import './mixins.scss';
 
-$_margin: 24px;
+$_margin: 28px;
+$_margin-lg: 40px;
 $_max-width: 1050px;
-$_nav-width-lg: 100px;
+$_nav-width-lg: 110px;
 
 .layout-outer {
   position: relative;
 
   @include for-md {
     margin: 0 $_margin;
+  }
+
+  @include for-lg {
+    margin: 0 $_margin-lg;
   }
 
   @include for-xl {
@@ -26,10 +32,15 @@ $_nav-width-lg: 100px;
     border-top: $site-border-thickness solid rgba($_goldenrod, 0.9);
     border-bottom: $site-border-thickness solid rgba($_goldenrod, 0.9);
 
-
     @include for-md {
-      width: calc(100% - calc(#{$_margin} * 2));
+      width: calc(100% - calc(calc(#{$_margin} + #{$site-border-thickness}) * 2));
       border: $site-border-thickness solid rgba($_goldenrod, 0.9);
+    }
+
+    @include for-lg {
+      width: calc(100% - calc(calc(#{$_margin-lg} + #{$site-border-thickness}) * 2));
+      top: $_margin-lg;
+      bottom: $_margin-lg;
     }
 
     @include for-xl {
@@ -48,7 +59,7 @@ $_nav-width-lg: 100px;
   }
 
   @include for-lg {
-    padding: calc(#{$_margin} + #{$site-border-thickness});
+    padding: calc(#{$_margin-lg} + #{$site-border-thickness});
   }
 
   &:after {
@@ -67,20 +78,22 @@ $_nav-width-lg: 100px;
 
     @include for-lg {
       margin-left: 0;
+      width: calc(100% - calc(#{$_margin-lg} * 4) - calc(#{$site-border-thickness} * 2));
+      bottom: $_margin-lg;
     }
 
     @include for-xl {
-      width: calc(#{$_max-width} - calc(#{$_margin} * 2) - calc(#{$site-border-thickness} * 2));
+      width: calc(#{$_max-width} - calc(#{$_margin-lg} * 2) - calc(#{$site-border-thickness} * 2));
     }
   }
 }
 
 .layout-nav {
-  position: fixed;
+  position: absolute;
   background: rgba($_bone, 0.95);
   width: calc(100% - calc(calc(#{$_margin} * 2)));
-  height: calc(#{$logo-dimension-sm} + #{$_margin});
-  margin-top: calc(#{$_margin} + #{$site-border-thickness});
+  height: $_margin;
+  top: calc(#{$_margin} * 1.5 + #{$site-border-thickness});
 
   &:after {
     display: block;
@@ -94,16 +107,18 @@ $_nav-width-lg: 100px;
   }
 
   @include for-md {
-    width: calc(100% - calc(calc(#{$_margin} * 4) + calc(#{$site-border-thickness} * 2)));
-    margin-left: $_margin;
+    width: calc(100% - calc(calc(#{$_margin} * 2) + calc(#{$site-border-thickness} * 2)));
+    // top
+    // margin-top: calc(#{$_margin} + #{$site-border-thickness});
+    // margin-left: $_margin;
   }
 
   @include for-lg {
+    position: fixed;
     width: $_nav-width-lg;
-    height: calc(100% - calc(calc(#{$_margin} * 4) + calc(#{$site-border-thickness} * 2)));
-    top: calc(calc(#{$_margin} * 2) + #{$site-border-thickness});
-    margin-top: 0;
-    margin-left: 0;
+    height: calc(100% - calc(calc(#{$_margin-lg} * 4) + calc(#{$site-border-thickness} * 2)));
+    top: calc(calc(#{$_margin-lg} * 2) + #{$site-border-thickness});
+    margin-left: calc(calc(#{$_nav-width-lg} + #{$_margin-lg}) * -1);
 
     &:after {
       top: 0;
@@ -127,7 +142,7 @@ $_nav-width-lg: 100px;
 }
 
 .layout-content {
-  padding: calc(calc(#{$logo-dimension-sm} * 2) + calc(#{$_margin} + #{$site-border-thickness})) 0 $_margin;
+  padding: calc(#{$_margin} * 2 + #{$site-border-thickness}) 0 $_margin;
 
   @include for-md {
     padding-left: $_margin;
@@ -135,10 +150,19 @@ $_nav-width-lg: 100px;
   }
 
   @include for-lg {
-    padding: $_margin 0 0 calc(#{$_nav-width-lg} + #{$_margin});
+    padding: $_margin-lg 0 0 calc(#{$_nav-width-lg} + #{$_margin-lg});
   }
 
-  img { // temp
+  img {
     max-width: 100%;
+  }
+}
+
+.page-content {
+  // background: $_white;
+  // padding: $padding-md;
+  
+  @include for-lg {
+    // padding: $padding-xxl;
   }
 }

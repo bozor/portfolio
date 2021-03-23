@@ -8,14 +8,14 @@
 }
 
 @mixin for-sm {
-  @media (max-width: rem(549)) { @content; }
+  @media (max-width: 549px) { @content; }
 }
 @mixin for-md {
-  @media (min-width: rem(550)) { @content; }
+  @media (min-width: 550px) { @content; }
 }
 @mixin for-lg {
-  @media (min-width: rem(850)) { @content; }
+  @media (min-width: 850px) { @content; }
 }
 @mixin for-xl {
-  @media (min-width: rem(1100)) { @content; }
+  @media (min-width: 1100px) { @content; }
 }
