@@ -44,6 +44,7 @@ jobs:
         user: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY}}
         port: ${{ secrets.PORT }}
+        args: -tt
 
     # - name: Delete old files
     #   uses: garygrossgarten/github-action-ssh@release
