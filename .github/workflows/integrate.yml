@@ -27,7 +27,14 @@ jobs:
     - run: npm run build
     - run: npm run export
 
-    - name: delete old files
+    - name: Setup SSH
+      uses: kielabokkie/ssh-key-and-known-hosts-action@v1
+      with:
+        ssh-private-key: ${{ secrets.KEY }}
+        ssh-host: ${{ secrets.HOST }}
+        ssh-port: ${{ secrets.PORT }}
+    
+    - name: Delete old files
       uses: garygrossgarten/github-action-ssh@release
       with:
         command: ls -la
