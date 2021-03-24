@@ -41,7 +41,7 @@ jobs:
           pwd
           ls -la
         host: ${{ secrets.HOST }}
-        user: grudinin
+        user: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY}}
         port: ${{ secrets.PORT }}
 
