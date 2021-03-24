@@ -1,0 +1,69 @@
+@import "bourbon";
+
+.role {
+  position: relative;
+  margin-bottom: $padding-lg;
+
+  p {
+    margin: 0;
+  }
+
+  &:last-of-type {
+    &:after {
+      content: '...';
+      font-size: $font-size-3;
+      font-weight: 200;
+      display: block;
+      text-align: center;
+      letter-spacing: 1em;
+      margin: 0 0 $padding-lg;
+    }
+  }
+}
+
+.date {
+  position: relative;
+  display: inline-block;
+  color: $_mako;
+  font-size: $font-size-0;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin: 0 0 $padding-sm;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    background: rgba($_pomegranate, 0.35);
+    top: 50%;
+    left: 6px;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+  }
+}
+
+.page-content {
+  position: relative;
+
+  img + p,
+  a + p {
+    position: relative;
+    display: inline-block;
+    transform: translate(14px, -20px);
+    background: $_white;
+    padding: $padding-xs $padding-sm;
+    margin-right: 30px;
+    box-shadow: -2px -2px 6px rgba(0,0,0,0.05);
+    margin-bottom: $padding-xs;
+  }
+
+  h2 + .date {
+    transform: translate(0, -23px);
+    margin-bottom: 0px;
+
+    @include for-lg {
+      transform: translate(0, -30px);
+    }
+  }
+}

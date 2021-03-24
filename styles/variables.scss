@@ -1,0 +1,41 @@
+/* margins/padding */
+$padding-xs: 0.25rem;
+$padding-sm: 0.5rem;
+$padding-md: 1.25rem;
+$padding-lg: 1.75rem;
+$padding-xl: 2.5rem;
+$padding-xxl: 4rem;
+
+// colour variables
+$_white: #fff;
+$_bone: #f4f4f4;
+$_alto: #dcdcdc;
+$_bandicoot: #7b7b6f;
+$_ironside: #55545d;
+$_mako: #313339;
+$_goldenrod: #f9cc66;
+$_puerto-rico: #4fcfbd;
+$_pomegranate: #f55026;
+
+// font sizes
+//$ms-base: 1em;
+//$ms-ratio: $minor-third;
+//
+//$font-size-0: ms(0);
+//$font-size-1: ms(1);
+//$font-size-2: ms(2);
+//$font-size-3: ms(6);
+//$font-size-4: ms(7);
+//$font-size-5: ms(8);
+
+$font-size-0: 0.77em;
+$font-size-1: 0.9em;
+$font-size-2: 1.1em;
+$font-size-3: 1.5em;
+$font-size-4: 2.1em;
+$font-size-5: 2.45em;
+$font-size-6: 4em;
+
+// other sizes
+$site-border-thickness: 18px;
+$nav-border-thickness: calc(#{$site-border-thickness} / 3);

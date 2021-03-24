@@ -1,0 +1,38 @@
+@import 'vendor/_bourbon.scss';
+@import 'vendor/_neat.scss';
+
+@import './mixins.scss';
+
+html {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  background: $_bone;
+
+  @include for-md {
+    font-size: 110%;
+  }
+
+  @include for-lg {
+    font-size: 120%;
+  }
+
+  @include for-xl {
+    font-size: 135%;
+  }
+}
+
+a {
+  transition: 150ms all;
+  color: $_puerto-rico;
+  font-weight: 700;
+
+  &:hover {
+    opacity: 0.65;
+    text-decoration: none;
+  }
+}
+
+#__next {
+  height: 100%;
+}
