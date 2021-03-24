@@ -13,19 +13,14 @@ function Apps() {
       <Nav className={`page-${router.pathname.substring(1)}`} />
 
       <header className="page-header">
-        <h1>Mobile Apps</h1>
+        <h1>Apps</h1>
       </header>
       <article className="page-content">
-        <h2>Android Apps <span>(2012 - Current)</span></h2>
+        <h2>Android Apps</h2>
+        <span className="date">2012 - Current</span>
         <img src="static/images/apps/pmb.jpg" />
         <p>Clothes sharing app. I was repsonsible for the wireframing, design and most of the front end implementation.</p>
       </article>
-
-      {/* <article>
-        <h2>iOS Apps <span>(2012 - Current)</span></h2>
-        <img src="static/images/apps/fs.jpg" />
-        <p>Reskin of existing clothes sharing app. I was repsonsible for the re-design and some of the front end implementation.</p>
-      </article> */}
     </React.Fragment>
   )
 }

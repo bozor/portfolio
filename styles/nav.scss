@@ -13,8 +13,9 @@ nav {
 
   .nav-item {
     position: relative;
-    margin-bottom: -$nav-border-thickness;
-    margin-right: $padding-md;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: $padding-md; 
     border-bottom: $nav-border-thickness solid transparent;
     transition: 150ms all;
     z-index: 1;
@@ -23,12 +24,13 @@ nav {
       height: auto;
       line-height: normal;
       margin-right: 0;
+      margin-bottom: 0;
       border-bottom: none;
       border-right: $nav-border-thickness solid transparent;
     }
 
     &:hover {
-      border-right-color: $_puerto-rico;
+      border-right-color: $_pomegranate;
 
       a {
         color: $_mako;
@@ -38,11 +40,14 @@ nav {
 
     a {
       display: block;
-      color: rgba($_bandicoot, 0.85);
+      font-size: $font-size-1;
+      font-weight: 200;
+      color: rgba($_bandicoot, 0.75);
       text-decoration: none;
+      padding-bottom: 4px;
 
       @include for-lg {
-        padding: $padding-xs 0;
+        padding: $padding-sm 0;
       }
     }
   }

@@ -11,17 +11,17 @@ h6 {
 }
 
 h1 {
-  color: $_goldenrod;
+  color: darken($_goldenrod, 10%);
   font-size: $font-size-5;
   margin-bottom: $padding-md;
   letter-spacing: -0.04em;
 }
 
 h2 {
-  font-size: $font-size-2;
+  font-size: $font-size-3;
   color: $_mako;
   line-height: 1.3em;
-  margin-bottom: $padding-xs;
+  margin-bottom: $padding-md;
   letter-spacing: -0.04em;
 
   > span {
@@ -31,34 +31,34 @@ h2 {
 }
 
 h3 {
-  font-size: $font-size-1;
+  font-size: $font-size-2;
   color: $_mako;
   line-height: 1.3em;
   letter-spacing: -0.04em;
-  margin-bottom: $padding-sm;
+  margin-bottom: -3px;
   
   > span {
     display: block;
     color: $_bandicoot;
-    font-weight: 400;
+    font-weight: 200;
     font-size: $font-size-0;
   }
 
   > strong {
     position: relative;
     display: inline-block;
-
+    font-weight: 400;
+    
     &:before{
       position: absolute;
       content: '';
       display: block;
       background: rgba($_alto, 0.75);
-      top: 50%;
-      left: 3px;
+      top: 40%;
+      left: 9px;
       width: 100%;
-      height: 50%;
+      height: 60%;
       z-index: -1;
-      // transform: rotate(1.5deg);
     }
   }
 }
@@ -68,7 +68,6 @@ h4 {
 }
 
 p {
-  // font-family: 'Lato', sans-serif;
   font-weight: 200;
   font-size: $font-size-0;
   color: $_ironside;
