@@ -42,6 +42,7 @@ jobs:
         username: grudinin
         privateKey: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
+        tryKeyboard: true
 
     # - name: copy file via ssh password
     #   uses: appleboy/scp-action@master
