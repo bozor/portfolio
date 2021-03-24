@@ -52,7 +52,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
-        key: ${{ secrets.KEY }}
+        password: ${{ secrets.PASSWORD }}
         script: ls -la
 
   # - name: Deploy to Staging server
