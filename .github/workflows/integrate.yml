@@ -32,7 +32,7 @@ jobs:
       with:
         command: ls -la
         host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
+        username: grudinin
         privateKey: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
 
