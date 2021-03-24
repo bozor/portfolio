@@ -34,16 +34,16 @@ jobs:
         ssh-host: ${{ secrets.HOST }}
         ssh-port: ${{ secrets.PORT }}
     
-  - name: ls -la via ssh
-    uses: fifsky/ssh-action@master
-    with:
-      command: |
-        pwd
-        ls -la
-      host: ${{ secrets.HOST }}
-      user: grudinin
-      key: ${{ secrets.KEY}}
-      port: ${{ secrets.PORT }}
+    - name: ls -la via ssh
+      uses: fifsky/ssh-action@master
+      with:
+        command: |
+          pwd
+          ls -la
+        host: ${{ secrets.HOST }}
+        user: grudinin
+        key: ${{ secrets.KEY}}
+        port: ${{ secrets.PORT }}
 
     # - name: Delete old files
     #   uses: garygrossgarten/github-action-ssh@release
