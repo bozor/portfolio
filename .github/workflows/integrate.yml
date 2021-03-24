@@ -23,10 +23,10 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: build stuff
-      run: |
-        npm i
-        npm run-script build
-        npm run-script export
+      uses: actions/setup-node@v1
+    - run: npm i
+    - run: npm run-script build
+    - run: npm run-script export
 
     # - name: copy file via ssh password
     #   uses: appleboy/scp-action@master
