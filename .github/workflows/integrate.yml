@@ -23,9 +23,9 @@ jobs:
     - name: setup node
       uses: actions/setup-node@v1  
 
-    - run: npm i
-    - run: npm run build
-    - run: npm run export
+    # - run: npm i
+    # - run: npm run build
+    # - run: npm run export
 
     # - name: Setup SSH
     #   uses: kielabokkie/ssh-key-and-known-hosts-action@v1
