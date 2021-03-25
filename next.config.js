@@ -20,7 +20,8 @@ const nextConfig = {
     };
   },
   basePath: "/work",
-  assetPrefix: "/work"
+  assetPrefix: "/work",
+  trailingSlash: true,
 }
 
 module.exports = withPlugins([
