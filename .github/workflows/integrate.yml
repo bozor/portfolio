@@ -23,37 +23,18 @@ jobs:
     - name: setup node
       uses: actions/setup-node@v1  
 
-    # - run: npm i
-    # - run: npm run build
-    # - run: npm run export
+    - run: npm i
+    - run: npm run build
+    - run: npm run export
 
-    # - name: Setup SSH
-    #   uses: kielabokkie/ssh-key-and-known-hosts-action@v1
-    #   with:
-    #     ssh-private-key: ${{ secrets.KEY }}
-    #     ssh-host: ${{ secrets.HOST }}
-    #     ssh-port: ${{ secrets.PORT }}
-    
-    # - name: ls -la via ssh
-    #   uses: fifsky/ssh-action@master
-    #   with:
-    #     command: |
-    #       pwd
-    #       ls -la
-    #     host: ${{ secrets.HOST }}
-    #     user: ${{ secrets.USERNAME }}
-    #     key: ${{ secrets.KEY }}
-    #     port: ${{ secrets.PORT }}
-    #     args: -tt
-
-    - name: ls -la via ssh
+    - name: Delete old stuff
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.KEY }}
-        script: ls -la
+        script: rm -rf /www/work/*; exit;
 
   # - name: Deploy to Staging server
   #   uses: easingthemes/ssh-deploy@v2.1.5
