@@ -9,7 +9,7 @@ function Print() {
   
   return (
     <React.Fragment>
-      <Head title="Boris Grudinin" />
+      <Head title="Boris Grudinin - Print" />
       <Nav className={`page-${router.pathname.substring(1)}`} />
 
       <header className="page-header" id="print">
