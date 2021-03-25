@@ -15,7 +15,9 @@ const nextConfig = {
     return {
       '/': { page: '/' }
     };
-  }
+  },
+  basePath: "/work",
+  assetPrefix: "/work"
 }
 
 module.exports = withPlugins([
