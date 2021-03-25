@@ -13,7 +13,10 @@ const nextConfig = {
   },
   exportPathMap: function () {
     return {
-      '/': { page: '/' }
+      '/': { page: '/' },
+      '/web': { page: '/web' },
+      '/print': { page: '/print' },
+      '/apps': { page: '/apps' }
     };
   },
   basePath: "/work",
