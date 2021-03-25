@@ -23,7 +23,6 @@ jobs:
     - name: Setup node
       uses: actions/setup-node@v1 
 
-    - name: Build stuff
     - run: npm i
     - run: npm run build
     - run: npm run export
