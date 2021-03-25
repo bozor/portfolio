@@ -50,12 +50,17 @@
   a + p {
     position: relative;
     display: inline-block;
-    transform: translate(14px, -20px);
+    transform: translate(9px, -14px);
     background: $_white;
-    padding: $padding-xs $padding-sm;
+    padding: $padding-xxs $padding-xs;
     margin-right: 30px;
     box-shadow: -2px -2px 6px rgba(0,0,0,0.05);
     margin-bottom: $padding-xs;
+
+    @include for-lg {
+      transform: translate(14px, -20px);
+      padding: $padding-xs $padding-sm;
+    }
   }
 
   h2 + .date {
