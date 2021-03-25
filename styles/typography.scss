@@ -26,7 +26,7 @@ h2 {
 
   > span {
     color: $_bandicoot;
-    font-weight: 400;
+    font-weight: 500;
   }
 }
 
@@ -40,14 +40,14 @@ h3 {
   > span {
     display: block;
     color: $_bandicoot;
-    font-weight: 200;
+    font-weight: 300;
     font-size: $font-size-0;
   }
 
   > strong {
     position: relative;
     display: inline-block;
-    font-weight: 400;
+    font-weight: 500;
     
     &:before{
       position: absolute;
@@ -68,7 +68,7 @@ h4 {
 }
 
 p {
-  font-weight: 200;
+  font-weight: 300;
   font-size: $font-size-0;
   color: $_ironside;
   line-height: 1.45em;
