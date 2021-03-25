@@ -20,7 +20,7 @@ const nextConfig = {
     };
   },
   basePath: "/work",
-  assetPrefix: "/work/static/",
+  assetPrefix: "/work",
   trailingSlash: true,
 }
 
