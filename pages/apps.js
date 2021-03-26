@@ -16,13 +16,16 @@ function Apps() {
         <h1>Apps</h1>
       </header>
       <article className="page-content">
-        <h2>Android Apps (React Native)</h2>
-        <span className="date">2012 - Current</span>
+        <h2>GG Arcade <span>React Native, Azure Playfab</span></h2>
+        <span className="date">2020</span>
         <img src="../images/apps/gg-arcade.jpg" />
         <img src="../images/apps/gg-arcade2.jpg" />
-        <p>GG Arcade was a free to play app with over 10k active users. Users could win token and exchange them for prizes which included game skins and gift vouchers for online stores like amazon. I was responsible for the design along with the front end implementation.</p>
-        {/* <img src="../images/apps/pmb.jpg" />
-        <p>Clothes sharing app. I was repsonsible for the wireframing, design and most of the front end implementation.</p> */}
+        <p><strong>GG Arcade</strong> was a free to play social casino Android app with over 10k active users. Users could win tokens and exchange them for prizes which included game skins and gift vouchers for online stores like Amazon. I was responsible for the design along with the front end implementation.</p>
+        <h2>PocketPredictor <span>React Native</span></h2>
+        <span className="date">2019-2020</span>
+        <img src="../images/apps/pp.jpg" />
+        <img src="../images/apps/pp2.jpg" />
+        <p><strong>PocketPredictor</strong> was a free to play prediction Android app. Users could win tokens by correctly answering questions about future esports matches and exchange them for game skins. I was responsible for the initial prototype, design and the front end implementation.</p>
       </article>
     </React.Fragment>
   )

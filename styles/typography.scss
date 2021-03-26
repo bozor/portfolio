@@ -25,8 +25,11 @@ h2 {
   letter-spacing: -0.04em;
 
   > span {
+    display: block;
     color: $_bandicoot;
-    font-weight: 500;
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin: -9px 0 -6px;
   }
 }
 
