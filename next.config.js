@@ -33,11 +33,12 @@ module.exports = withPlugins([
     }
   }],
   [optimizedImages,{
-    imagesFolder: 'images',
+
     optimizeImagesInDev: true,
     mozjpeg: {
       quality: 70,
     },
     pngquant: true,
+    lqipLoader: true
   }]
 ], nextConfig);
