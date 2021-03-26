@@ -20,6 +20,7 @@ function Apps() {
         <span className="date">2020</span>
         <img src="../images/apps/gg-arcade.jpg" />
         <img src="../images/apps/gg-arcade2.jpg" />
+        <img src="../images/apps/gg-arcade3.jpg" />
         <p><strong>GG Arcade</strong> was a free to play social casino Android app with over 10k active users. Users could win tokens and exchange them for prizes which included game skins and gift vouchers for online stores like Amazon. I was responsible for the design along with the front end implementation.</p>
         <h2>PocketPredictor <span>React Native</span></h2>
         <span className="date">2019-2020</span>
