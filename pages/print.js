@@ -51,7 +51,7 @@ function Print() {
         <p>General photography</p>
 
         <h2>Various Projects</h2>
-        <span className="date">2005 - Current</span>
+        <span className="date">2011 - Current</span>
         <img src="../images/print/funk-photo.jpg" alt="funk at the forge logo" />
         <p>Logo for a jazz, funk and blues night in Camden</p>
         <img src="../images/print/nexus.jpg" />
