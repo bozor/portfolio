@@ -34,6 +34,7 @@ function Home() {
           <span className="date">Sep 2015 - Feb 2016</span>
           <p>This contract role was for a startup developing a celebrity fitness and nutrition website. I was responsible for the design and front end build. The site was built using Ruby on Rails with HAML as the templating language, SASS and jQuery to enhance the user experience.</p>
         </section>
+
         <section className="role">
           <h3>
             <strong>Corporate Image Developer</strong>
@@ -42,6 +43,7 @@ function Home() {
           <span className="date">Jan 2003 - Jul 2016</span>
           <p>Fianium were a long standing freelance client until they merged with another company. I looked after their corporate image which involved the design and maintenance of their website, tradeshow displays, posters, datasheets and product photography.</p>
         </section>
+
         <section className="role">
           <h3>
             <strong>Senior Front End Developer</strong>
@@ -50,6 +52,7 @@ function Home() {
           <span className="date">Jun 2014 - Aug 2015</span>
           <p>This role allowed me to work on the user experience, information architecture, wireframes, design and front end build of a complex, web based CRM, sales and telephony system. The company followed agile practices and I split my work between two separate teams of developers and ensured the UI was consistent throughout.</p>
         </section>
+
         <section className="role">
           <h3>
             <strong>UX Developer, Senior UX Developer</strong>
@@ -58,6 +61,7 @@ function Home() {
           <span className="date">Dec 2009 - Jun 2014</span>
           <p>My remit covered the full lifecycle of a project from initial wireframes and information architecture through to visual design, implementation and testing of websites, web apps and mobile apps. I was able to work on projects for BP Castrol, Dell, GoDaddy, Oracle and Zebra Technologies, along with several charities and local good causes.</p>
         </section>
+
         <section className="role">
           <h3>
             <strong>Web Designer</strong>
@@ -65,13 +69,13 @@ function Home() {
           </h3>
           <span className="date">Apr 2008 - Nov 2009</span>
         </section>
+        
         <section className="role">
           <h3>
             <strong>Web Designer</strong>
             <span>(Connexion Ltd, Reading, UK)</span>
           </h3>
           <span className="date">Apr 2007 - Mar 2008</span>
-
         </section>
 
         <h2>Skills</h2>
