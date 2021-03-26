@@ -3,7 +3,7 @@
 
 $_margin: 24px;
 $_margin-lg: 40px;
-$_max-width: 1050px;
+$_max-width: 1102px;
 $_nav-width-lg: 110px;
 
 .layout-outer {
@@ -60,6 +60,7 @@ $_nav-width-lg: 110px;
 
   @include for-lg {
     padding: calc(#{$_margin-lg} + #{$site-border-thickness});
+    padding-right: $_margin-lg;
   }
 
   &:after {
@@ -83,7 +84,7 @@ $_nav-width-lg: 110px;
     }
 
     @include for-xl {
-      width: calc(#{$_max-width} - calc(#{$_margin-lg} * 2) - calc(#{$site-border-thickness} * 2));
+      width: calc(#{$_max-width} - calc(#{$_margin-lg} * 2));
     }
   }
 }

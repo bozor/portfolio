@@ -47,7 +47,8 @@
   position: relative;
 
   img + p,
-  a + p {
+  a + p,
+  img + .description {
     position: relative;
     display: inline-block;
     transform: translate(9px, -14px);
@@ -59,7 +60,7 @@
 
     @include for-lg {
       transform: translate(14px, -20px);
-      padding: $padding-xs $padding-sm;
+      padding: $padding-sm;
     }
   }
 
@@ -69,6 +70,16 @@
 
     @include for-lg {
       transform: translate(0, -30px);
+    }
+  }
+
+  .description {
+    p {
+      margin-bottom: $padding-sm;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 }
