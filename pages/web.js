@@ -16,14 +16,6 @@ function Web() {
         <h1>Web</h1>
       </header>
       <article className="page-content">
-        <h2>Gem Titans <span>React, Meteor, Node</span></h2>
-        <span className="date">2019</span>
-        <img src="../images/web/gem-titans.jpg" />
-        <div className="description">
-          <p><strong>Gem Titans</strong> was a free to play responsive web app. I was responsible for the prototyping, design and front end development.</p>
-          <p>The web app was a stock market style game which allowed users to buy and sell 'shares' (gems) that coincided with an answer to a particular question about a game that was shown on the twitch stream. Users could build up tokens that they could then exchange for prizes like game skins or Steam vouchers.</p>
-        </div>
-
         <h2>Blinkpool <span>React, Meteor, Node</span></h2>
         <span className="date">2016 - 2019</span>
         <img src="../images/web/bp-desktop.jpg" />
@@ -33,6 +25,14 @@ function Web() {
         </div>
         <img src="../images/web/bp-mobile.jpg" />
         <p>Small screen version of the Blinkpool site.</p>
+
+        <h2>Gem Titans <span>React, Meteor, Node</span></h2>
+        <span className="date">2019</span>
+        <img src="../images/web/gem-titans.jpg" />
+        <div className="description">
+          <p><strong>Gem Titans</strong> was a free to play responsive web app. I was responsible for the prototyping, design and front end development.</p>
+          <p>The web app was a stock market style game which allowed users to buy and sell 'shares' (gems) that coincided with an answer to a particular question about a game that was shown on the twitch stream. Users could build up tokens that they could then exchange for prizes like game skins or Steam vouchers.</p>
+        </div>
 
         <h2>Get Fit with Davina <span>Rails</span></h2>
         <span className="date">2015 - 2016</span>
