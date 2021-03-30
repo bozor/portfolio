@@ -20,7 +20,7 @@ function Home() {
         <section className="role">
           <h3>
             <strong>Lead UI Designer / Developer</strong>
-            <span> (Douglas-White &amp; Gosai Ltd, London, UK)</span>
+            <span> Blinkbox Labs, London, UK)</span>
           </h3>
           <span className="date">Sep 2016 - Jan 2021</span>
           <p>In this role, I was responsible for the design, front end build and branding for various free to play and traditional betting products using React and React Native. I was able to take ideas from initial concept, through to design and implementation while making sure we were adhering to front-end code best practices. Alongside design and development, I created a brand for a popular UK esports betting website which included a large scale outdoor ad campaign in Birmingham for a major esport event.</p>
@@ -69,7 +69,7 @@ function Home() {
           </h3>
           <span className="date">Apr 2008 - Nov 2009</span>
         </section>
-        
+
         <section className="role">
           <h3>
             <strong>Web Designer</strong>
