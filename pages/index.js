@@ -28,20 +28,20 @@ function Home() {
 
         <section className="role">
           <h3>
-            <strong>Lead UI Designer / Developer</strong>
-            <span>(getfitwithdavina.com, London, UK)</span>
-          </h3>
-          <span className="date">Sep 2015 - Feb 2016</span>
-          <p>This contract role was for a startup developing a celebrity fitness and nutrition website. I was responsible for the design and front end build. The site was built using Ruby on Rails with HAML as the templating language, SASS and jQuery to enhance the user experience.</p>
-        </section>
-
-        <section className="role">
-          <h3>
             <strong>Corporate Image Developer</strong>
             <span>(Fianium Ltd, Southampton, UK)</span>
           </h3>
           <span className="date">Jan 2003 - Jul 2016</span>
           <p>Fianium were a long standing freelance client until they merged with another company. I looked after their corporate image which involved the design and maintenance of their website, tradeshow displays, posters, datasheets and product photography.</p>
+        </section>
+
+        <section className="role">
+          <h3>
+            <strong>Lead UI Designer / Developer</strong>
+            <span>(getfitwithdavina.com, London, UK)</span>
+          </h3>
+          <span className="date">Sep 2015 - Feb 2016</span>
+          <p>This contract role was for a startup developing a celebrity fitness and nutrition website. I was responsible for the design and front end build. The site was built using Ruby on Rails with HAML as the templating language, SASS and jQuery to enhance the user experience.</p>
         </section>
 
         <section className="role">
