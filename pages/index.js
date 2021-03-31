@@ -20,19 +20,10 @@ function Home() {
         <section className="role">
           <h3>
             <strong>Lead UI Designer / Developer</strong>
-            <span> Blinkbox Labs, London, UK)</span>
+            <span>(Blinkbox Labs, London, UK)</span>
           </h3>
           <span className="date">Sep 2016 - Jan 2021</span>
           <p>In this role, I was responsible for the design, front end build and branding for various free to play and traditional betting products using React and React Native. I was able to take ideas from initial concept, through to design and implementation while making sure we were adhering to front-end code best practices. Alongside design and development, I created a brand for a popular UK esports betting website which included a large scale outdoor ad campaign in Birmingham for a major esport event.</p>
-        </section>
-
-        <section className="role">
-          <h3>
-            <strong>Lead UI Designer / Developer</strong>
-            <span>(getfitwithdavina.com, London, UK)</span>
-          </h3>
-          <span className="date">Sep 2015 - Feb 2016</span>
-          <p>This contract role was for a startup developing a celebrity fitness and nutrition website. I was responsible for the design and front end build. The site was built using Ruby on Rails with HAML as the templating language, SASS and jQuery to enhance the user experience.</p>
         </section>
 
         <section className="role">
@@ -42,6 +33,15 @@ function Home() {
           </h3>
           <span className="date">Jan 2003 - Jul 2016</span>
           <p>Fianium were a long standing freelance client until they merged with another company. I looked after their corporate image which involved the design and maintenance of their website, tradeshow displays, posters, datasheets and product photography.</p>
+        </section>
+
+        <section className="role">
+          <h3>
+            <strong>Lead UI Designer / Developer</strong>
+            <span>(getfitwithdavina.com, London, UK)</span>
+          </h3>
+          <span className="date">Sep 2015 - Feb 2016</span>
+          <p>This contract role was for a startup developing a celebrity fitness and nutrition website. I was responsible for the design and front end build. The site was built using Ruby on Rails with HAML as the templating language, SASS and jQuery to enhance the user experience.</p>
         </section>
 
         <section className="role">
