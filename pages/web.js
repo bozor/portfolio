@@ -17,11 +17,11 @@ function Web() {
       </header>
       <article className="page-content">
         <h2>Blinkpool <span>React, Meteor, Node</span></h2>
-        <span className="date">2016 - 2019</span>
+        <span className="date">2017 - 2019</span>
         <img src="../images/web/bp-desktop.jpg" />
         <div className="description">
           <p><strong>Blinkpool</strong> was a UK regulated esports gambling website which evolved over a period of 3 years. I was responsible for the prototyping, design and front end development.</p>
-          <p>The site went through numerous iterations, with each one being carefully analysed with the help of Google Analytics, Hotjar and Mixpanel to see how the changes we made affected user behaviour.</p>
+          <p>The site went through numerous iterations and we followed a data led decision making approach when it came to evolving the site. Each iteration was carefully analysed with the help of Google Analytics, Hotjar, Mixpanel and user interviews where possible, to see how the changes we made affected user behaviour.</p>
         </div>
         <img src="../images/web/bp-mobile.jpg" />
         <p>Small screen version of the Blinkpool site.</p>
@@ -32,7 +32,18 @@ function Web() {
         <div className="description">
           <p><strong>Gem Titans</strong> was a free to play responsive web app. I was responsible for the prototyping, design and front end development.</p>
           <p>The web app was a stock market style game which allowed users to buy and sell 'shares' (gems) that coincided with an answer to a particular question about a game that was shown on the twitch stream. Users could build up tokens that they could then exchange for prizes like game skins or Steam vouchers.</p>
+          <p>Just like Blinkpool, we used extensive analytics tools to monitor how changes we made affected user behaviour.</p>
         </div>
+
+        <h2>Blinkpredict <span>React, Meteor, Node</span></h2>
+        <span className="date">2016 - 2018</span>
+        <img src="../images/web/predict-desktop.jpg" />
+        <div className="description">
+          <p><strong>Blinkpredict</strong> was a free to play responsive web app that was a precursor to Blinkpool. I was responsible for the prototyping, design and front end development.</p>
+          <p>We used this site to test out potential features for our real-money product, Blinkpool. The site had a few thousand users that gave us timely and useful feedback. We also used Mixpanel and Google Analytics which allowed us to make quick decisions and iterate through our ideas.</p>
+        </div>
+        <img src="../images/web/predict-mobile.jpg" />
+        <p>Small screen version of the Blinkpredict site.</p>
 
         <h2>Get Fit with Davina <span>Rails</span></h2>
         <span className="date">2015 - 2016</span>
