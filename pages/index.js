@@ -14,7 +14,7 @@ function Home() {
       </header>
 
       <article className="page-content">
-        <p className="intro">I am a highly skilled web designer with over a decade of experience. In this time, I have been able to work on a wide variety of different projects which have helped me to broaden my skill set. I am just as comfortable in Photoshop as in a text editor. I always look to challenge myself and to stay up to date with the latest trends and technologies in order to integrate them into my solutions.</p>
+        <p className="intro">I am a highly skilled digital interaction specialist with over a decade of experience. In this time, I have been able to work on a wide variety of different projects in varied environments which have helped me to broaden my skill set. I am just as comfortable prototyping ideas in Adobe XD as I am turning them into web and mobile apps in Visual Studio Code. I always look to challenge myself and to stay up to date with the latest trends and technologies in order to integrate them into my solutions.</p>
         
         <h2>Experience</h2>
         <section className="role">
