@@ -15,7 +15,7 @@
     "fontfaceobserver": "^2.1.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
     "module-alias": "^2.2.2",
     "next": "^13.1.6",
     "normalize-scss": "^7.0.1",
