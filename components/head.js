@@ -1,6 +1,5 @@
 import React from 'react'
 import NextHead from 'next/head'
-import '../styles/index.scss'
 
 const defaultDescription = ''
 const defaultOGURL = ''

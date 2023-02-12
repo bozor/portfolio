@@ -18,7 +18,7 @@ const Nav = (c) => {
       {links.map(({ key, cssClass, href, label }) => (
         <span key={key} className={cssClass}>
           <Link href={href}>
-            <a>{label}</a>
+            <span>{label}</span>
           </Link>
         </span>
       ))}
