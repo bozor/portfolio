@@ -19,6 +19,15 @@ function Home() {
         <h2>Experience</h2>
         <section className="role">
           <h3>
+            <strong>Senior React Developer</strong>
+            <span>(OMM, London, UK)</span>
+          </h3>
+          <span className="date">Sep 2021 - Current</span>
+          <p>I developed a number of projects which ranged from video based and AR microsites for Nike through to an NPM component library which I then used in a series of web apps for a large scale interactive rugby installation. I used React, Typescript, SASS, Framer Motion and Zustand as well as a whole host of other libraries in my solutions. Our team used kanban boards to keep on top of tasks and help project managers see what was being worked on..</p>
+        </section>
+
+        <section className="role">
+          <h3>
             <strong>Lead UI Designer / Developer</strong>
             <span>(Blinkbox Labs, London, UK)</span>
           </h3>
