@@ -19,7 +19,7 @@
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^8.0.0",
     "module-alias": "^2.2.2",
-    "next": "^10.0.3",
+    "next": "^12.1.0",
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",
     "node-sass": "^5.0.0",
