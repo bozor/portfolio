@@ -9,6 +9,17 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+  exportPathMap: function () {
+    return {
+      '/': { page: '/' },
+      '/web': { page: '/web' },
+      '/print': { page: '/print' },
+      '/apps': { page: '/apps' }
+    };
+  },
+  basePath: "/work",
+  assetPrefix: "/work",
+  trailingSlash: true,
 }
 
 module.exports = nextConfig
