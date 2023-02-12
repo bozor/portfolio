@@ -1,6 +1,5 @@
 import React from 'react'
 import NextHead from 'next/head'
-import { string } from 'prop-types'
 import '../styles/index.scss'
 
 const defaultDescription = ''
@@ -52,12 +51,5 @@ const Head = props => (
     />
   </NextHead>
 )
-
-Head.propTypes = {
-  title: string,
-  description: string,
-  url: string,
-  ogImage: string
-}
 
 export default Head
