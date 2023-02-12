@@ -10,8 +10,6 @@
     "export": "next export"
   },
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "@zeit/next-sass": "^1.0.1",
     "bourbon": "^7.0.0",
     "bourbon-neat": "^4.0.0",
     "fontfaceobserver": "^2.1.0",
@@ -19,14 +17,11 @@
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^8.0.0",
     "module-alias": "^2.2.2",
-    "next": "^10.0.3",
-    "next-compose-plugins": "^2.2.1",
-    "next-optimized-images": "^2.6.2",
+    "next": "^13.1.6",
     "normalize-scss": "^7.0.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "sass": "^1.58.0",
-    "sass-loader": "^10.1.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.58.0"
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "^4.1.0"
