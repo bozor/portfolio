@@ -1,7 +1,6 @@
 import React from 'react'
 import NextHead from 'next/head'
-import { string } from 'prop-types'
-import '../styles/index.scss'
+import Script from 'next/script'
 
 const defaultDescription = ''
 const defaultOGURL = ''
@@ -17,7 +16,7 @@ const Head = props => (
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&display=swap" rel="stylesheet" />
+
     {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" />  */}
 
     {/* <link rel="apple-touch-icon" sizes="180x180" href={require('favicon/apple-touch-icon.png')} />
@@ -35,29 +34,20 @@ const Head = props => (
     <meta property="og:image" content={props.ogImage || defaultOGImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" /> */}
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-29914500-1"
-    />
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=UA-29914500-1"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-29914500-1');
-        `,
-      }}
-    />
+          gtag('config', 'UA-29914500-1');
+        `}
+      </Script>
   </NextHead>
 )
-
-Head.propTypes = {
-  title: string,
-  description: string,
-  url: string,
-  ogImage: string
-}
 
 export default Head
