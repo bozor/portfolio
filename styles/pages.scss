@@ -1,24 +1,34 @@
-@import "bourbon";
-
 .role {
   position: relative;
   margin-bottom: $padding-lg;
 
   p {
     margin: 0;
-  }
 
-  &:last-of-type {
-    &:after {
-      content: '...';
-      font-size: $font-size-3;
-      font-weight: 300;
-      display: block;
-      text-align: center;
-      letter-spacing: 1em;
-      margin: 0 0 $padding-lg;
+    & + p {
+      padding-top: $padding-sm;
     }
   }
+}
+
+.skills {
+  margin-top: -$padding-sm;
+
+  &::before {
+    content: '...';
+    font-size: 1.35rem;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    letter-spacing: 1em;
+    margin: 0 0 $padding-md;
+  }
+}
+
+.credits {
+  font-size: 80%;
+  opacity: 0.65;
+  padding-top: $padding-sm
 }
 
 .date {
@@ -30,7 +40,7 @@
   letter-spacing: -0.05em;
   margin: 0 0 $padding-sm;
 
-  &:before {
+  &::before {
     position: absolute;
     content: '';
     display: block;

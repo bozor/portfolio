@@ -23,7 +23,8 @@ function Home() {
             <span>(OMM, London, UK)</span>
           </h3>
           <span className="date">Sep 2021 - Current</span>
-          <p>I developed a number of projects which ranged from video based and AR microsites for Nike through to an NPM component library which I then used in a series of web apps for a large scale interactive rugby installation. I used React, Typescript, SASS, Framer Motion and Zustand as well as a whole host of other libraries in my solutions. Our team used kanban boards to keep on top of tasks and help project managers see what was being worked on..</p>
+          <p>I developed a number of projects which ranged from video based and AR microsites for Nike through to an NPM component library which I then used in a series of web apps for a large scale interactive rugby installation.</p>
+          <p>I used React, Typescript, SASS, Framer Motion and Electron as well as a whole host of other libraries. Our team used kanban boards to keep on top of tasks and help project managers see what was being worked on.</p>
         </section>
 
         <section className="role">
@@ -32,7 +33,8 @@ function Home() {
             <span>(Blinkbox Labs, London, UK)</span>
           </h3>
           <span className="date">Sep 2016 - Jan 2021</span>
-          <p>In this role, I was responsible for the design, front end build and branding for various free to play and traditional betting products using React and React Native. I was able to take ideas from initial concept, through to design and implementation while making sure we were adhering to front-end code best practices. Alongside design and development, I created a brand for a popular UK esports betting website which included a large scale outdoor ad campaign in Birmingham for a major esport event.</p>
+          <p>In this role, I was responsible for the design, front end build and branding for various free to play and traditional betting products using React and React Native. I was able to take ideas from initial concept, through to design and implementation while making sure we were adhering to front-end code best practices.</p>
+          <p>Alongside design and development, I created a brand for a popular UK esports betting website which included a large scale outdoor ad campaign in Birmingham for a major esport event.</p>
         </section>
 
         <section className="role">
@@ -87,8 +89,14 @@ function Home() {
           <span className="date">Apr 2007 - Mar 2008</span>
         </section>
 
-        <h2>Skills</h2>
-        <p>Adobe CS (Illustrator, InDesign, XD, Photoshop), HTML (HTML5), CSS (SASS, Less), Javascript (React, React-Native, Typescript), Templating (HAML, Mustache, JSX), Git Version Control, Android Phone UI Development, iOS Phone UI Development.</p>
+        <section className="skills">
+          <h2>Skills</h2>
+          <p>Adobe CC (Illustrator, InDesign, XD, Photoshop), HTML (HTML5), CSS (SASS, Less), Javascript (React, React-Native, Framer Motion, Typescript), Templating (HAML, Mustache, JSX), Git Version Control, Android Phone UI Development, iOS Phone UI Development.</p>
+        </section>
+
+        <section className="credits">
+          <p className="small">🖥️ Built using Next.js and SASS. Automatically deployed via an action on Github commits.</p>
+        </section>
       </article>
     </React.Fragment>
   )

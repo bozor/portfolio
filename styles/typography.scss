@@ -68,6 +68,12 @@ h3 {
 
 h4 {
   font-size: $font-size-1;
+  margin-bottom: $padding-sm;
+}
+
+h5 {
+  font-size: $font-size-0;
+  line-height: 1.45em;
 }
 
 p {
@@ -91,7 +97,7 @@ p {
       display: block;
       text-align: center;
       letter-spacing: 1em;
-      margin: $padding-sm 0 $padding-lg;
+      margin: $padding-md 0 $padding-lg;
     }
   }
 }
