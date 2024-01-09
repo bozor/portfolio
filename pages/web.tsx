@@ -6,6 +6,9 @@ import { NextPage } from 'next'
 import Head from '@components/Head'
 import Nav from '@components/Nav'
 
+import nikeBraLegging from '@images/web/nike-bra-legging.jpg'
+import nikeRunningShoe from '@images/web/nike-running-shoe-finder.jpg'
+import ire from '@images/web/ire.jpg'
 import bpDesktop from '@images/web/bp-desktop.jpg'
 import bpMobile from '@images/web/bp-mobile.jpg'
 import gemTitans from '@images/web/gem-titans.jpg'
@@ -26,6 +29,27 @@ const Web: NextPage = () => {
         <h1>Web</h1>
       </header>
       <article className="page-content">
+        <h2>International Rugby Experience <span>React, Typescript, Framer Motion</span></h2>
+        <span className="date">2021-2023</span>
+        <a href="https://www.internationalrugbyexperience.com/" target="_blank" rel="noreferrer"><Image src={ire} alt='' width={0} height={0} /></a>
+        <div className="description">
+          <p><strong>International Rugby Experience</strong> is a multi storey, interactive rugby museum in Limerick, Ireland.</p>
+        </div>
+
+        <h2>Nike Bra & Legging Finder <span>React, Typescript, Framer Motion</span></h2>
+        <span className="date">2023</span>
+        <Image src={nikeBraLegging} alt='' width={0} height={0} />
+        <div className="description">
+          <p><strong>Nike Bra & Legging Finder</strong> is a physical installation in Nike Town London.</p>
+        </div>
+
+        <h2>Nike Running Shoe Finder <span>React, Typescript, Framer Motion</span></h2>
+        <span className="date">2023</span>
+        <Image src={nikeRunningShoe} alt='' width={0} height={0} />
+        <div className="description">
+          <p><strong>Nike Running Shoe Finder</strong> is a physical installation in Nike Town London.</p>
+        </div>
+
         <h2>Blinkpool <span>React, Meteor, Node</span></h2>
         <span className="date">2017 - 2019</span>
         <Image src={bpDesktop} alt='' width={0} height={0} />
