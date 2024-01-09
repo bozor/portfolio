@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { NextPage } from 'next'
 
 import Head from '@components/Head'
 import Nav from '@components/Nav'
@@ -13,7 +14,7 @@ import predictMobile from '@images/web/predict-mobile.jpg'
 import gfwd from '@images/web/gfwd.jpg'
 import fianium from '@images/web/fianium.jpg'
 
-function Web() {
+const Web: NextPage = () => {
   const router = useRouter()
   
   return (

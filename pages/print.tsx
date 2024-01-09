@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { NextPage } from 'next'
 
 import Head from '@components/Head'
 import Nav from '@components/Nav'
@@ -23,7 +24,7 @@ import eleri from "@images/print/eleri.jpg"
 import funk from "@images/print/funk-photo.jpg"
 import nexus from "@images/print/nexus.jpg"
 
-function Print() {
+const Print: NextPage = () => {
   const router = useRouter()
   
   return (
