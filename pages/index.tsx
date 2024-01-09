@@ -1,12 +1,32 @@
 import React from 'react'
 import Image from 'next/image'
+import { NextPage } from 'next';
+import { format } from 'date-fns';
 
 import Head from '@components/Head'
 import Nav from '@components/Nav'
 
 import githubLogo from '@images/github.svg';
 
-function Home() {
+type HomeProps = {
+  lastUpdated: string;
+}
+
+export async function getStaticProps() {
+  const date = new Date();
+  const isoDateTime = new Date(
+    date.getTime() - date.getTimezoneOffset() * 60000
+  ).toISOString();
+  const lastUpdated = isoDateTime.slice(0, 10);
+    console.info(isoDateTime)
+  return {
+    props: {
+      lastUpdated: format(date, 'p, PP')
+    }
+  };
+}
+
+const Home: NextPage<HomeProps> = ({ lastUpdated }) => {
   return (
     <React.Fragment>
       <Head title="Boris Grudinin" />
@@ -98,7 +118,7 @@ function Home() {
         </section>
 
         <section className="credits">
-          <p className="small">🖥️ Built using Next.js and SASS. Automatically deployed using <Image src={githubLogo} alt="github" width={14} height={14} /> actions.</p>
+          <p className="small">🖥️ Built using Next.js and SASS. Automatically deployed at {lastUpdated} using <Image src={githubLogo} alt="github" width={14} height={14} /> actions.</p>
         </section>
       </article>
     </React.Fragment>
