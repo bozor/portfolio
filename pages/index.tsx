@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
-import githubLogo from '../public/images/github.svg';
 
-import Head from '../components/head'
-import Nav from '../components/nav'
+import Head from '@components/Head'
+import Nav from '@components/Nav'
+
+import githubLogo from '@images/github.svg';
 
 function Home() {
   return (
