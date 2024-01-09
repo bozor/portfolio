@@ -14,14 +14,10 @@ type HomeProps = {
 
 export async function getStaticProps() {
   const date = new Date();
-  const isoDateTime = new Date(
-    date.getTime() - date.getTimezoneOffset() * 60000
-  ).toISOString();
-  const lastUpdated = isoDateTime.slice(0, 10);
-    console.info(isoDateTime)
+
   return {
     props: {
-      lastUpdated: format(date, 'p, PP')
+      lastUpdated: format(date, "p 'on' PP")
     }
   };
 }
