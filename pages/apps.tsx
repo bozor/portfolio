@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { NextPage } from 'next'
 
 import Head from '@components/Head'
 import Nav from '@components/Nav'
@@ -12,7 +13,7 @@ import ggArcade3 from '@images/apps/gg-arcade3.jpg'
 import pp1 from '@images/apps/pp.jpg'
 import pp2 from '@images/apps/pp2.jpg'
 
-function Apps() {
+const Apps: NextPage = () => {
   const router = useRouter()
 
   return (
