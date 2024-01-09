@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+import githubLogo from '../public/images/github.svg';
 
 import Head from '../components/head'
 import Nav from '../components/nav'
@@ -23,8 +25,8 @@ function Home() {
             <span>(OMM, London, UK)</span>
           </h3>
           <span className="date">Sep 2021 - Current</span>
-          <p>I developed a number of projects which ranged from video based and AR microsites for Nike through to an NPM component library which I then used in a series of web apps for a large scale interactive rugby installation.</p>
-          <p>I used React, Typescript, SASS, Framer Motion and Electron as well as a whole host of other libraries. Our team used kanban boards to keep on top of tasks and help project managers see what was being worked on.</p>
+          <p>I developed a number of projects which ranged from video based and AR microsites for Nike through to an NPM component library which I then used in a series of web apps for a large scale interactive rugby installation in Ireland.</p>
+          <p>I used React, Typescript, SASS, Framer Motion, Storybook and Electron as well as a whole host of other libraries. Our team used kanban boards to keep on top of tasks and help project managers see what was being worked on.</p>
         </section>
 
         <section className="role">
@@ -91,11 +93,11 @@ function Home() {
 
         <section className="skills">
           <h2>Skills</h2>
-          <p>Adobe CC (Illustrator, InDesign, XD, Photoshop), HTML (HTML5), CSS (SASS, Less), Javascript (React, React-Native, Framer Motion, Typescript), Templating (HAML, Mustache, JSX), Git Version Control, Android Phone UI Development, iOS Phone UI Development.</p>
+          <p>Javascript (React, React-Native, Framer Motion, Typescript, Storybook), HTML (HTML5), CSS (SASS, Less, CSS Modules), Adobe CC (Illustrator, InDesign, XD, Photoshop), Figma, Git Version Control, Android UI Development.</p>
         </section>
 
         <section className="credits">
-          <p className="small">🖥️ Built using Next.js and SASS. Automatically deployed via an action on Github commits.</p>
+          <p className="small">🖥️ Built using Next.js and SASS. Automatically deployed using <Image src={githubLogo} alt="github" width={14} height={14} /> actions.</p>
         </section>
       </article>
     </React.Fragment>
