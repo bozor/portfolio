@@ -91,7 +91,6 @@ $_nav-width-lg: 110px;
 .layout-nav {
   position: absolute;
   width: calc(100% - calc(calc(#{$_margin} * 2)));
-  // height: $_margin;
   top: calc(#{$_margin} * 1.5 + #{$site-border-thickness});
 
   &:after {
@@ -151,14 +150,5 @@ $_nav-width-lg: 110px;
 
   img {
     max-width: 100%;
-  }
-}
-
-.page-content {
-  // background: $_white;
-  // padding: $padding-md;
-  
-  @include for-lg {
-    // padding: $padding-xxl;
   }
 }

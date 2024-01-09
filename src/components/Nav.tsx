@@ -6,17 +6,13 @@ const links = [
   { href: '/web', label: 'web' },
   { href: '/print', label: 'print' },
   { href: '/apps', label: 'apps' }
-].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  link.cssClass = `nav-item nav-${link.label}`
-  return link
-})
+];
 
-const Nav = (c) => {
+const Nav = (c: { className: string }) => {
   return (
     <nav className={`layout-nav ${c.className}`}>
-      {links.map(({ key, cssClass, href, label }) => (
-        <span key={key} className={cssClass}>
+      {links.map(({href, label }) => (
+        <span key={`nav-link-${href}-${label}`} className={`nav-item nav-${label}`}>
           <Link href={href}>
             {label}
           </Link>
