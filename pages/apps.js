@@ -9,7 +9,7 @@ function Apps() {
   const router = useRouter()
 
   return (
-    <React.Fragment>
+    <>
       <Head title="Boris Grudinin - Apps" />
       <Nav className={`page-${router.pathname.substring(1)}`} />
 
@@ -19,17 +19,17 @@ function Apps() {
       <article className="page-content">
         <h2>GG Arcade <span>React Native, Azure Playfab</span></h2>
         <span className="date">2020</span>
-        <Image src="../images/apps/gg-arcade.jpg" alt='' />
-        <Image src="../images/apps/gg-arcade2.jpg" alt='' />
-        <Image src="../images/apps/gg-arcade3.jpg" alt='' />
+        <Image src="../images/apps/gg-arcade.jpg" alt='' width={0} height={0} />
+        <Image src="../images/apps/gg-arcade2.jpg" alt='' width={0} height={0} />
+        <Image src="../images/apps/gg-arcade3.jpg" alt='' width={0} height={0} />
         <p><strong>GG Arcade</strong> was a free to play social casino Android app with over 10k active users. Users could win tokens and exchange them for prizes which included game skins and gift vouchers for online stores like Amazon. I was responsible for the design along with the front end implementation.</p>
         <h2>PocketPredictor <span>React Native</span></h2>
         <span className="date">2019 - 2020</span>
-        <Image src="../images/apps/pp.jpg" alt='' />
-        <Image src="../images/apps/pp2.jpg" alt='' />
+        <Image src="../images/apps/pp.jpg" alt='' width={0} height={0} />
+        <Image src="../images/apps/pp2.jpg" alt='' width={0} height={0} />
         <p><strong>PocketPredictor</strong> was a free to play prediction Android app. Users could win tokens by correctly answering questions about future esports matches and exchange them for game skins. I was responsible for the initial prototype, design and the front end implementation.</p>
       </article>
-    </React.Fragment>
+    </>
   )
 }
 
