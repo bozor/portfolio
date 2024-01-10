@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 
 const links = [
   { href: '/', label: 'about' },
@@ -8,9 +9,11 @@ const links = [
   { href: '/apps', label: 'apps' }
 ];
 
-const Nav = (c: { className: string }) => {
+const Nav = () => {
+  const router = useRouter();
+  
   return (
-    <nav className={`layout-nav ${c.className}`}>
+    <nav className={`layout-nav page-${router.pathname.substring(1) || 'about'}`}>
       {links.map(({href, label }) => (
         <span key={`nav-link-${href}-${label}`} className={`nav-item nav-${label}`}>
           <Link href={href}>

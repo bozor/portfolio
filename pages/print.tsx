@@ -1,12 +1,10 @@
 import React from 'react'
-import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { NextPage } from 'next'
+import Head from 'next/head'
+import Header from '@components/Header'
 
-import Head from '@components/Head'
-import Nav from '@components/Nav'
-
-import bpLogo from '@images/blinkpool/logo.png';
+import bpLogo from '@images/blinkpool/logo.png'
 import bpCards from "@images/blinkpool/business-cards.jpg"
 import bpBillboard from "@images/blinkpool/outdoor-billboard.jpg"
 import bpBrand2 from "@images/blinkpool/brand2.jpg"
@@ -25,16 +23,13 @@ import funk from "@images/print/funk-photo.jpg"
 import nexus from "@images/print/nexus.jpg"
 
 const Print: NextPage = () => {
-  const router = useRouter()
-  
   return (
     <>
-      <Head title="Boris Grudinin - Print" />
-      <Nav className={`page-${router.pathname.substring(1)}`} />
+      <Head>
+        <title>Boris Grudinin - Print</title>
+      </Head>
 
-      <header className="page-header" id="print">
-        <h1>Print</h1>
-      </header>
+      <Header text="Print" />
 
       <article className="page-content">
         <h2>Blinkpool</h2>

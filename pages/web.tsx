@@ -1,10 +1,9 @@
 import React from 'react'
-import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { NextPage } from 'next'
+import Head from 'next/head'
 
-import Head from '@components/Head'
-import Nav from '@components/Nav'
+import Header from '@components/Header'
 
 import nikeBraLegging from '@images/web/nike-bra-legging.jpg'
 import nikeRunningShoe from '@images/web/nike-running-shoe-finder.jpg'
@@ -17,17 +16,16 @@ import predictMobile from '@images/web/predict-mobile.jpg'
 import gfwd from '@images/web/gfwd.jpg'
 import fianium from '@images/web/fianium.jpg'
 
+
 const Web: NextPage = () => {
-  const router = useRouter()
-  
   return (
     <>
-      <Head title="Boris Grudinin - Web" />
-      <Nav className={`page-${router.pathname.substring(1)}`} />
+      <Head>
+        <title>Boris Grudinin - Web</title>
+      </Head>
 
-      <header className="page-header">
-        <h1>Web</h1>
-      </header>
+      <Header text="Web" />
+
       <article className="page-content">
         <h2>International Rugby Experience <span>React, Typescript, Framer Motion</span></h2>
         <span className="date">2021-2023</span>
