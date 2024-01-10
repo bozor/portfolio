@@ -7,10 +7,6 @@ import Header from '@components/Header';
 
 import githubLogo from '@images/github.svg';
 
-type HomeProps = {
-  lastUpdated: string;
-}
-
 const getLastUpdated = async () => format(new Date(), "p 'on' PP");
 
 export const metadata: Metadata = {
@@ -19,7 +15,7 @@ export const metadata: Metadata = {
   },
 }
 
-const Home: NextPage<HomeProps> = async () => {
+const Home: NextPage = async () => {
   const lastUpdated = await getLastUpdated();
 
   return (
