@@ -20,7 +20,7 @@ const nextConfig = {
   },
   basePath: "/work",
   assetPrefix: "/work",
-  trailingSlash: true,
+  trailingSlash: true
 }
 
 module.exports = nextConfig

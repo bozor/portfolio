@@ -1,6 +1,8 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 const links = [
   { href: '/', label: 'about' },
@@ -10,10 +12,10 @@ const links = [
 ];
 
 const Nav = () => {
-  const router = useRouter();
+  const pathname = usePathname();
   
   return (
-    <nav className={`layout-nav page-${router.pathname.substring(1) || 'about'}`}>
+    <nav className={`layout-nav page-${pathname.substring(1).slice(0,-1) || 'about'}`}>
       {links.map(({href, label }) => (
         <span key={`nav-link-${href}-${label}`} className={`nav-item nav-${label}`}>
           <Link href={href}>
