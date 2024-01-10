@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { NextPage } from 'next'
-import Head from 'next/head'
+import { Metadata, NextPage } from 'next'
 
 import Header from '@components/Header'
 
@@ -12,13 +11,13 @@ import ggArcade3 from '@images/apps/gg-arcade3.jpg'
 import pp1 from '@images/apps/pp.jpg'
 import pp2 from '@images/apps/pp2.jpg'
 
+export const metadata: Metadata = {
+  title: "Apps",
+}
+
 const Apps: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Boris Grudinin - Apps</title>
-      </Head>
-
       <Header text="Apps" />
 
       <article className="page-content">

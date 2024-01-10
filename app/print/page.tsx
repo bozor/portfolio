@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { NextPage } from 'next'
-import Head from 'next/head'
+import { Metadata, NextPage } from 'next'
 import Header from '@components/Header'
 
 import bpLogo from '@images/blinkpool/logo.png'
@@ -22,13 +21,13 @@ import eleri from "@images/print/eleri.jpg"
 import funk from "@images/print/funk-photo.jpg"
 import nexus from "@images/print/nexus.jpg"
 
+export const metadata: Metadata = {
+  title: "Print",
+}
+
 const Print: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Boris Grudinin - Print</title>
-      </Head>
-
       <Header text="Print" />
 
       <article className="page-content">

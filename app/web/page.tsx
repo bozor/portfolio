@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { NextPage } from 'next'
-import Head from 'next/head'
+import { Metadata, NextPage } from 'next'
 
 import Header from '@components/Header'
 
@@ -16,14 +15,13 @@ import predictMobile from '@images/web/predict-mobile.jpg'
 import gfwd from '@images/web/gfwd.jpg'
 import fianium from '@images/web/fianium.jpg'
 
+export const metadata: Metadata = {
+  title: "Web",
+}
 
 const Web: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Boris Grudinin - Web</title>
-      </Head>
-
       <Header text="Web" />
 
       <article className="page-content">
