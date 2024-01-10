@@ -24,7 +24,15 @@ function Home() {
           </h3>
           <span className="date">Sep 2021 - Current</span>
           <p>I developed a number of projects which ranged from video based and AR microsites for Nike through to an NPM component library which I then used in a series of web apps for a large scale interactive rugby installation.</p>
-          <p>I used React, Typescript, SASS, Framer Motion and Electron as well as a whole host of other libraries. Our team used kanban boards to keep on top of tasks and help project managers see what was being worked on.</p>
+          <p>Our team used kanban boards to keep on top of tasks and help project managers see what was being worked on.</p>
+          <ul>
+            <li>Tech:</li>
+            <li>React</li>
+            <li>Typescript</li>
+            <li>SASS</li>
+            <li>Framer Motion</li>
+            <li>Electron</li>
+          </ul>
         </section>
 
         <section className="role">
@@ -33,8 +41,15 @@ function Home() {
             <span>(Blinkbox Labs, London, UK)</span>
           </h3>
           <span className="date">Sep 2016 - Jan 2021</span>
-          <p>In this role, I was responsible for the design, front end build and branding for various free to play and traditional betting products using React and React Native. I was able to take ideas from initial concept, through to design and implementation while making sure we were adhering to front-end code best practices.</p>
+          <p>In this role, I was responsible for the design, front end build and branding for various free to play and traditional betting products. I was able to take ideas from initial concept, through to design and implementation while making sure we were adhering to front-end code best practices.</p>
           <p>Alongside design and development, I created a brand for a popular UK esports betting website which included a large scale outdoor ad campaign in Birmingham for a major esport event.</p>
+          <ul>
+            <li>React</li>
+            <li>React Native</li>
+            <li>Typescript</li>
+            <li>Less</li>
+            <li>Adobe Illustrator</li>
+          </ul>
         </section>
 
         <section className="role">
@@ -53,6 +68,11 @@ function Home() {
           </h3>
           <span className="date">Sep 2015 - Feb 2016</span>
           <p>This contract role was for a startup developing a celebrity fitness and nutrition website. I was responsible for the design and front end build. The site was built using Ruby on Rails with HAML as the templating language, SASS and jQuery to enhance the user experience.</p>
+          <ul>
+            <li>Ruby on Rails</li>
+            <li>Sass</li>
+            <li>jQuery</li>
+          </ul>
         </section>
 
         <section className="role">
