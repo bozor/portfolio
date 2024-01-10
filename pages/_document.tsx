@@ -17,16 +17,17 @@ export default function Document() {
         <link rel="manifest" href={require('favicon/site.webmanifest')} />
         <link rel="mask-icon" href={require('favicon/safari-pinned-tab.svg')} color="#5bbad5" /> */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=UA-29914500-1"
+          src="https://www.googletagmanager.com/gtag/js?id=G-95677VDEHT"
           strategy="afterInteractive"
+          async
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer.push(arguments);}
+            function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'UA-29914500-1');
+            gtag('config', 'G-95677VDEHT');
           `}
         </Script>
       </Head>
