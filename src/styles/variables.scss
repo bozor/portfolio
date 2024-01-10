@@ -7,6 +7,9 @@ $padding-lg: 1.75rem;
 $padding-xl: 2.5rem;
 $padding-xxl: 4rem;
 
+$margin: 24px;
+$margin-lg: 40px;
+
 // colour variables
 $_white: #fff;
 $_bone: #f4f4f4;
@@ -30,3 +33,4 @@ $font-size-6: 4em;
 // other sizes
 $site-border-thickness: 18px;
 $nav-border-thickness: calc(#{$site-border-thickness} / 3);
+$nav-width-lg: 110px;

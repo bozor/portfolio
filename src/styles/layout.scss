@@ -1,23 +1,21 @@
 @import './mixins.scss';
+@import './variables.scss';
 
-$_margin: 24px;
-$_margin-lg: 40px;
-$_max-width: 1102px;
-$_nav-width-lg: 110px;
+$_width: 1102px;
 
 .layout-outer {
   position: relative;
 
   @include for-md {
-    margin: 0 $_margin;
+    margin: 0 $margin;
   }
 
   @include for-lg {
-    margin: 0 $_margin-lg;
+    margin: 0 $margin-lg;
   }
 
   @include for-xl {
-    max-width: $_max-width;
+    max-width: $_width;
     margin: 0 auto;
   }
 
@@ -26,126 +24,78 @@ $_nav-width-lg: 110px;
     content: '';
     display: block;
     width: 100%;
-    top: $_margin;
-    bottom: $_margin;
+    top: $margin;
+    bottom: $margin;
     border-top: $site-border-thickness solid rgba($_goldenrod, 0.9);
     border-bottom: $site-border-thickness solid rgba($_goldenrod, 0.9);
 
     @include for-md {
-      width: calc(100% - calc(calc(#{$_margin} + #{$site-border-thickness}) * 2));
+      width: calc(100% - calc(calc(#{$margin} + #{$site-border-thickness}) * 2));
       border: $site-border-thickness solid rgba($_goldenrod, 0.9);
     }
 
     @include for-lg {
-      width: calc(100% - calc(calc(#{$_margin-lg} + #{$site-border-thickness}) * 2));
-      top: $_margin-lg;
-      bottom: $_margin-lg;
+      width: calc(100% - calc(calc(#{$margin-lg} + #{$site-border-thickness}) * 2));
+      top: $margin-lg;
+      bottom: $margin-lg;
     }
 
     @include for-xl {
-      width: $_max-width;
+      width: $_width;
     }
   }
 }
 
 .layout-inner {
   position: relative;
-  padding: $_margin;
+  padding: $margin;
   z-index: 1;
 
   @include for-md {
-    padding: $_margin $site-border-thickness;
+    padding: $margin $site-border-thickness;
   }
 
   @include for-lg {
-    padding: calc(#{$_margin-lg} + #{$site-border-thickness});
-    padding-right: $_margin-lg;
+    padding: calc(#{$margin-lg} + #{$site-border-thickness});
+    padding-right: $margin-lg;
   }
 
   &:after {
     position: fixed;
     content: '';
     display: block;
-    width: calc(100% - calc(#{$_margin} * 2));
+    width: calc(100% - calc(#{$margin} * 2));
     height: $site-border-thickness;
     background: rgba($_goldenrod, 0.8);
-    bottom: $_margin;
+    bottom: $margin;
 
     @include for-md {
-      margin-left: $_margin;
-      width: calc(100% - calc(#{$_margin} * 4) - calc(#{$site-border-thickness} * 2));
+      margin-left: $margin;
+      width: calc(100% - calc(#{$margin} * 4) - calc(#{$site-border-thickness} * 2));
     }
 
     @include for-lg {
       margin-left: 0;
-      width: calc(100% - calc(#{$_margin-lg} * 4) - calc(#{$site-border-thickness} * 2));
-      bottom: $_margin-lg;
+      width: calc(100% - calc(#{$margin-lg} * 4) - calc(#{$site-border-thickness} * 2));
+      bottom: $margin-lg;
     }
 
     @include for-xl {
-      width: calc(#{$_max-width} - calc(#{$_margin-lg} * 2));
-    }
-  }
-}
-
-.layout-nav {
-  position: absolute;
-  width: calc(100% - calc(calc(#{$_margin} * 2)));
-  top: calc(#{$_margin} * 1.5 + #{$site-border-thickness});
-
-  &:after {
-    display: block;
-    content: '';
-    position: absolute;
-    background: rgba($_alto, 0.65);
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: $nav-border-thickness;
-  }
-
-  @include for-md {
-    width: calc(100% - calc(calc(#{$_margin} * 2) + calc(#{$site-border-thickness} * 2)));
-  }
-
-  @include for-lg {
-    position: fixed;
-    width: $_nav-width-lg;
-    height: calc(100% - calc(calc(#{$_margin-lg} * 4) + calc(#{$site-border-thickness} * 2)));
-    top: calc(calc(#{$_margin-lg} * 2) + #{$site-border-thickness});
-    margin-left: calc(calc(#{$_nav-width-lg} + #{$_margin-lg}) * -1);
-
-    &:after {
-      top: 0;
-      right: 0;
-      left: auto;
-      bottom: auto;
-      height: 100%;
-      width: $nav-border-thickness;
-    }
-  }
-
-  .layout-nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    @include for-lg {
-      display: block;
+      width: calc(#{$_width} - calc(#{$margin-lg} * 2));
     }
   }
 }
 
 .layout-content {
-  padding: calc(#{$_margin} * 3 + #{$site-border-thickness}) 0 $_margin;
+  padding: calc(#{$margin} * 3 + #{$site-border-thickness}) 0 $margin;
 
   @include for-md {
-    padding-left: $_margin;
-    padding-right: $_margin;
+    padding-left: $margin;
+    padding-right: $margin;
   }
 
   @include for-lg {
-    padding: $_margin-lg 0 0 calc(#{$_nav-width-lg} + #{$_margin-lg});
+    padding: $margin-lg 0 0 calc(#{$nav-width-lg} + #{$margin-lg});
   }
 
   img {
