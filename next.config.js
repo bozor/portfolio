@@ -4,19 +4,8 @@ const path = require('path')
 const nextConfig = {
   output: 'export',
   reactStrictMode: true,
-  images: {
-    unoptimized: true
-  },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
-  },
-  generateStaticParams: function () {
-    return {
-      '/': { page: '/' },
-      '/web': { page: '/web' },
-      '/print': { page: '/print' },
-      '/apps': { page: '/apps' }
-    };
   },
   basePath: "/work",
   assetPrefix: "/work",
