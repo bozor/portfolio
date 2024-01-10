@@ -10,7 +10,7 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-  exportPathMap: function () {
+  generateStaticParams: function () {
     return {
       '/': { page: '/' },
       '/web': { page: '/web' },
