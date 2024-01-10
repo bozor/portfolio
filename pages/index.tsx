@@ -2,9 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import { NextPage } from 'next';
 import { format } from 'date-fns';
+import Head from 'next/head';
 
-import Head from '@components/Head'
-import Nav from '@components/Nav'
+import Header from '@components/Header';
 
 import githubLogo from '@images/github.svg';
 
@@ -24,13 +24,12 @@ export async function getStaticProps() {
 
 const Home: NextPage<HomeProps> = ({ lastUpdated }) => {
   return (
-    <React.Fragment>
-      <Head title="Boris Grudinin" />
-      <Nav className={'page-about'} />
+    <>
+      <Head>
+        <title>Boris Grudinin</title>
+      </Head>
 
-      <header className="page-header">
-        <h1>Boris Grudinin</h1>
-      </header>
+      <Header text="Boris Grudinin" />
 
       <article className="page-content">
         <p className="intro">I am a highly skilled digital interaction specialist with over a decade of experience. In this time, I have been able to work on a wide variety of different projects in varied environments which have helped me to broaden my skill set. I am just as comfortable prototyping ideas in Adobe XD as I am turning them into web and mobile apps in Visual Studio Code. I always look to challenge myself and to stay up to date with the latest trends and technologies in order to integrate them into my solutions.</p>
@@ -117,7 +116,7 @@ const Home: NextPage<HomeProps> = ({ lastUpdated }) => {
           <p className="small">🖥️ Built using Next.js and SASS. Automatically deployed at {lastUpdated} using <Image src={githubLogo} alt="github" width={14} height={14} /> actions.</p>
         </section>
       </article>
-    </React.Fragment>
+    </>
   )
 }
 

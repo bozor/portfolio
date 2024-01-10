@@ -1,10 +1,9 @@
 import React from 'react'
-import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { NextPage } from 'next'
+import Head from 'next/head'
 
-import Head from '@components/Head'
-import Nav from '@components/Nav'
+import Header from '@components/Header'
 
 import ggArcade1 from '@images/apps/gg-arcade.jpg'
 import ggArcade2 from '@images/apps/gg-arcade2.jpg'
@@ -14,16 +13,14 @@ import pp1 from '@images/apps/pp.jpg'
 import pp2 from '@images/apps/pp2.jpg'
 
 const Apps: NextPage = () => {
-  const router = useRouter()
-
   return (
     <>
-      <Head title="Boris Grudinin - Apps" />
-      <Nav className={`page-${router.pathname.substring(1)}`} />
+      <Head>
+        <title>Boris Grudinin - Apps</title>
+      </Head>
 
-      <header className="page-header">
-        <h1>Apps</h1>
-      </header>
+      <Header text="Apps" />
+
       <article className="page-content">
         <h2>GG Arcade <span>React Native, Azure Playfab</span></h2>
         <span className="date">2020</span>
