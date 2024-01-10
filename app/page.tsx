@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Metadata, NextPage } from 'next';
+import { NextPage } from 'next';
 import { format } from 'date-fns';
 
 import Header from '@components/Header';
@@ -8,12 +8,6 @@ import Header from '@components/Header';
 import githubLogo from '@images/github.svg';
 
 const getLastUpdated = async () => format(new Date(), "p 'on' PP");
-
-export const metadata: Metadata = {
-  title: {
-    absolute: 'Boris Grudinin',
-  },
-}
 
 const Home: NextPage = async () => {
   const lastUpdated = await getLastUpdated();

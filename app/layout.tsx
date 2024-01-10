@@ -17,7 +17,10 @@ type layoutProps = {
 }
 
 export const metadata: Metadata = {
-  title: 'Boris Grudinin - %s',
+  title: {
+    template: 'Boris Grudinin - %s',
+    default: 'Boris Grudinin'
+  },
   description: 'Boris Grudinin - Digital Interaction Specialist',
 }
 

@@ -7,6 +7,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+  images: {
+    unoptimized: true,
+  },
   basePath: "/work",
   assetPrefix: "/work",
   trailingSlash: true
