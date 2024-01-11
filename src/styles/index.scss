@@ -1,8 +1,6 @@
-@import 'vendor/normalize/_import-now.scss';
+@forward 'vendor/normalize/_import-now.scss';
 
-@import './variables.scss';
-@import './base.scss';
-@import './layout.scss';
-@import './mixins.scss';
-@import './pages.scss';
-@import './typography.scss';
+@forward './variables.scss';
+@forward './mixins.scss';
+@forward './pages.scss';
+@forward './typography.scss';

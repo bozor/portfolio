@@ -1,9 +1,9 @@
-@import './mixins.scss';
-@import './variables.scss';
+@use 'mixins' as *;
+@use 'variables' as *;
 
 $_width: 1102px;
 
-.layout-outer {
+.outer {
   position: relative;
 
   @include for-md {
@@ -26,12 +26,12 @@ $_width: 1102px;
     width: 100%;
     top: $margin;
     bottom: $margin;
-    border-top: $site-border-thickness solid rgba($_goldenrod, 0.9);
-    border-bottom: $site-border-thickness solid rgba($_goldenrod, 0.9);
+    border-top: $site-border-thickness solid rgba($goldenrod, 0.9);
+    border-bottom: $site-border-thickness solid rgba($goldenrod, 0.9);
 
     @include for-md {
       width: calc(100% - calc(calc(#{$margin} + #{$site-border-thickness}) * 2));
-      border: $site-border-thickness solid rgba($_goldenrod, 0.9);
+      border: $site-border-thickness solid rgba($goldenrod, 0.9);
     }
 
     @include for-lg {
@@ -46,7 +46,7 @@ $_width: 1102px;
   }
 }
 
-.layout-inner {
+.inner {
   position: relative;
   padding: $margin;
   z-index: 1;
@@ -66,7 +66,7 @@ $_width: 1102px;
     display: block;
     width: calc(100% - calc(#{$margin} * 2));
     height: $site-border-thickness;
-    background: rgba($_goldenrod, 0.8);
+    background: rgba($goldenrod, 0.8);
     bottom: $margin;
 
     @include for-md {
@@ -86,7 +86,7 @@ $_width: 1102px;
   }
 }
 
-.layout-content {
+.content {
   padding: calc(#{$margin} * 3 + #{$site-border-thickness}) 0 $margin;
 
   @include for-md {
