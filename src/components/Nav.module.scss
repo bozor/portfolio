@@ -63,7 +63,7 @@
     }
 
     &.active {
-      @include nav-over-active();
+      @include nav-over-active;
     }
 
     &:hover {
