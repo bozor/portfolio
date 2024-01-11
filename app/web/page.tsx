@@ -25,21 +25,22 @@ const Web: NextPage = () => {
       <Header text="Web" />
 
       <article className="page-content">
-        <h2>International Rugby Experience <span>React, Typescript, Framer Motion</span></h2>
+        <h2>International Rugby Experience <span>React, Typescript, Framer Motion, Electron</span></h2>
         <span className="date">2021-2023</span>
         <a href="https://www.internationalrugbyexperience.com/" target="_blank" rel="noreferrer"><Image src={ire} alt='' width={0} height={0} /></a>
         <div className="description">
-          <p><strong>International Rugby Experience</strong> is a multi storey, interactive rugby museum in Limerick, Ireland.</p>
+          <p><strong>International Rugby Experience</strong> is a multi storey, interactive rugby museum in Limerick, Ireland. I worked on 10 different touch screen web apps.</p>
+          <p></p>
         </div>
 
-        <h2>Nike Bra & Legging Finder <span>React, Typescript, Framer Motion</span></h2>
-        <span className="date">2023</span>
+        <h2>Nike Bra & Legging Finder <span>React, Typescript, Framer Motion, Electron</span></h2>
+        <span className="date">2023-2024</span>
         <Image src={nikeBraLegging} alt='' width={0} height={0} />
         <div className="description">
           <p><strong>Nike Bra & Legging Finder</strong> is a physical installation in Nike Town London.</p>
         </div>
 
-        <h2>Nike Running Shoe Finder <span>React, Typescript, Framer Motion</span></h2>
+        <h2>Nike Running Shoe Finder <span>React, Typescript, Framer Motion, Electron</span></h2>
         <span className="date">2023</span>
         <Image src={nikeRunningShoe} alt='' width={0} height={0} />
         <div className="description">
