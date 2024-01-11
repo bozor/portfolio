@@ -32,6 +32,10 @@ h2 {
     font-size: 0.8rem;
     margin: -9px 0 -6px;
   }
+
+  &.subtitle {
+    margin-top: -10px;
+  }
 }
 
 h3 {
@@ -69,6 +73,7 @@ h3 {
 
 h4 {
   font-size: $font-size-1;
+  line-height: 1.45em;
   margin-bottom: $padding-sm;
 }
 

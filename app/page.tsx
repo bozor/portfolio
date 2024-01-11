@@ -92,10 +92,10 @@ const Home: NextPage = async () => {
   
   return (
     <>
-      <Header text="Boris Grudinin" />
+      <Header text="Boris Grudinin" subtitle="A highly skilled digital interaction specialist with two decades of experience" />
 
       <article className="page-content">
-        <p className="intro">I am a highly skilled digital interaction specialist with over a decade of experience. In this time, I have been able to work on a wide variety of different projects in varied environments which have helped me to broaden my skill set. I am just as comfortable prototyping ideas in Adobe XD as I am turning them into web and mobile apps in Visual Studio Code. I always look to challenge myself and to stay up to date with the latest trends and technologies in order to integrate them into my solutions.</p>
+        <p className="intro">I have been able to work on a wide array of different projects in varied environments which have helped me to broaden my skill set. I am just as comfortable prototyping ideas in Adobe XD as I am turning them into web and mobile apps in Visual Studio Code. I always look to challenge myself and to stay up to date with the latest trends and technologies in order to integrate them into my solutions.</p>
         
         <h2>Experience</h2>
 
