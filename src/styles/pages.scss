@@ -1,3 +1,6 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
 .role {
   position: relative;
   margin-bottom: $padding-lg;
@@ -42,7 +45,7 @@
 .date {
   position: relative;
   display: inline-block;
-  color: $_mako;
+  color: $mako;
   font-size: $font-size-0;
   font-weight: 700;
   letter-spacing: -0.05em;
@@ -52,7 +55,7 @@
     position: absolute;
     content: '';
     display: block;
-    background: rgba($_pomegranate, 0.35);
+    background: rgba($pomegranate, 0.35);
     top: 50%;
     left: 6px;
     width: 100%;
@@ -71,7 +74,7 @@
     position: relative;
     display: inline-block;
     transform: translate(9px, -14px);
-    background: $_white;
+    background: $white;
     padding: $padding-xxs $padding-xs;
     margin-right: 30px;
     box-shadow: -2px -2px 6px rgba(0, 0, 0, 0.05);

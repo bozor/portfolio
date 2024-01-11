@@ -4,6 +4,8 @@ import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 
+import s from './Nav.module.scss';
+
 const links = [
   { href: '/', label: 'about' },
   { href: '/web', label: 'web' },
@@ -15,14 +17,19 @@ const Nav = () => {
   const pathname = usePathname();
   
   return (
-    <nav className={`layout-nav page-${pathname.substring(1).slice(0,-1) || 'about'}`}>
-      {links.map(({href, label }) => (
-        <span key={`nav-link-${href}-${label}`} className={`nav-item nav-${label}`}>
-          <Link href={href}>
-            {label}
-          </Link>
-        </span>
-      ))}
+    <nav className={s.wrap}>
+      {links.map(({href, label }) => {
+        const path = pathname.substring(1).slice(0,-1) || 'about'
+        const isActive = label === path;
+
+        return (
+          <span key={`nav-link-${href}-${label}`} className={`${s.item} ${isActive ? s.active : ''}`}>
+            <Link href={href}>
+              {label}
+            </Link>
+          </span>
+        )
+      })}
     </nav>
   )
 }

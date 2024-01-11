@@ -1,0 +1,95 @@
+@import '../styles/mixins.scss';
+@import '../styles/variables.scss';
+
+.wrap {
+  display: flex;
+  z-index: 10;
+  position: absolute;
+  width: calc(100% - calc(calc(#{$margin} * 2)));
+  top: calc(#{$margin} * 1.5 + #{$site-border-thickness});
+  height: 34px;
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    background: rgba($alto, 0.65);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $nav-border-thickness;
+  }
+
+  @include for-md {
+    width: calc(100% - calc(calc(#{$margin} * 2) + calc(#{$site-border-thickness} * 2)));
+    height: 40px;
+  }
+
+  @include for-lg {
+    position: fixed;
+    width: $nav-width-lg;
+    height: calc(100% - calc(calc(#{$margin-lg} * 4) + calc(#{$site-border-thickness} * 2)));
+    top: calc(calc(#{$margin-lg} * 2) + #{$site-border-thickness});
+    margin-left: calc(calc(#{$nav-width-lg} + #{$margin-lg}) * -1);
+
+    &:after {
+      top: 0;
+      right: 0;
+      left: auto;
+      bottom: auto;
+      height: 100%;
+      width: $nav-border-thickness;
+    }
+  }
+
+  @include for-lg {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .item {
+    position: relative;
+    margin-bottom: 0;
+    margin-right: $padding-md;
+    border-bottom: $nav-border-thickness solid transparent;
+    transition: 150ms all;
+    z-index: 1;
+
+    @include for-lg {
+      margin-right: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+      border-right: $nav-border-thickness solid transparent;
+    }
+
+    &.active {
+      @include nav-over-active();
+    }
+
+    &:hover {
+      border-right-color: $pomegranate;
+
+      a {
+        color: $mako;
+        opacity: 1;
+      }
+    }
+
+    a {
+      display: inline-block;
+      font-size: $font-size-1;
+      font-weight: 300;
+      color: rgba($bandicoot, 0.75);
+      text-decoration: none;
+      padding-bottom: 4px;
+
+      @include for-lg {
+        padding: $padding-sm 0;
+      }
+
+      &:active {
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  }
+}

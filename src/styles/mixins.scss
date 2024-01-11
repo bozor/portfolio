@@ -1,6 +1,8 @@
+@use 'variables' as *;
+
 @mixin nav-over-active() {
-  border-bottom-color: $_pomegranate;
-  border-right-color: $_pomegranate;
+  border-bottom-color: $pomegranate;
+  border-right-color: $pomegranate;
   padding-bottom: 4px;
 
   @include for-lg {
@@ -8,20 +10,28 @@
   }
 
   a {
-    color: $_mako;
+    color: $mako;
     font-weight: 500;
   }
 }
 
 @mixin for-sm {
-  @media (max-width: 549px) { @content; }
+  @media (max-width: 549px) {
+    @content;
+  }
 }
 @mixin for-md {
-  @media (min-width: 550px) { @content; }
+  @media (min-width: 550px) {
+    @content;
+  }
 }
 @mixin for-lg {
-  @media (min-width: 850px) { @content; }
+  @media (min-width: 850px) {
+    @content;
+  }
 }
 @mixin for-xl {
-  @media (min-width: 1100px) { @content; }
+  @media (min-width: 1100px) {
+    @content;
+  }
 }

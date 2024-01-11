@@ -3,8 +3,9 @@ import { Roboto_Mono } from 'next/font/google';
 import { Metadata } from 'next';
 import { GoogleTagManager } from '@next/third-parties/google';
 
-import '@styles/index.scss';
 import Nav from '@components/Nav';
+import s from '@styles/layout.module.scss';
+import '@styles/index.scss';
 
 const robotoMono = Roboto_Mono({
   weight: ['300', '500', '700'],
@@ -33,9 +34,9 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${robotoMono.className} layout-outer`}>
-        <div className="layout-inner">
-          <section className="layout-content">
+      <body className={`${robotoMono.className} ${s.outer}`}>
+        <div className={s.inner}>
+          <section className={s.content}>
             <Nav />
             {children}
           </section>

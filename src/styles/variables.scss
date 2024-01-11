@@ -7,16 +7,19 @@ $padding-lg: 1.75rem;
 $padding-xl: 2.5rem;
 $padding-xxl: 4rem;
 
+$margin: 24px;
+$margin-lg: 40px;
+
 // colour variables
-$_white: #fff;
-$_bone: #f4f4f4;
-$_alto: #dcdcdc;
-$_bandicoot: #7b7b6f;
-$_ironside: #55545d;
-$_mako: #313339;
-$_goldenrod: #f9cc66;
-$_puerto-rico: #4fcfbd;
-$_pomegranate: #f55026;
+$white: #fff;
+$bone: #f4f4f4;
+$alto: #dcdcdc;
+$bandicoot: #7b7b6f;
+$ironside: #55545d;
+$mako: #313339;
+$goldenrod: #f9cc66;
+$puerto-rico: #4fcfbd;
+$pomegranate: #f55026;
 
 // font sizes
 $font-size-0: 0.77em;
@@ -30,3 +33,4 @@ $font-size-6: 4em;
 // other sizes
 $site-border-thickness: 18px;
 $nav-border-thickness: calc(#{$site-border-thickness} / 3);
+$nav-width-lg: 110px;

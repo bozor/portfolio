@@ -1,4 +1,5 @@
-@import './mixins.scss';
+@use 'mixins' as *;
+@use 'variables' as *;
 
 h1,
 h2,
@@ -11,7 +12,7 @@ h6 {
 }
 
 h1 {
-  color: darken($_goldenrod, 10%);
+  color: darken($goldenrod, 10%);
   font-size: $font-size-5;
   margin-bottom: $padding-md;
   letter-spacing: -0.04em;
@@ -19,14 +20,14 @@ h1 {
 
 h2 {
   font-size: $font-size-3;
-  color: $_mako;
+  color: $mako;
   line-height: 1.3em;
   margin-bottom: $padding-md;
   letter-spacing: -0.04em;
 
   > span {
     display: block;
-    color: $_bandicoot;
+    color: $bandicoot;
     font-weight: 300;
     font-size: 0.8rem;
     margin: -9px 0 -6px;
@@ -35,14 +36,14 @@ h2 {
 
 h3 {
   font-size: $font-size-2;
-  color: $_mako;
+  color: $mako;
   line-height: 1.3em;
   letter-spacing: -0.04em;
   margin-bottom: -3px;
-  
+
   > span {
     display: block;
-    color: $_bandicoot;
+    color: $bandicoot;
     font-weight: 300;
     font-size: $font-size-0;
   }
@@ -51,12 +52,12 @@ h3 {
     position: relative;
     display: inline-block;
     font-weight: 500;
-    
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       display: block;
-      background: rgba($_alto, 0.75);
+      background: rgba($alto, 0.75);
       top: 40%;
       left: 9px;
       width: 100%;
@@ -79,7 +80,7 @@ h5 {
 p {
   font-weight: 300;
   font-size: $font-size-0;
-  color: $_ironside;
+  color: $ironside;
   line-height: 1.45em;
   margin: 0 0 $padding-lg;
 

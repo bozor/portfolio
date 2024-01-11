@@ -1,4 +1,4 @@
-@import './mixins.scss';
+@use 'variables' as *;
 
 html {
   font-family: 'Roboto Mono', monospace;
@@ -21,7 +21,7 @@ html {
 
 a {
   transition: 150ms all;
-  color: $_puerto-rico;
+  color: $puerto-rico;
   font-weight: 700;
 
   &:hover {

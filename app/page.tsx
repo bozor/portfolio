@@ -98,7 +98,7 @@ const Home: NextPage = async () => {
         </section>
 
         <section className="credits">
-          <p className="small">🖥️ Built using Next.js and SASS. Automatically deployed at {lastUpdated} using <Image src={githubLogo} alt="github" width={14} height={14} /> actions.</p>
+          <p className="small">🖥️ Built using Next.js and SASS. Automatically deployed at {lastUpdated} using <Image src={githubLogo} alt="github" width={12} height={12} /> actions.</p>
         </section>
       </article>
     </>

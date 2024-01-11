@@ -4,7 +4,7 @@ type HeaderProps = {
 
 const Header = ({text} : HeaderProps) => {
   return (
-    <header className="page-header">
+    <header>
       <h1>{text}</h1>
     </header>
   )
