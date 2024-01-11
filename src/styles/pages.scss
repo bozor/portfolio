@@ -1,19 +1,6 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-.role {
-  position: relative;
-  margin-bottom: $padding-lg;
-
-  p {
-    margin: 0;
-
-    & + p {
-      padding-top: $padding-sm;
-    }
-  }
-}
-
 .skills {
   margin-top: -$padding-sm;
 

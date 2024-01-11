@@ -1,0 +1,14 @@
+@use '../styles/variables.scss' as *;
+
+.wrap {
+  position: relative;
+  margin-bottom: $padding-lg;
+
+  p {
+    margin: 0;
+
+    & + p {
+      padding-top: $padding-sm;
+    }
+  }
+}
