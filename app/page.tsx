@@ -15,7 +15,7 @@ const roles = [
     dates: 'Sep 2021 - Current',
     description: [
       'I developed a number of projects which ranged from video based and AR microsites for Nike through to an NPM component library which I then used in a series of web apps for a large scale interactive rugby installation in Ireland.',
-      'I used React, Typescript, SASS, Framer Motion, Storybook and Electron as well as a whole host of other libraries. Our team used kanban boards to keep on top of tasks and help project managers see what was being worked on.'
+      'I used React, Typescript, Framer Motion, Storybook and Electron as well as a whole host of other libraries. Our team used kanban boards to keep on top of tasks to help project managers and other stakeholders see what was being worked on.'
     ]
   },
   {
