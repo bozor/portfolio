@@ -14,8 +14,8 @@ const roles = [
     location: 'OMM, London, UK',
     dates: 'Sep 2021 - Current',
     description: [
-      'I developed a number of projects which ranged from video based and AR microsites for Nike through to an NPM component library which I then used in a series of web apps for a large scale interactive rugby installation in Ireland.',
-      'I used React, Typescript, Framer Motion, Storybook and Electron as well as a whole host of other libraries. Our team used kanban boards to keep on top of tasks to help project managers and other stakeholders see what was being worked on.'
+      'I was part of a small team that developed a number of projects which ranged from video based and AR microsites for Nike through to a series of web apps for a large scale interactive rugby museum in Ireland.',
+      'I used React, Typescript, Framer Motion, Next.js, Storybook and Electron as well as a whole host of other libraries. Our team used kanban boards to keep on top of tasks to help project managers and other stakeholders see what was being worked on.'
     ]
   },
   {
@@ -103,7 +103,7 @@ const Home: NextPage = async () => {
 
         <section className="skills">
           <h2>Skills</h2>
-          <p>Javascript (React, React-Native, Framer Motion, Typescript, Storybook), HTML (HTML5), CSS (SASS, Less, CSS Modules), Adobe CC (Illustrator, InDesign, XD, Photoshop), Figma, Git Version Control, Android UI Development.</p>
+          <p>Javascript (React, React-Native, Framer Motion, Next.js, Typescript, Storybook), HTML (HTML5), CSS (SASS, Less, CSS Modules), Adobe CC (Illustrator, InDesign, XD, Photoshop), Figma, Git Version Control, Android UI Development.</p>
         </section>
 
         <section className="credits">
