@@ -25,6 +25,7 @@ jobs:
         Host prod
           HostName $SSH_HOST
           User $SSH_USER
+          Port $SSH_PORT
           IdentityFile ~/.ssh/prod.key
           StrictHostKeyChecking no
         END
