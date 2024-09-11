@@ -19,40 +19,51 @@ jobs:
         node-version: 21
         cache: 'npm'
 
-    - name: Configure SSH
-      run: |
-        mkdir -p ~/.ssh/
-        ls -l
-        echo "$SSH_KEY" > ~/.ssh/prod.key
-        chmod 600 ~/.ssh/prod.key
-        cat >>~/.ssh/config <<END
-        Host prod
-          HostName $SSH_HOST
-          User $SSH_USER
-          Port $SSH_PORT
-          IdentityFile ~/.ssh/prod.key
-          StrictHostKeyChecking no
-          PreferredAuthentications publickey
-        END
-      env:
-        SSH_USER: ${{ secrets.USERNAME }}
-        SSH_KEY: ${{ secrets.KEY }}
-        SSH_HOST: ${{ secrets.HOST }}
-        SSH_PORT: ${{ secrets.PORT }}
+    # - name: Configure SSH
+    #   run: |
+    #     mkdir -p ~/.ssh/
+    #     ls -l
+    #     echo "$SSH_KEY" > ~/.ssh/prod.key
+    #     chmod 600 ~/.ssh/prod.key
+    #     cat >>~/.ssh/config <<END
+    #     Host prod
+    #       HostName $SSH_HOST
+    #       User $SSH_USER
+    #       Port $SSH_PORT
+    #       IdentityFile ~/.ssh/prod.key
+    #       StrictHostKeyChecking no
+    #       PreferredAuthentications publickey
+    #     END
+    #   env:
+    #     SSH_USER: ${{ secrets.USERNAME }}
+    #     SSH_KEY: ${{ secrets.KEY }}
+    #     SSH_HOST: ${{ secrets.HOST }}
+    #     SSH_PORT: ${{ secrets.PORT }}
 
+    - name: Install SSH Key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.KEY }}
+
+    - name: Adding Known Hosts
+      run: ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+      
     - run: npm i
     - run: npm run build
-    - run: ssh prod 'ls -l'
-    - run: ssh prod 'rm -rf www/work/*; exit;'
+    # - run: ssh prod 'ls -l'
+    # - run: ssh prod 'rm -rf www/work/*; exit;'
 
-    - name: Copy new stuff
-      uses: appleboy/scp-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
-        port: ${{ secrets.PORT }}
-        source: "out/"
-        target: "www/work/"
-        debug: true
-        strip_components: 1
+    - name: Deploy with rsync
+      run: rsync -avz out/ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:www/work/
+  
+    # - name: Copy new stuff
+    #   uses: appleboy/scp-action@master
+    #   with:
+    #     host: ${{ secrets.HOST }}
+    #     username: ${{ secrets.USERNAME }}
+    #     key: ${{ secrets.KEY }}
+    #     port: ${{ secrets.PORT }}
+    #     source: "out/"
+    #     target: "www/work/"
+    #     debug: true
+    #     strip_components: 1
