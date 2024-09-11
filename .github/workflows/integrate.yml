@@ -16,18 +16,27 @@ jobs:
     - name: Setup node
       uses: actions/setup-node@v4
 
+    - name: Configure SSH
+      run: |
+        mkdir -p ~/.ssh/
+        echo "$SSH_KEY" > ~/.ssh/prod.key
+        chmod 600 ~/.ssh/prod.key
+        cat >>~/.ssh/config <<END
+        Host prod
+          HostName $SSH_HOST
+          User $SSH_USER
+          IdentityFile ~/.ssh/prod.key
+          StrictHostKeyChecking no
+        END
+      env:
+        SSH_USER: ${{ secrets.USERNAME }}
+        SSH_KEY: ${{ secrets.KEY }}
+        SSH_HOST: ${{ secrets.HOST }}
+        SSH_PORT: ${{ secrets.PORT }}
+
     - run: npm i
     - run: npm run build
-
-    - name: Delete old stuff
-      uses: appleboy/ssh-action@v0.1.3
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        port: ${{ secrets.PORT }}
-        key: ${{ secrets.KEY }}
-        debug: true
-        script: rm -rf www/work/*; exit;
+    - run: ssh prod 'rm -rf www/work/*; exit;'
 
     - name: Copy new stuff
       uses: appleboy/scp-action@master
