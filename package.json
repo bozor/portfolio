@@ -22,7 +22,8 @@
     "react-dom": "18.2.0",
     "sass": "^1.69.7",
     "sharp": "^0.33.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "use-scramble": "^2.2.15"
   },
   "devDependencies": {
     "@types/node": "20.10.7",
