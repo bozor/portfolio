@@ -36,6 +36,7 @@ jobs:
 
     - run: npm i
     - run: npm run build
+    - run: ssh prod 'ls -l'
     - run: ssh prod 'rm -rf www/work/*; exit;'
 
     - name: Copy new stuff
