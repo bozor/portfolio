@@ -26,6 +26,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.KEY }}
+        debug: true
         script: rm -rf www/work/*; exit;
 
     - name: Copy new stuff
