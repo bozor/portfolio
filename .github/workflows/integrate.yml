@@ -15,9 +15,6 @@ jobs:
 
     - name: Setup node
       uses: actions/setup-node@v4
-      with:
-        node-version: 21
-        cache: 'npm'
 
     # - name: Configure SSH
     #   run: |
