@@ -3,16 +3,8 @@
 @mixin nav-over-active {
   border-bottom-color: $pomegranate;
   border-right-color: $pomegranate;
-  padding-bottom: 4px;
-
-  @include for-lg {
-    padding-bottom: 0;
-  }
-
-  a {
-    color: $mako;
-    font-weight: 500;
-  }
+  color: $mako;
+  font-weight: 500;
 }
 
 @mixin for-sm {
