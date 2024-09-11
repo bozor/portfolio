@@ -22,6 +22,7 @@ jobs:
     - name: Configure SSH
       run: |
         mkdir -p ~/.ssh/
+        ls -l
         echo "$SSH_KEY" > ~/.ssh/prod.key
         chmod 600 ~/.ssh/prod.key
         cat >>~/.ssh/config <<END
