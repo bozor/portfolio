@@ -23,11 +23,9 @@ const Nav = () => {
         const isActive = label === path;
 
         return (
-          <span key={`nav-link-${href}-${label}`} className={`${s.item} ${isActive ? s.active : ''}`}>
-            <Link href={href}>
-              {label}
-            </Link>
-          </span>
+          <Link key={`nav-link-${href}-${label}`} className={`${s.item} ${isActive ? s.active : ''}`} href={href}>
+            {label}
+          </Link>
         )
       })}
     </nav>
