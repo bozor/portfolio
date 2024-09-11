@@ -43,7 +43,6 @@ jobs:
         key: ${{ secrets.KEY }}
         known_hosts: 'a'
 
-    - name: Adding Known Hosts
     - run: ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
       
     - run: npm i
