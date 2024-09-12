@@ -49,9 +49,6 @@ jobs:
     - run: npm run build
     # - run: ssh prod 'ls -l'
     # - run: ssh prod 'rm -rf www/work/*; exit;'
-
-    # - name: Deploy with rsync
-    #   run: rsync -avz out/ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:www/work/
   
     - name: Copy new stuff
       uses: SamKirkland/web-deploy@v1
