@@ -14,8 +14,8 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "es2015",
+    "moduleResolution": "bundler",
     "paths": {
       "@/*": [
         "./*"
@@ -31,6 +31,9 @@
       ],
       "@next/third-parties/google": [
         "./node_modules/@next/third-parties/dist/google"
+      ],
+      "lenis/react": [
+        "./node_modules/lenis/dist/lenis-react.d.tss"
       ]
     },
     "incremental": true,
