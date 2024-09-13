@@ -2,7 +2,6 @@ import React from 'react';
 import { Roboto_Mono } from 'next/font/google';
 import { Metadata } from 'next';
 import { GoogleTagManager } from '@next/third-parties/google';
-import { SmoothScrollbar } from '@14islands/r3f-scroll-rig';
 
 import Nav from '@components/Nav';
 
