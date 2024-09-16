@@ -43,3 +43,27 @@
     }
   }
 }
+
+.topBlur,
+.bottomBlur {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 34px;
+  backdrop-filter: blur(4px) grayscale(100%);
+  z-index: 10;
+
+  @include for-md {
+    height: 48px;
+  }
+}
+
+.topBlur {
+  top: 0;
+  mask: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.bottomBlur {
+  bottom: 0;
+  mask: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}

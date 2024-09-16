@@ -8,7 +8,7 @@ type LayoutProps = {
 
 const Layout = ({ children } : LayoutProps) => {
   return (
-    <main className={s.inner}>
+    <main className={s.container}>
       <section className={s.content}>
         <Nav />
         {children}

@@ -38,9 +38,11 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={`${robotoMono.className} ${s.outer}`}>
+        <div className={s.topBlur}></div>
         <Layout>
           {children}
         </Layout>
+        <div className={s.bottomBlur}></div>
       </body>
       <GoogleTagManager gtmId={'G-95677VDEHT'} />
     </html>
