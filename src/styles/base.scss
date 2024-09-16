@@ -21,13 +21,21 @@ html {
 }
 
 a {
-  transition: 150ms all;
+  transition: 200ms all ease-in-out;
   color: $puerto-rico;
   font-weight: 700;
+
+  img {
+    transition: 200ms all ease-in-out;
+  }
 
   &:hover {
     opacity: 0.65;
     text-decoration: none;
+
+    img {
+      filter: grayscale(50%);
+    }
   }
 }
 
