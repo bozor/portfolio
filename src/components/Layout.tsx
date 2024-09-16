@@ -1,15 +1,18 @@
-import Nav from './Nav'
+import Nav from './Nav';
+
+import s from './Layout.module.scss'
 
 type LayoutProps = {
-  className: string
   children: React.ReactNode
 }
 
-const Layout = ({ className, children } : LayoutProps) => {
+const Layout = ({ children } : LayoutProps) => {
   return (
-    <main className={className}>
-      <Nav />
-      {children}
+    <main className={s.inner}>
+      <section className={s.content}>
+        <Nav />
+        {children}
+      </section>
     </main>
   )
 }

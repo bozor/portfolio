@@ -1,0 +1,59 @@
+@use '../styles/variables.scss' as *;
+@use '../styles/mixins.scss' as *;
+
+.inner {
+  position: relative;
+  padding: $margin;
+  z-index: 1;
+
+  @include for-md {
+    padding: $margin $site-border-thickness;
+  }
+
+  @include for-lg {
+    padding: calc(#{$margin-lg} + #{$site-border-thickness});
+    padding-right: $margin-lg;
+  }
+
+  &:after {
+    position: fixed;
+    content: '';
+    display: block;
+    width: calc(100% - calc(#{$margin} * 2));
+    height: $site-border-thickness;
+    background: rgba($goldenrod, 0.8);
+    bottom: $margin;
+
+    @include for-md {
+      margin-left: $margin;
+      width: calc(100% - calc(#{$margin} * 4) - calc(#{$site-border-thickness} * 2));
+    }
+
+    @include for-lg {
+      margin-left: 0;
+      width: calc(100% - calc(#{$margin-lg} * 4) - calc(#{$site-border-thickness} * 2));
+      bottom: $margin-lg;
+    }
+
+    @include for-xl {
+      width: calc(#{$site-width} - calc(#{$margin-lg} * 2));
+    }
+  }
+}
+
+.content {
+  padding: calc(#{$margin} * 3 + #{$site-border-thickness}) 0 $margin;
+
+  @include for-md {
+    padding-left: $margin;
+    padding-right: $margin;
+  }
+
+  @include for-lg {
+    padding: $margin-lg 0 0 calc(#{$nav-width-lg} + #{$margin-lg});
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

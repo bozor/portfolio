@@ -8,6 +8,7 @@ import Nav from '@components/Nav';
 import s from '@styles/layout.module.scss';
 
 import '@styles/index.scss';
+import Layout from '@/src/components/Layout';
 
 const robotoMono = Roboto_Mono({
   weight: ['300', '500', '700'],
@@ -37,13 +38,9 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={`${robotoMono.className} ${s.outer}`}>
-
-        <div className={s.inner}>
-          <section className={s.content}>
-            <Nav />
-            {children}
-          </section>
-        </div>
+        <Layout>
+          {children}
+        </Layout>
       </body>
       <GoogleTagManager gtmId={'G-95677VDEHT'} />
     </html>
