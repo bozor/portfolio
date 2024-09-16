@@ -31,7 +31,7 @@
 
     @include for-lg {
       margin-left: 0;
-      width: calc(100% - calc(#{$margin-lg} * 4) - calc(#{$site-border-thickness} * 2));
+      width: calc(100% - calc(#{$margin-lg} * 4) - $site-border-thickness);
       bottom: $margin-lg;
     }
 
