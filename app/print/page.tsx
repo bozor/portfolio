@@ -1,7 +1,8 @@
 import React from 'react'
-import Image from 'next/image'
 import { Metadata, NextPage } from 'next'
+
 import Header from '@components/Header'
+import Image from '@components/Image'
 
 import bpLogo from '@images/blinkpool/logo.png'
 import bpCards from "@images/blinkpool/business-cards.jpg"
@@ -33,44 +34,44 @@ const Print: NextPage = () => {
       <article className="page-content">
         <h2>Blinkpool</h2>
         <span className="date">2016 - 2019</span>
-        <Image src={bpLogo} alt="blinkpool logo" width={0} height={0} />
+        <Image src={bpLogo} alt="blinkpool logo" />
         <p>Logo for a UK based e-sports gambling company</p>
         
-        <Image src={bpCards} alt="blinkpool business cards" width={0} height={0} />
+        <Image src={bpCards} alt="blinkpool business cards" />
         <p>Company business cards and headed paper</p>
 
-        <Image src={bpBillboard} alt="blinkpool branding" width={0} height={0} />
+        <Image src={bpBillboard} alt="blinkpool branding" />
         <p>Outdoor advertising during a major esports event in Birmingham</p>
 
-        <Image src={bpBrand2} alt="blinkpool branding" width={0} height={0} />
-        <Image src={bpBrand1} alt="blinkpool branding" width={0} height={0} />
-        <Image src={bpBrand4} alt="blinkpool branding" width={0} height={0} />
-        <Image src={bpBrand3} alt="blinkpool branding" width={0} height={0} />
+        <Image src={bpBrand2} alt="blinkpool branding" />
+        <Image src={bpBrand1} alt="blinkpool branding" />
+        <Image src={bpBrand4} alt="blinkpool branding" />
+        <Image src={bpBrand3} alt="blinkpool branding" />
         <p>A selection of Blinkpool branded collateral and clothing</p>
 
         <h2>Fianium</h2>
         <span className="date">2003 - 2016</span>
-        <Image src={fianiumDisplay3} alt="fianium backlit poster" width={0} height={0} />
+        <Image src={fianiumDisplay3} alt="fianium backlit poster" />
         <p>Large, backlit tradeshow poster</p>
-        <Image src={fianiumDisplay4} alt="fianium display" width={0} height={0} />
-        <Image src={fianiumDisplays} alt="fianium display design" width={0} height={0} />
+        <Image src={fianiumDisplay4} alt="fianium display" />
+        <Image src={fianiumDisplays} alt="fianium display design" />
         <p>A selection of tradeshow display stands</p>
-        <Image src={fianiumLogoWords} alt="fianium logo word collage" width={0} height={0} />
+        <Image src={fianiumLogoWords} alt="fianium logo word collage" />
         <p>Stylised Fianium logo</p>
-        <Image src={fianiumLogo} alt="fianium logo" width={0} height={0} />
+        <Image src={fianiumLogo} alt="fianium logo" />
         <p>Fianium logo and various print collateral</p>
-        <Image src={fianiumProductPhotos} alt="fianium product photos" width={0} height={0} />
+        <Image src={fianiumProductPhotos} alt="fianium product photos" />
         <p>Product photography</p>
-        <Image src={fianiumPhotos} alt="fianium photos" width={0} height={0} />
+        <Image src={fianiumPhotos} alt="fianium photos" />
         <p>General photography</p>
 
         <h2>Various Projects</h2>
         <span className="date">2011 - Current</span>
-        <Image src={eleri} alt="eleri" width={0} height={0} />
+        <Image src={eleri} alt="eleri" />
         <p>Logo for a clothing brand for made-to-order womenswear</p>
-        <Image src={funk} alt="funk at the forge logo" width={0} height={0} />
+        <Image src={funk} alt="funk at the forge logo" />
         <p>Logo for a jazz, funk and blues night in Camden, London</p>
-        <Image src={nexus} alt='' width={0} height={0} />
+        <Image src={nexus} alt='' />
         <p>Logo for <a href="http://www.nexusmods.com" target="_blank" rel="noreferrer">www.nexusmods.com</a></p>
       </article>
     </>
