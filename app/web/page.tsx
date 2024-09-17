@@ -6,6 +6,7 @@ import Image from '@components/Image'
 
 import nikeBraLegging from '@images/web/nike-bra-legging.jpg'
 import nikeRunningShoe from '@images/web/nike-running-shoe-finder.jpg'
+import nikeRunningShoe2 from '@images/web/nike-running-shoe-finder2.jpg'
 import ire from '@images/web/ire.jpg'
 import bpDesktop from '@images/web/bp-desktop.jpg'
 import bpMobile from '@images/web/bp-mobile.jpg'
@@ -25,6 +26,13 @@ const Web: NextPage = () => {
       <Header text="Web" />
 
       <article className="page-content">
+        <h2>Nike Running Shoe Finder 2.0<span>React, Typescript, Framer Motion, Next.js</span></h2>
+        <span className="date">2024</span>
+        <a href="https://nikerunningshoefinder.com/" target="_blank" rel="noreferrer"><Image src={nikeRunningShoe2} alt='' /></a>
+        <div className="description">
+          <p><strong>Nike Running Shoe Finder 2.0</strong> is responsive website that is linked to from the running section of nike.com.</p>
+        </div>
+
         <h2>International Rugby Experience <span>React, Typescript, Framer Motion, Electron</span></h2>
         <span className="date">2021-2023</span>
         <a href="https://www.internationalrugbyexperience.com/" target="_blank" rel="noreferrer"><Image src={ire} alt='' /></a>
@@ -46,7 +54,7 @@ const Web: NextPage = () => {
         <Image src={nikeRunningShoe} alt='' />
         <div className="description">
           <p><strong>Nike Running Shoe Finder</strong> is a physical installation in Nike Town London. It takes centre stage in the running area of the store.</p>
-          <p>I worked on one of the phases of the project which involved stripping out the old <a href="https://chakra-ui.com/" target='_blank' rel="noreferrer">chakra ui</a> in favour of more ubiquitous css modules.</p>
+          <p>I worked on one of the phases of the project which involved stripping out the old <a href="https://chakra-ui.com/" target='_blank' rel="noreferrer">chakra ui</a> in favour of more ubiquitous css modules along with general code refactoring.</p>
         </div>
 
         <h2>Blinkpool <span>React, Meteor, Node</span></h2>
