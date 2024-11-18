@@ -4,17 +4,17 @@ import { NextPage } from 'next';
 import { format } from 'date-fns';
 
 import Header from '@components/Header';
+import Role from '@components/Role';
 
 import githubLogo from '@images/github.svg';
-import Role from '@/src/components/Role';
 
 const roles = [
   {
     title: 'Senior React Developer',
     location: 'OMM, London, UK',
-    dates: 'Sep 2021 - Current',
+    dates: 'Sep 2021 - Dec 2024',
     description: [
-      'I was part of a small team that developed a number of projects which ranged from video based and AR microsites for Nike through to a series of web apps for a large scale interactive rugby museum in Ireland.',
+      'I was part of a small dev team within a digital agency that worked on a number of projects which included video based and AR microsites for Nike, JBL, Tommy Hilfiger and Crocs through to a series of web apps for a large scale interactive rugby museum in Ireland.',
       'I used React, Typescript, Framer Motion, Next.js, Storybook and Electron as well as a whole host of other libraries. Our team used kanban boards to keep on top of tasks to help project managers and other stakeholders see what was being worked on.'
     ]
   },
@@ -54,10 +54,7 @@ const roles = [
   {
     title: 'UX Developer, Senior UX Developer',
     location: 'Volume Ltd, Wokingham, UK',
-    dates: 'Dec 2009 - Jun 2014',
-    description: [
-      'My remit covered the full lifecycle of a project from initial wireframes and information architecture through to visual design, implementation and testing of websites, web apps and mobile apps. I was able to work on projects for BP Castrol, Dell, GoDaddy, Oracle and Zebra Technologies, along with several charities and local good causes.'
-    ]
+    dates: 'Dec 2009 - Jun 2014'
   },
   {
     title: 'Web Designer',
@@ -103,7 +100,7 @@ const Home: NextPage = async () => {
 
         <section className="skills">
           <h2>Skills</h2>
-          <p>Javascript (React, React-Native, Framer Motion, Next.js, Typescript, Storybook), HTML (HTML5), CSS (SASS, Less, CSS Modules), Adobe CC (Illustrator, InDesign, XD, Photoshop), Figma, Git Version Control, Android UI Development.</p>
+          <p>Javascript (React, React-Native, Framer Motion, Next.js, Typescript, Storybook, Cypress), HTML (HTML5), CSS (SASS, Less, CSS Modules), Adobe CC (Illustrator, InDesign, XD, Photoshop), Figma, GraphQL, Git Version Control, Android UI Development.</p>
         </section>
 
         <section className="credits">
