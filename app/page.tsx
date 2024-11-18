@@ -100,7 +100,7 @@ const Home: NextPage = async () => {
 
         <section className="skills">
           <h2>Skills</h2>
-          <p>Javascript (React, React-Native, Framer Motion, Next.js, Typescript, Storybook, Cypress), HTML (HTML5), CSS (SASS, Less, CSS Modules), Adobe CC (Illustrator, InDesign, XD, Photoshop), Figma, GraphQL, Git Version Control, Android UI Development.</p>
+          <p>Javascript (React, React-Native, Framer Motion, Next.js, Typescript, Storybook, Electron, Cypress), HTML (HTML5), CSS (SASS, Less, CSS Modules), Adobe CC (Illustrator, InDesign, XD, Photoshop), Figma, GraphQL, Git Version Control, Android UI Development.</p>
         </section>
 
         <section className="credits">
