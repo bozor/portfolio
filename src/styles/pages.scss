@@ -1,7 +1,8 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-.skills {
+.skills,
+.clients {
   margin-top: -$padding-sm;
 
   &::before {

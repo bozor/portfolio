@@ -4,8 +4,10 @@ import { Metadata, NextPage } from 'next'
 import Header from '@components/Header'
 import Image from '@components/Image'
 
-import jbl from '@images/web/jbl.jpg'
+import omm from '@images/web/omm.jpg'
+import puma from '@images/web/puma-table.jpg'
 import nikeBraLegging from '@images/web/nike-bra-legging.jpg'
+import jbl from '@images/web/jbl.jpg'
 import nikeRunningShoe from '@images/web/nike-running-shoe-finder.jpg'
 import nikeRunningShoe2 from '@images/web/nike-running-shoe-finder2.jpg'
 import ire from '@images/web/ire.jpg'
@@ -27,17 +29,40 @@ const Web: NextPage = () => {
       <Header text="Web" />
 
       <article className="page-content">
-        <h2>JBL Challenge<span>React, Typescript, Framer Motion, PlayCanvas, Next.js, </span></h2>
+        <h2>OMM Agency Website<span>React, Typescript, Framer Motion, Next.js, Three.js, GraphQL</span></h2>
+        <span className="date">2024</span>
+        <a href="https://weareomm.com/" target="_blank" rel="noreferrer"><Image src={omm} alt='' /></a>
+        <div className="description">
+          <p>A major overhaul of the <strong>OMM</strong> agency website.</p>
+        </div>
+      
+        <h2>JBL Challenge<span>React, Typescript, Framer Motion, PlayCanvas, Next.js, Electron</span></h2>
         <span className="date">2024</span>
         <a href="https://challenge.jbl.com/" target="_blank" rel="noreferrer"><Image src={jbl} alt='' /></a>
         <div className="description">
           <p><strong>JBL Challenge</strong> is a campaign to promote one of JBL`s portable speakers. It is made up of a microsite, a web endless runner style game and a series of arcade style cabinets running the web game in various electronics stores around Germany.</p>
         </div>
+
         <h2>Nike Running Shoe Finder 2.0<span>React, Typescript, Framer Motion, Next.js, Three.js, GraphQL</span></h2>
         <span className="date">2024</span>
         <a href="https://nikerunningshoefinder.com/" target="_blank" rel="noreferrer"><Image src={nikeRunningShoe2} alt='' /></a>
         <div className="description">
           <p><strong>Nike Running Shoe Finder 2.0</strong> is responsive website that is linked to from the running section of nike.com and the Nike mobile app.</p>
+        </div>
+
+        <h2>PUMA Basketball Interactive Table<span>React, Typescript, Framer Motion, Next.js, Three.js, GraphQL</span></h2>
+        <span className="date">2023</span>
+        <Image src={puma} alt='' />
+        <div className="description">
+          <p><strong>PUMA Basketball Interactive Table</strong> is a large 86&ldquo; touchscreen that was installed in PUMA corporate Headquarters, Herzogenaurach, Germany.</p>
+          <p>It allows users to explore PUMA`s upcoming basketball shoe collection by placing rfid embedded sample shoes onto a sensor. The user is then able to use the large touchscreen display to play around with the shoe in 3D and get more information about it.</p>
+        </div>
+
+        <h2>Nike Bra &amp; Legging Finder <span>React, Typescript, Framer Motion, Next.js, Electron, Mixpanel</span></h2>
+        <span className="date">2023-2024</span>
+        <Image src={nikeBraLegging} alt='' />
+        <div className="description">
+          <p><strong>Nike Bra &amp; Legging Finder</strong> is a physical installation in Nike Town London that uses electron to run an react web app. It asks users a series of questions and suggests possible matching Nike products which can then be purchased in store.</p>
         </div>
 
         <h2>International Rugby Experience <span>React, Typescript, Framer Motion, Electron</span></h2>
@@ -46,13 +71,6 @@ const Web: NextPage = () => {
         <div className="description">
           <p><strong>International Rugby Experience</strong> is a multi storey, interactive rugby museum in Limerick, Ireland. Working as part of a 7 person development team, I was responsible for a lot of the frontend as well as some image generation on the backend for personalised emails.</p>
           <p>I worked on 10 different touch screen electron apps along with an npm package of common components which helped maintain ui consistency throughout.</p>
-        </div>
-
-        <h2>Nike Bra &amp; Legging Finder <span>React, Typescript, Framer Motion, Next.js, Electron, Mixpanel</span></h2>
-        <span className="date">2023-2024</span>
-        <Image src={nikeBraLegging} alt='' />
-        <div className="description">
-          <p><strong>Nike Bra &amp; Legging Finder</strong> is a physical installation in Nike Town London that uses electron to run an react web app. It asks users a series of questions and suggests possible matching Nike products which can then be purchased in store.</p>
         </div>
 
         <h2>Nike Running Shoe Finder <span>React, Typescript, Framer Motion, Next.js, Electron</span></h2>
