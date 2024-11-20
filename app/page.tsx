@@ -15,7 +15,7 @@ const roles = [
     dates: 'Sep 2021 - Dec 2024',
     description: [
       'I was part of a small dev team within a digital agency that worked on a number of projects which included video based and AR microsites for Nike, JBL, Tommy Hilfiger, Puma and Crocs through to a series of web apps for a large scale interactive rugby museum in Ireland.',
-      'I used React, Typescript, Framer Motion, Next.js, Storybook and Electron as well as a whole host of other libraries. Our team used kanban boards to keep on top of tasks to help project managers and other stakeholders see what was being worked on.'
+      'I used React, Typescript, Framer Motion, Next.js, Storybook and Electron as well as a whole host of other libraries. Our team carried out regular code reviews of each other`s work to maintain coding standards and to minimise bugs. We also used kanban boards to keep on top of tasks to help project managers and other stakeholders see what was being worked on.'
     ]
   },
   {
