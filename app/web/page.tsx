@@ -33,21 +33,24 @@ const Web: NextPage = () => {
         <span className="date">2024</span>
         <a href="https://weareomm.com/" target="_blank" rel="noreferrer"><Image src={omm} alt='' /></a>
         <div className="description">
-          <p>A major overhaul of the <strong>OMM</strong> agency website.</p>
+          <p>A major overhaul of the <a href="https://weareomm.com/" target="_blank" rel="noreferrer">OMM</a> agency website.</p>
+          <p>I worked alongside a lead developer and a number of designers during this project. <a href="https://storybook.js.org/" target="_blank" rel="noreferrer">Storybook</a> was invaluable during this project. It allowed us to implement each component and all of their states in isolation and it helped designers to check that brand guidelines were being adhered to.</p>
         </div>
       
         <h2>JBL Challenge<span>React, Typescript, Framer Motion, PlayCanvas, Next.js, Electron</span></h2>
         <span className="date">2024</span>
         <a href="https://challenge.jbl.com/" target="_blank" rel="noreferrer"><Image src={jbl} alt='' /></a>
         <div className="description">
-          <p><strong>JBL Challenge</strong> is a campaign to promote one of JBL`s portable speakers. It is made up of a microsite, a web endless runner style game and a series of arcade style cabinets running the web game in various electronics stores around Germany.</p>
+          <p><a href="https://challenge.jbl.com/" target="_blank" rel="noreferrer">JBL Challenge</a> is a campaign to promote one of JBL`s portable speakers. It is made up of a microsite, an endless runner style web game and a series of arcade style cabinets running the web game in various electronics stores around Germany.</p>
+          <p>The game was made using <a href="https://playcanvas.com/" target="_blank" rel="noreferrer">PlayCanvas</a> by one of the agency`s lead developers, while I was responsible for the microsite and the game UI.</p>
         </div>
 
         <h2>Nike Running Shoe Finder 2.0<span>React, Typescript, Framer Motion, Next.js, Three.js, GraphQL</span></h2>
         <span className="date">2024</span>
         <a href="https://nikerunningshoefinder.com/" target="_blank" rel="noreferrer"><Image src={nikeRunningShoe2} alt='' /></a>
         <div className="description">
-          <p><strong>Nike Running Shoe Finder 2.0</strong> is responsive website that is linked to from the running section of nike.com and the Nike mobile app.</p>
+          <p><a href="https://nikerunningshoefinder.com/" target="_blank" rel="noreferrer">Nike Running Shoe Finder 2.0</a> is a responsive website that is linked to from the running section of nike.com and the Nike mobile app.</p>
+          <p>Working with a lead developer, I tackled most of the UI while they implemented the shoe visualisation in Three.js.</p>
         </div>
 
         <h2>PUMA Basketball Interactive Table<span>React, Typescript, Framer Motion, Next.js, Three.js, GraphQL</span></h2>
@@ -69,7 +72,7 @@ const Web: NextPage = () => {
         <span className="date">2021-2023</span>
         <a href="https://www.internationalrugbyexperience.com/" target="_blank" rel="noreferrer"><Image src={ire} alt='' /></a>
         <div className="description">
-          <p><strong>International Rugby Experience</strong> is a multi storey, interactive rugby museum in Limerick, Ireland. Working as part of a 7 person development team, I was responsible for a lot of the frontend as well as some image generation on the backend for personalised emails.</p>
+          <p><a href="https://www.internationalrugbyexperience.com/" target="_blank" rel="noreferrer">International Rugby Experience</a> is a multi storey, interactive rugby museum in Limerick, Ireland. Working as part of a 7 person development team, I was responsible for a lot of the frontend as well as some image generation on the backend for personalised emails.</p>
           <p>I worked on 10 different touch screen electron apps along with an npm package of common components which helped maintain ui consistency throughout.</p>
         </div>
 
