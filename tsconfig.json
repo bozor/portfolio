@@ -21,7 +21,7 @@
         "./*"
       ],
       "@images/*": [
-        "public/images/*"
+        "src/assets/images/*"
       ],
       "@components/*": [
         "src/components/*"
