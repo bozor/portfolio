@@ -100,7 +100,7 @@ const Home: NextPage = async () => {
 
         <section className="clients">
           <h2>Worked with</h2>
-          <p>Nike, JBL, Puma, Crocs, Tommy Hilfiger, Dell, BP, Castrol</p>
+          <p>Nike, JBL, PUMA, Crocs, Tommy Hilfiger, Dell, BP, Castrol</p>
         </section>
 
         <section className="skills">
