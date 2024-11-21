@@ -27,7 +27,7 @@ const Image = ({src, alt} : ImageProps) => {
         amount: 0.25
       }}
     >
-      <NextImage src={src} alt={alt} width={0} height={0} />
+      <NextImage src={src} alt={alt} width={0} height={0} priority />
     </motion.div>
   )
 }
