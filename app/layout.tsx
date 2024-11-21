@@ -36,6 +36,13 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="icon"
+          href="/public/favicon-96x96.png"
+          type="image/png"
+          sizes="96x96"
+        />
+        <link rel="shortcut icon" href="/public/favicon.ico" />
       </head>
       <body className={`${robotoMono.className} ${s.outer}`}>
         <div className={s.topBlur}></div>
