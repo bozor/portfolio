@@ -6,6 +6,7 @@ import Image from '@components/Image'
 
 import omm from '@images/web/omm.jpg'
 import puma from '@images/web/puma-table.jpg'
+import nikeLilPenny from '@images/web/nike-lil-penny.jpg'
 import nikeBraLegging from '@images/web/nike-bra-legging.jpg'
 import jbl from '@images/web/jbl.jpg'
 import nikeRunningShoe from '@images/web/nike-running-shoe-finder.jpg'
@@ -53,6 +54,14 @@ const Web: NextPage = () => {
           <p>Working with a lead developer, I tackled most of the UI while they implemented the shoe visualisation in Three.js.</p>
         </div>
 
+        <h2>Nike New Age of Sport<span>React, Typescript, Next.js, Three.js, 8th Wall</span></h2>
+        <span className="date">2023</span>
+        <Image src={nikeLilPenny} alt='' />
+        <div className="description">
+          <p><strong>Nike New Age of Sport</strong> was a promotional AR microsite for a relaunch of one of Nike`s famous basketball shoes.</p>
+          <p>The AR component was created by another developer using 8th Wall while I helped with the UI elements and testing.</p>
+        </div>
+
         <h2>PUMA Basketball Interactive Table<span>React, Typescript, Framer Motion, Next.js, Three.js, GraphQL</span></h2>
         <span className="date">2023</span>
         <Image src={puma} alt='' />
@@ -73,7 +82,7 @@ const Web: NextPage = () => {
         <a href="https://www.internationalrugbyexperience.com/" target="_blank" rel="noreferrer"><Image src={ire} alt='' /></a>
         <div className="description">
           <p><a href="https://www.internationalrugbyexperience.com/" target="_blank" rel="noreferrer">International Rugby Experience</a> is a multi storey, interactive rugby museum in Limerick, Ireland. Working as part of a 7 person development team, I was responsible for a lot of the frontend as well as some image generation on the backend for personalised emails.</p>
-          <p>I worked on 10 different touch screen electron apps along with an npm package of common components which helped maintain ui consistency throughout.</p>
+          <p>I worked on 10 different touch screen electron apps along with an npm package of common components which helped maintain UI consistency throughout.</p>
         </div>
 
         <h2>Nike Running Shoe Finder <span>React, Typescript, Framer Motion, Next.js, Electron</span></h2>
