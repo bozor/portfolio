@@ -1,7 +1,7 @@
 import React from 'react';
 import { Roboto_Mono } from 'next/font/google';
 import { Metadata } from 'next';
-import { GoogleTagManager } from '@next/third-parties/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import s from '@styles/layout.module.scss';
 
@@ -54,7 +54,7 @@ export default function RootLayout({
         </Layout>
         <div className={s.bottomBlur}></div>
       </body>
-      <GoogleTagManager gtmId={'G-95677VDEHT'} />
+      <GoogleAnalytics gaId={'G-95677VDEHT'} />
     </html>
   )
 }
