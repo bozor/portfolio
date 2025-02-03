@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: 'Boris Grudinin - %s',
     default: 'Boris Grudinin'
   },
-  description: 'Boris Grudinin - Digital Interaction Specialist',
+  description: 'Boris Grudinin - Senior Frontend Developer',
   icons: [
     {
       rel: 'shortcut icon',
