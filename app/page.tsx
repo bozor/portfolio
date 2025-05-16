@@ -19,7 +19,7 @@ const roles = [
     ]
   },
   {
-    title: 'Lead UI Designer / Developer',
+    title: 'UI Designer / Developer',
     location: 'Blinkbox Labs, London, UK',
     dates: 'Sep 2016 - Jan 2021',
     description: [
@@ -36,7 +36,7 @@ const roles = [
     ]
   },
   {
-    title: 'Lead UI Designer / Developer',
+    title: 'UI Designer / Developer',
     location: 'getfitwithdavina.com, London, UK',
     dates: 'Sep 2015 - Feb 2016',
     description: [
@@ -66,7 +66,7 @@ const roles = [
     location: 'Connexion Ltd, Reading, UK',
     dates: 'Apr 2007 - Mar 2008'
   }
-]
+];
 
 const getLastUpdated = async () => format(new Date(), "p 'on' PP");
 
@@ -75,28 +75,25 @@ const Home: NextPage = async () => {
 
   const renderRoles = () => {
     return roles.map((role, index) => {
-      return (
-        <Role
-          key={index}
-          title={role.title} 
-          location={role.location} 
-          dates={role.dates} 
-          description={role.description || null}
-        />
-      )
-    })
-  }
-  
+      return <Role key={index} title={role.title} location={role.location} dates={role.dates} description={role.description || null} />;
+    });
+  };
+
   return (
     <>
       <Header text="Boris Grudinin" subtitle="A highly skilled senior frontend developer with two decades of experience" />
 
       <article className="page-content">
-        <p className="intro">I have been able to work on a wide array of different projects in varied environments which have helped me to broaden my skill set. I am just as comfortable prototyping ideas in Adobe XD as I am turning them into web and mobile apps in Visual Studio Code. I always look to challenge myself and to stay up to date with the latest trends and technologies in order to integrate them into my solutions.</p>
-        
+        <p className="intro">
+          I have been able to work on a wide array of different projects in varied environments which have helped me to broaden my skill
+          set. I am just as comfortable prototyping ideas in Adobe XD as I am turning them into web and mobile apps in Visual Studio Code. I
+          always look to challenge myself and to stay up to date with the latest trends and technologies in order to integrate them into my
+          solutions.
+        </p>
+
         <h2>Experience</h2>
 
-        { renderRoles() }
+        {renderRoles()}
 
         <section className="clients">
           <h2>Worked with</h2>
@@ -105,15 +102,22 @@ const Home: NextPage = async () => {
 
         <section className="skills">
           <h2>Skills</h2>
-          <p>Javascript (React, React-Native, Framer Motion, Next.js, Typescript, Storybook, Electron, Cypress), HTML (HTML5), CSS (SASS, Less, CSS Modules), Adobe CC (Illustrator, InDesign, XD, Photoshop), Figma, GraphQL, Git Version Control, Android UI Development.</p>
+          <p>
+            Javascript (React, React-Native, Framer Motion, Next.js, Typescript, Storybook, Electron, Cypress), HTML (HTML5), CSS (SASS,
+            Less, CSS Modules), Adobe CC (Illustrator, InDesign, XD, Photoshop), Figma, GraphQL, Git Version Control, Android UI
+            Development.
+          </p>
         </section>
 
         <section className="credits">
-          <p className="small">🖥️ Built using Next.js and SASS. Automatically deployed at {lastUpdated} using <Image src={githubLogo} alt="github" width={12} height={12} /> actions.</p>
+          <p className="small">
+            🖥️ Built using Next.js and SASS. Automatically deployed at {lastUpdated} using{' '}
+            <Image src={githubLogo} alt="github" width={12} height={12} /> actions.
+          </p>
         </section>
       </article>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
