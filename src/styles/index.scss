@@ -1,7 +1,7 @@
-@use 'vendor/normalize/_import-now.scss';
-
 @forward 'variables';
 @forward 'mixins';
 @forward 'base';
 @forward 'pages';
 @forward 'typography';
+
+@import 'node_modules/modern-normalize/modern-normalize.css';
