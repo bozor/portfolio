@@ -1,30 +1,28 @@
-import React from 'react'
-import { Metadata, NextPage } from 'next'
+import React from 'react';
+import { Metadata, NextPage } from 'next';
 
-import Header from '@components/Header'
-import Image from '@components/Image'
+import Header from '@components/Header';
+import Image from '@components/Image';
 
-import bpLogo from '@images/blinkpool/logo.png'
-import bpCards from "@images/blinkpool/business-cards.jpg"
-import bpBillboard from "@images/blinkpool/outdoor-billboard.jpg"
-import bpBrand2 from "@images/blinkpool/brand2.jpg"
-import bpBrand1 from "@images/blinkpool/brand1.jpg"
-import bpBrand4 from "@images/blinkpool/brand4.jpg"
-import bpBrand3 from "@images/blinkpool/brand3.jpg"
-import fianiumDisplay3 from "@images/fianium/fianium-display3.jpg"
-import fianiumDisplay4 from "@images/fianium/fianium-display4.jpg"
-import fianiumDisplays from "@images/fianium/fianium-displays.jpg"
-import fianiumLogoWords from "@images/fianium/fianium-logo-word-collage.png"
-import fianiumLogo from "@images/fianium/fianium-logo.jpg"
-import fianiumProductPhotos from "@images/fianium/fianium-product-photos.jpg"
-import fianiumPhotos from "@images/fianium/fianium-photos.jpg"
-import eleri from "@images/print/eleri.jpg"
-import funk from "@images/print/funk-photo.jpg"
-import nexus from "@images/print/nexus.jpg"
+import bpLogo from 'public/images/blinkpool/logo.png';
+import bpCards from 'public/images/blinkpool/business-cards.jpg';
+import bpBillboard from 'public/images/blinkpool/outdoor-billboard.jpg';
+import bpBrand2 from 'public/images/blinkpool/brand2.jpg';
+import bpBrand1 from 'public/images/blinkpool/brand1.jpg';
+import bpBrand4 from 'public/images/blinkpool/brand4.jpg';
+import bpBrand3 from 'public/images/blinkpool/brand3.jpg';
+import fianiumDisplay3 from 'public/images/fianium/fianium-display3.jpg';
+import fianiumDisplay4 from 'public/images/fianium/fianium-display4.jpg';
+import fianiumDisplays from 'public/images/fianium/fianium-displays.jpg';
+import fianiumLogoWords from 'public/images/fianium/fianium-logo-word-collage.png';
+import fianiumLogo from 'public/images/fianium/fianium-logo.jpg';
+import fianiumProductPhotos from 'public/images/fianium/fianium-product-photos.jpg';
+import fianiumPhotos from 'public/images/fianium/fianium-photos.jpg';
+import eleri from 'public/images/print/eleri.jpg';
+import funk from 'public/images/print/funk-photo.jpg';
+import nexus from 'public/images/print/nexus.jpg';
 
-export const metadata: Metadata = {
-  title: "Print",
-}
+export const metadata: Metadata = { title: 'Print' };
 
 const Print: NextPage = () => {
   return (
@@ -36,7 +34,7 @@ const Print: NextPage = () => {
         <span className="date">2016 - 2019</span>
         <Image src={bpLogo} alt="blinkpool logo" />
         <p>Logo for a UK based e-sports gambling company</p>
-        
+
         <Image src={bpCards} alt="blinkpool business cards" />
         <p>Company business cards and headed paper</p>
 
@@ -71,12 +69,16 @@ const Print: NextPage = () => {
         <p>Logo for a clothing brand for made-to-order womenswear</p>
         <Image src={funk} alt="funk at the forge logo" />
         <p>Logo for a jazz, funk and blues night in Camden, London</p>
-        <Image src={nexus} alt='' />
-        <p>Logo for <a href="http://www.nexusmods.com" target="_blank" rel="noreferrer">www.nexusmods.com</a></p>
+        <Image src={nexus} alt="" />
+        <p>
+          Logo for{' '}
+          <a href="http://www.nexusmods.com" target="_blank" rel="noreferrer">
+            www.nexusmods.com
+          </a>
+        </p>
       </article>
     </>
-  )
+  );
+};
 
-}
-
-export default Print
+export default Print;
