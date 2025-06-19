@@ -6,7 +6,7 @@ import { format } from 'date-fns';
 import Header from '@components/Header';
 import Role from '@components/Role';
 
-import githubLogo from '@images/github.svg';
+import githubLogo from 'public/images/github.svg';
 
 const roles = [
   {
@@ -51,21 +51,9 @@ const roles = [
       'This role allowed me to work on the user experience, information architecture, wireframes, design and front end build of a complex, web based CRM, sales and telephony system. The company followed agile practices and I split my work between two separate teams of developers and ensured the UI was consistent throughout.'
     ]
   },
-  {
-    title: 'UX Developer, Senior UX Developer',
-    location: 'Volume Ltd, Wokingham, UK',
-    dates: 'Dec 2009 - Jun 2014'
-  },
-  {
-    title: 'Web Designer',
-    location: 'Dunwoody Marketing Communications Ltd, Newbury, UK',
-    dates: 'Apr 2008 - Nov 2009'
-  },
-  {
-    title: 'Web Designer',
-    location: 'Connexion Ltd, Reading, UK',
-    dates: 'Apr 2007 - Mar 2008'
-  }
+  { title: 'UX Developer, Senior UX Developer', location: 'Volume Ltd, Wokingham, UK', dates: 'Dec 2009 - Jun 2014' },
+  { title: 'Web Designer', location: 'Dunwoody Marketing Communications Ltd, Newbury, UK', dates: 'Apr 2008 - Nov 2009' },
+  { title: 'Web Designer', location: 'Connexion Ltd, Reading, UK', dates: 'Apr 2007 - Mar 2008' }
 ];
 
 const getLastUpdated = async () => format(new Date(), "p 'on' PP");
