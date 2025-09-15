@@ -1,12 +1,5 @@
 @use 'variables' as *;
 
-@mixin nav-over-active {
-  border-bottom-color: $pomegranate;
-  border-right-color: $pomegranate;
-  color: $mako;
-  font-weight: 500;
-}
-
 @mixin for-sm {
   @media (max-width: 549px) {
     @content;

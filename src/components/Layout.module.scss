@@ -19,24 +19,24 @@
     position: fixed;
     content: '';
     display: block;
-    width: calc(100% - calc(#{$margin} * 2));
+    width: calc(100% - (#{$margin} * 2));
     height: $site-border-thickness;
     background: rgba($goldenrod, 0.8);
     bottom: $margin;
 
     @include for-md {
       margin-left: $margin;
-      width: calc(100% - calc(#{$margin} * 4) - calc(#{$site-border-thickness} * 2));
+      width: calc(100% - (#{$margin} * 4) - (#{$site-border-thickness} * 2));
     }
 
     @include for-lg {
       margin-left: 0;
-      width: calc(100% - calc(#{$margin-lg} * 4) - $site-border-thickness);
+      width: calc(100% - (#{$margin-lg} * 4) - $site-border-thickness);
       bottom: $margin-lg;
     }
 
     @include for-xl {
-      width: calc(#{$site-width} - calc(#{$margin-lg} * 2));
+      width: calc(#{$site-width} - (#{$margin-lg} * 2));
     }
   }
 }
