@@ -1,59 +1,69 @@
 @use '../styles/variables.scss' as *;
 @use '../styles/mixins.scss' as *;
 
-.container {
+.outer {
   position: relative;
-  padding: $margin;
-  z-index: 1;
 
   @include for-md {
-    padding: $margin $site-border-thickness;
+    margin: 0 $margin;
   }
 
   @include for-lg {
-    padding: calc(#{$margin-lg} + #{$site-border-thickness});
-    padding-right: $margin-lg;
+    margin: 0 $margin-lg;
   }
 
-  &:after {
+  @include for-xl {
+    max-width: $site-width;
+    margin: 0 auto;
+  }
+
+  &:before {
     position: fixed;
     content: '';
     display: block;
-    width: calc(100% - (#{$margin} * 2));
-    height: $site-border-thickness;
-    background: rgba($goldenrod, 0.8);
+    width: 100%;
+    top: $margin;
     bottom: $margin;
+    border-top: $site-border-thickness solid rgba($goldenrod, 0.9);
+    border-bottom: $site-border-thickness solid rgba($goldenrod, 0.9);
 
     @include for-md {
-      margin-left: $margin;
-      width: calc(100% - (#{$margin} * 4) - (#{$site-border-thickness} * 2));
+      width: calc(100% - (#{$margin} * 2));
+      border: $site-border-thickness solid rgba($goldenrod, 0.9);
     }
 
     @include for-lg {
-      margin-left: 0;
-      width: calc(100% - (#{$margin-lg} * 4) - $site-border-thickness);
+      width: calc(100% - (#{$margin-lg} * 2));
+      top: $margin-lg;
       bottom: $margin-lg;
     }
 
     @include for-xl {
-      width: calc(#{$site-width} - (#{$margin-lg} * 2));
+      width: $site-width;
     }
   }
 }
 
-.content {
-  padding: calc(#{$margin} * 3 + #{$site-border-thickness}) 0 $margin;
+.topBlur,
+.bottomBlur {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 34px;
+  backdrop-filter: grayscale(100%);
+  z-index: 10;
 
   @include for-md {
-    padding-left: $margin;
-    padding-right: $margin;
+    height: 48px;
   }
+}
 
-  @include for-lg {
-    padding: $margin-lg 0 0 calc(#{$nav-width-lg} + #{$margin-lg});
-  }
+.topBlur {
+  top: 0;
+  mask: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
 
-  img {
-    max-width: 100%;
-  }
+.bottomBlur {
+  bottom: 0;
+  mask: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
 }
