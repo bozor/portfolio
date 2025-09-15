@@ -31,13 +31,16 @@
     left: anchor(left);
     right: anchor(right);
     height: $nav-border-thickness;
-    z-index: 2;
+    z-index: 1;
     position-anchor: --hovered-link;
-    transition:
-      top 150ms,
-      bottom 150ms,
-      left 150ms,
-      right 150ms;
+    opacity: 0;
+    transition: all 150ms ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
   }
 
   @include for-md {
@@ -83,7 +86,7 @@
     font-weight: 300;
     color: rgba($bandicoot, 0.75);
     text-decoration: none;
-    z-index: 1;
+    z-index: 2;
 
     @include for-lg {
       padding: $padding-sm 0;
@@ -99,15 +102,27 @@
     }
 
     &:hover {
-      border-right-color: $pomegranate;
+      border-bottom-color: $pomegranate;
       color: $mako;
       opacity: 1;
-      anchor-name: --hovered-link;
+    }
+
+    @include for-lg {
+      &:hover {
+        border-right-color: $pomegranate;
+      }
     }
 
     @supports (position-anchor: --hovered-link) {
       &:hover {
-        border-right-color: transparent;
+        border-bottom-color: transparent;
+        anchor-name: --hovered-link;
+      }
+
+      @include for-lg {
+        &:hover {
+          border-right-color: transparent;
+        }
       }
     }
   }
