@@ -61,12 +61,6 @@ const getLastUpdated = async () => format(new Date(), "p 'on' PP");
 const Home: NextPage = async () => {
   const lastUpdated = await getLastUpdated();
 
-  const renderRoles = () => {
-    return roles.map((role, index) => {
-      return <Role key={index} title={role.title} location={role.location} dates={role.dates} description={role.description || null} />;
-    });
-  };
-
   return (
     <>
       <Header text="Boris Grudinin" subtitle="A highly skilled senior frontend developer with two decades of experience" />
@@ -74,14 +68,16 @@ const Home: NextPage = async () => {
       <article className="page-content">
         <p className="intro">
           I have been able to work on a wide array of different projects in varied environments which have helped me to broaden my skill
-          set. I am just as comfortable prototyping ideas in Adobe XD as I am turning them into web and mobile apps in Visual Studio Code. I
+          set. I am just as comfortable prototyping ideas in Figma as I am turning them into web and mobile apps in Visual Studio Code. I
           always look to challenge myself and to stay up to date with the latest trends and technologies in order to integrate them into my
           solutions.
         </p>
 
         <h2>Experience</h2>
 
-        {renderRoles()}
+        {roles.map((role, index) => (
+          <Role key={index} title={role.title} location={role.location} dates={role.dates} description={role.description || null} />
+        ))}
 
         <section className="clients">
           <h2>Worked with</h2>
