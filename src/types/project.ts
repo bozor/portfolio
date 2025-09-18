@@ -3,7 +3,7 @@ import { StaticImageData } from "next/image";
 
 export type TProject = {
   title: string;
-  technologies: string;
+  technologies?: string;
   date: string;
   url?: string;
   imgSrcs: StaticImageData[];

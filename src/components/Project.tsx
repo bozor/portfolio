@@ -11,13 +11,14 @@ type ProjectContextProps = {
 };
 
 type HeaderProps = {
-  technologies: string;
+  technologies?: string;
   date: string;
 };
 
 type ImagesProps = {
   url?: string;
   imgSrcs: StaticImageData[];
+  imgAlts?: string[];
 };
 
 type DescriptionProps = {
@@ -32,8 +33,8 @@ type ExtrasProps = {
 const ProjectContext = createContext({ title: '' });
 const useProjectContext = () => useContext(ProjectContext);
 
-const renderImages = (imgSrcs: StaticImageData[], title: string) => {
-  return imgSrcs.map((imgSrc, index) => <Image src={imgSrc} alt={title} key={index} />);
+const renderImages = (imgSrcs: StaticImageData[], title: string, imgAlts?: string[]) => {
+  return imgSrcs.map((imgSrc, index) => <Image src={imgSrc} alt={(imgAlts && imgAlts[index]) || title} key={index} />);
 };
 
 export const Wrapper = ({ title, children }: ProjectContextProps) => {
@@ -46,7 +47,7 @@ export const Header = ({ technologies, date }: HeaderProps) => {
     <>
       <h2>
         {title}
-        <span>{technologies}</span>
+        {technologies ? <span>{technologies}</span> : null}
       </h2>
       <span className="date">{date}</span>
     </>
@@ -73,7 +74,7 @@ export const Extras = ({ imgSrc, children }: ExtrasProps) => {
   return (
     <>
       <Image src={imgSrc} alt={title} />
-      {children}
+      <div className="description">{children}</div>
     </>
   );
 };
