@@ -53,18 +53,14 @@
 }
 
 .page-content {
-  position: relative;
-
-  .image + p,
-  a + p,
   .image + .description,
   a + .description {
     position: relative;
     display: inline-block;
-    transform: translate(9px, -14px);
+    transform: translate(5px, -12px);
     background: $white;
     padding: $padding-xs $padding-sm;
-    margin-right: 20px;
+    margin-right: 12px;
     box-shadow: -2px -2px 6px rgba(0, 0, 0, 0.05);
     margin-bottom: $padding-xs;
 
