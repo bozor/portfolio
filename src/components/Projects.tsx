@@ -1,9 +1,9 @@
 import * as Project from '@components/Project';
 
-import { TProject } from '../types/project';
+import { Project as ProjectType } from '../types/project';
 
 type ProjectsProps = {
-  projects: TProject[];
+  projects: ProjectType[];
 };
 
 const Projects = ({ projects }: ProjectsProps) => {

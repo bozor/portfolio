@@ -4,7 +4,7 @@ import { Metadata, NextPage } from 'next';
 import Header from '@components/Header';
 import Projects from '@components/Projects';
 
-import { TProject } from '@/src/types/project';
+import { Project } from '@/src/types/project';
 
 import omm from 'public/images/web/omm.jpg';
 import puma from 'public/images/web/puma-table.jpg';
@@ -24,7 +24,7 @@ import fianium from 'public/images/web/fianium.jpg';
 
 export const metadata: Metadata = { title: 'Web' };
 
-const projects: TProject[] = [
+const projects: Project[] = [
   {
     title: 'OMM Agency Website',
     date: '2024',
@@ -255,10 +255,7 @@ const Web: NextPage = () => {
   return (
     <>
       <Header text="Web" />
-
-      <article className="page-content">
-        <Projects projects={projects} />
-      </article>
+      <Projects projects={projects} />
     </>
   );
 };

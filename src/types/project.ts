@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { StaticImageData } from "next/image";
 
-export type TProject = {
+export type Project = {
   title: string;
   technologies?: string;
   date: string;
@@ -23,7 +23,7 @@ type ProjectPrintItem = {
   description: ReactNode;
 }
 
-export type TProjectPrint = {
+export type ProjectPrint = {
   title: string;
   date: string;
   items: ProjectPrintItem[]

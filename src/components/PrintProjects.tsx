@@ -1,10 +1,10 @@
 import * as Project from '@components/Project';
 
-import { TProjectPrint } from '../types/project';
+import { ProjectPrint } from '../types/project';
 import { Fragment } from 'react';
 
 type PrintProjectsProps = {
-  printProjects: TProjectPrint[];
+  printProjects: ProjectPrint[];
 };
 
 const PrintProjects = ({ printProjects }: PrintProjectsProps) => {

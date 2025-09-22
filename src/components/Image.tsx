@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 
 import { default as NextImage, StaticImageData } from 'next/image';
 
+import s from './Image.module.scss';
+
 type ImageProps = { src: StaticImageData; alt: string };
 type ImageLoaderProps = { src: string; width: number; quality?: number };
 
@@ -14,7 +16,7 @@ const imageLoader = ({ src, width, quality }: ImageLoaderProps) => {
 const Image = ({ src, alt }: ImageProps) => {
   return (
     <motion.div
-      className="image"
+      className={s.wrap}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1, transition: { duration: 0.35 } }}
       viewport={{ once: true, amount: 0.1 }}

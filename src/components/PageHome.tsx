@@ -1,0 +1,59 @@
+import React from 'react';
+import Image from 'next/image';
+
+import Header from '@components/Header';
+import Role from '@components/Role';
+
+import { Role as RoleType } from '../types/role';
+
+import githubLogo from 'public/images/github.svg';
+
+import s from './PageHome.module.scss';
+
+type PageHomeProps = {
+  roles: RoleType[];
+  lastUpdated: string;
+};
+
+const PageHome = ({ roles, lastUpdated }: PageHomeProps) => {
+  return (
+    <>
+      <Header text="Boris Grudinin" subtitle="A highly skilled senior frontend developer with two decades of experience" />
+
+      <p className={s.intro}>
+        I have been able to work on a wide array of different projects in varied environments which have helped me to broaden my skill set.
+        I am just as comfortable prototyping ideas in Figma as I am turning them into web and mobile apps in Visual Studio Code. I always
+        look to challenge myself and to stay up to date with the latest trends and technologies in order to integrate them into my
+        solutions.
+      </p>
+
+      <h2>Experience</h2>
+
+      {roles.map((role, index) => (
+        <Role key={index} title={role.title} location={role.location} dates={role.dates} description={role.description || null} />
+      ))}
+
+      <section className={s.clients}>
+        <h2>Worked with</h2>
+        <p>Nike, JBL, PUMA, Crocs, Tommy Hilfiger, Dell, BP, Castrol</p>
+      </section>
+
+      <section className={s.skills}>
+        <h2>Skills</h2>
+        <p>
+          Javascript (React, React-Native, Framer Motion, Next.js, Typescript, Storybook, Electron, Cypress), HTML (HTML5), CSS (SASS, Less,
+          CSS Modules), Adobe CC (Illustrator, InDesign, XD, Photoshop), Figma, GraphQL, Git Version Control, Android UI Development.
+        </p>
+      </section>
+
+      <section className={s.credits}>
+        <p>
+          🖥️ Built using Next.js and SASS. Automatically deployed at {lastUpdated} using{' '}
+          <Image src={githubLogo} alt="github" width={12} height={12} /> actions.
+        </p>
+      </section>
+    </>
+  );
+};
+
+export default PageHome;

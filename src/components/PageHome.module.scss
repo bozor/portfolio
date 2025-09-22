@@ -1,0 +1,45 @@
+@use '../styles/variables.scss' as *;
+@use '../styles/shared.scss' as *;
+
+.intro {
+  font-size: $font-size-1;
+  margin: 0 0 $padding-lg;
+
+  &:after {
+    content: '...';
+    font-size: $font-size-3;
+    display: block;
+    text-align: center;
+    letter-spacing: 1em;
+    margin: $padding-md 0 $padding-lg;
+  }
+}
+
+.skills,
+.clients {
+  margin-top: -$padding-sm;
+
+  &::before {
+    content: '...';
+    font-size: 1.35rem;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    letter-spacing: 1em;
+    margin: 0 0 $padding-md;
+  }
+}
+
+.credits {
+  font-size: 80%;
+  opacity: 0.65;
+  padding-top: $padding-sm;
+
+  p {
+    img {
+      width: auto;
+      display: inline-block;
+      margin: 0 0 -5px 0;
+    }
+  }
+}

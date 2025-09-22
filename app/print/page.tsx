@@ -4,7 +4,7 @@ import { Metadata, NextPage } from 'next';
 import Header from '@components/Header';
 import PrintProjects from '@/src/components/PrintProjects';
 
-import { TProjectPrint } from '@/src/types/project';
+import { ProjectPrint } from '@/src/types/project';
 
 import bpLogo from 'public/images/blinkpool/logo.png';
 import bpCards from 'public/images/blinkpool/business-cards.jpg';
@@ -26,7 +26,7 @@ import nexus from 'public/images/print/nexus.jpg';
 
 export const metadata: Metadata = { title: 'Print' };
 
-const printProjects: TProjectPrint[] = [
+const printProjects: ProjectPrint[] = [
   {
     title: 'Blinkpool',
     date: '2016 - 2019',
@@ -149,10 +149,7 @@ const Print: NextPage = () => {
   return (
     <>
       <Header text="Print" />
-
-      <article className="page-content">
-        <PrintProjects printProjects={printProjects} />
-      </article>
+      <PrintProjects printProjects={printProjects} />
     </>
   );
 };

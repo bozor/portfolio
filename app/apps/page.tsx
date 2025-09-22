@@ -4,7 +4,7 @@ import { Metadata, NextPage } from 'next';
 import Header from '@components/Header';
 import Projects from '@components/Projects';
 
-import { TProject } from '@/src/types/project';
+import { Project } from '@/src/types/project';
 
 import ggArcade1 from 'public/images/apps/gg-arcade.jpg';
 import ggArcade2 from 'public/images/apps/gg-arcade2.jpg';
@@ -15,7 +15,7 @@ import pp2 from 'public/images/apps/pp2.jpg';
 
 export const metadata: Metadata = { title: 'Apps' };
 
-const projects: TProject[] = [
+const projects: Project[] = [
   {
     title: 'GG Arcade',
     technologies: 'React Native, Azure Playfab',
@@ -48,10 +48,7 @@ const Apps: NextPage = () => {
   return (
     <>
       <Header text="Apps" />
-
-      <article className="page-content">
-        <Projects projects={projects} />
-      </article>
+      <Projects projects={projects} />
     </>
   );
 };

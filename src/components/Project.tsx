@@ -1,9 +1,11 @@
 'use client';
 
+import { Children, createContext, Fragment, ReactNode, useContext } from 'react';
 import { StaticImageData } from 'next/image';
 
 import Image from '@components/Image';
-import { Children, createContext, Fragment, ReactNode, useContext } from 'react';
+
+import s from './Project.module.scss';
 
 type ProjectContextProps = {
   title: string;
@@ -49,7 +51,7 @@ export const Header = ({ technologies, date }: HeaderProps) => {
         {title}
         {technologies ? <span>{technologies}</span> : null}
       </h2>
-      <span className="date">{date}</span>
+      <span className={s.date}>{date}</span>
     </>
   );
 };
@@ -69,7 +71,7 @@ export const Description = ({ children }: DescriptionProps) => {
   const items = Children.toArray(children);
 
   return (
-    <div className="description">
+    <div className={s.description}>
       {items.map((item, index) => (
         <Fragment key={index}>{item}</Fragment>
       ))}
@@ -82,7 +84,7 @@ export const Extras = ({ imgSrc, children }: ExtrasProps) => {
   return (
     <>
       <Image src={imgSrc} alt={title} />
-      <div className="description">{children}</div>
+      <div className={s.description}>{children}</div>
     </>
   );
 };

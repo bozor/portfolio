@@ -32,10 +32,6 @@ h2 {
     line-height: 1.3em;
     padding-bottom: 6px;
   }
-
-  &.subtitle {
-    margin-top: -10px;
-  }
 }
 
 h3 {
@@ -92,19 +88,5 @@ p {
 
   strong {
     font-weight: 700;
-  }
-
-  &.intro {
-    font-size: $font-size-1;
-    margin: 0 0 $padding-lg;
-
-    &:after {
-      content: '...';
-      font-size: $font-size-3;
-      display: block;
-      text-align: center;
-      letter-spacing: 1em;
-      margin: $padding-md 0 $padding-lg;
-    }
   }
 }
