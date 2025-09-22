@@ -3,7 +3,7 @@
 import { StaticImageData } from 'next/image';
 
 import Image from '@components/Image';
-import { createContext, ReactNode, useContext } from 'react';
+import { Children, createContext, Fragment, ReactNode, useContext } from 'react';
 
 type ProjectContextProps = {
   title: string;
@@ -66,7 +66,15 @@ export const Images = ({ url, imgSrcs }: ImagesProps) => {
 };
 
 export const Description = ({ children }: DescriptionProps) => {
-  return <div className="description">{children}</div>;
+  const items = Children.toArray(children);
+
+  return (
+    <div className="description">
+      {items.map((item, index) => (
+        <Fragment key={index}>{item}</Fragment>
+      ))}
+    </div>
+  );
 };
 
 export const Extras = ({ imgSrc, children }: ExtrasProps) => {
