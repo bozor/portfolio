@@ -15,7 +15,7 @@ const Role = ({ title, location, dates, description }: RoleProps) => {
         <span>({location})</span>
       </h3>
       <span className={s.date}>{dates}</span>
-      {description?.map((item, index) => <p key={index}>{item}</p>)}
+      {description?.map((item, index) => <p key={`${title}-${index}`}>{item}</p>)}
     </section>
   );
 };
