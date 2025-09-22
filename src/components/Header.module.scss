@@ -3,10 +3,18 @@
 .wrap {
   h1 {
     height: 1lh;
+    margin-bottom: 0;
   }
 
-  h1 + h3 {
-    margin-top: -$padding-sm;
-    margin-bottom: $padding-lg;
+  .subtitle {
+    display: block;
+    font-size: $font-size-2;
+    font-weight: 700;
+    color: $mako;
+    line-height: 1.3em;
+    letter-spacing: -0.04em;
+    margin-top: 1rem;
   }
+
+  padding-bottom: $padding-md;
 }
