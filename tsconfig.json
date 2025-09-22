@@ -29,6 +29,12 @@
       "@styles/*": [
         "src/styles/*"
       ],
+      "@data/*": [
+        "src/data/*"
+      ],
+      "@types/*": [
+        "src/types/*"
+      ],
       "@next/third-parties/google": [
         "./node_modules/@next/third-parties/dist/google"
       ],
