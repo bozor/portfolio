@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata, NextPage } from 'next';
 
 import Header from '@components/Header';
-import PrintProjects from '@/src/components/PrintProjects';
+import ProjectsPrint from '@/src/components/ProjectsPrint';
 
 import { ProjectPrint } from '@/src/types/project';
 
@@ -26,7 +26,7 @@ import nexus from 'public/images/print/nexus.jpg';
 
 export const metadata: Metadata = { title: 'Print' };
 
-const printProjects: ProjectPrint[] = [
+const projectsPrint: ProjectPrint[] = [
   {
     title: 'Blinkpool',
     date: '2016 - 2019',
@@ -149,7 +149,7 @@ const Print: NextPage = () => {
   return (
     <>
       <Header text="Print" />
-      <PrintProjects printProjects={printProjects} />
+      <ProjectsPrint projectsPrint={projectsPrint} />
     </>
   );
 };
