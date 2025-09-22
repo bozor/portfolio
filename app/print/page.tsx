@@ -2,7 +2,9 @@ import React from 'react';
 import { Metadata, NextPage } from 'next';
 
 import Header from '@components/Header';
-import * as Project from '@components/Project';
+import PrintProjects from '@/src/components/PrintProjects';
+
+import { TProjectPrint } from '@/src/types/project';
 
 import bpLogo from 'public/images/blinkpool/logo.png';
 import bpCards from 'public/images/blinkpool/business-cards.jpg';
@@ -24,83 +26,132 @@ import nexus from 'public/images/print/nexus.jpg';
 
 export const metadata: Metadata = { title: 'Print' };
 
+const printProjects: TProjectPrint[] = [
+  {
+    title: 'Blinkpool',
+    date: '2016 - 2019',
+    items: [
+      {
+        images: {
+          srcs: [bpLogo],
+          alts: ['blinkpool logo']
+        },
+        description: [<p>Logo for a UK based e-sports gambling company</p>]
+      },
+      {
+        images: {
+          srcs: [bpCards],
+          alts: ['blinkpool business cards']
+        },
+        description: [<p>Company business cards and headed paper</p>]
+      },
+      {
+        images: {
+          srcs: [bpBillboard],
+          alts: ['blinkpool branding']
+        },
+        description: [<p>Outdoor advertising during a major esports event in Birmingham</p>]
+      },
+      {
+        images: {
+          srcs: [bpBrand2, bpBrand1, bpBrand4, bpBrand3],
+          alts: ['blinkpool branding', 'blinkpool branding', 'blinkpool branding', 'blinkpool branding']
+        },
+        description: [<p>A selection of Blinkpool branded collateral and clothing</p>]
+      }
+    ]
+  },
+  {
+    title: 'Fianium',
+    date: '2003 - 2016',
+    items: [
+      {
+        images: {
+          srcs: [fianiumDisplay3],
+          alts: ['fianium backlit poster']
+        },
+        description: [<p>Large, backlit tradeshow poster</p>]
+      },
+      {
+        images: {
+          srcs: [fianiumDisplay4, fianiumDisplays],
+          alts: ['fianium display', 'fianium display design']
+        },
+        description: [<p>A selection of tradeshow display stands</p>]
+      },
+      {
+        images: {
+          srcs: [fianiumLogoWords],
+          alts: ['fianium logo word collage']
+        },
+        description: [<p>Stylised Fianium logo</p>]
+      },
+      {
+        images: {
+          srcs: [fianiumLogo],
+          alts: ['fianium logo']
+        },
+        description: [<p>Fianium logo and various print collateral</p>]
+      },
+      {
+        images: {
+          srcs: [fianiumProductPhotos],
+          alts: ['fianium product photos']
+        },
+        description: [<p>Product photography</p>]
+      },
+      {
+        images: {
+          srcs: [fianiumPhotos],
+          alts: ['fianium photos']
+        },
+        description: [<p>General photography</p>]
+      }
+    ]
+  },
+  {
+    title: 'Various Projects',
+    date: '2011 - Current',
+    items: [
+      {
+        images: {
+          srcs: [eleri],
+          alts: ['eleri']
+        },
+        description: [<p>Logo for a clothing brand for made-to-order womenswear</p>]
+      },
+      {
+        images: {
+          srcs: [funk],
+          alts: ['funk at the forge']
+        },
+        description: [<p>Logo for a jazz, funk and blues night in Camden, London</p>]
+      },
+      {
+        images: {
+          srcs: [nexus],
+          alts: ['nexus mods']
+        },
+        description: [
+          <p>
+            Logo for{' '}
+            <a href="http://www.nexusmods.com" target="_blank" rel="noreferrer">
+              www.nexusmods.com
+            </a>
+          </p>
+        ]
+      }
+    ]
+  }
+];
+
 const Print: NextPage = () => {
   return (
     <>
       <Header text="Print" />
 
       <article className="page-content">
-        <Project.Wrapper title="Blinkpool">
-          <Project.Header date="2016 - 2019" />
-          <Project.Images imgSrcs={[bpLogo]} imgAlts={['blinkpool logo']} />
-          <Project.Description>
-            <p>Logo for a UK based e-sports gambling company</p>
-          </Project.Description>
-          <Project.Images imgSrcs={[bpCards]} imgAlts={['blinkpool business cards']} />
-          <Project.Description>
-            <p>Company business cards and headed paper</p>
-          </Project.Description>
-          <Project.Images imgSrcs={[bpBillboard]} imgAlts={['blinkpool branding']} />
-          <Project.Description>
-            <p>Outdoor advertising during a major esports event in Birmingham</p>
-          </Project.Description>
-          <Project.Images
-            imgSrcs={[bpBrand2, bpBrand1, bpBrand4, bpBrand3]}
-            imgAlts={['blinkpool branding', 'blinkpool branding', 'blinkpool branding', 'blinkpool branding']}
-          />
-          <Project.Description>
-            <p>A selection of Blinkpool branded collateral and clothing</p>
-          </Project.Description>
-        </Project.Wrapper>
-
-        <Project.Wrapper title="Fianium">
-          <Project.Header date="2003 - 2016" />
-          <Project.Images imgSrcs={[fianiumDisplay3]} imgAlts={['fianium backlit poster']} />
-          <Project.Description>
-            <p>Large, backlit tradeshow poster</p>
-          </Project.Description>
-          <Project.Images imgSrcs={[fianiumDisplay4, fianiumDisplays]} imgAlts={['fianium display', 'fianium display design']} />
-          <Project.Description>
-            <p>A selection of tradeshow display stands</p>
-          </Project.Description>
-          <Project.Images imgSrcs={[fianiumLogoWords]} imgAlts={['fianium logo word collage']} />
-          <Project.Description>
-            <p>Stylised Fianium logo</p>
-          </Project.Description>
-          <Project.Images imgSrcs={[fianiumLogo]} imgAlts={['fianium logo']} />
-          <Project.Description>
-            <p>Fianium logo and various print collateral</p>
-          </Project.Description>
-          <Project.Images imgSrcs={[fianiumProductPhotos]} imgAlts={['fianium product photos']} />
-          <Project.Description>
-            <p>Product photography</p>
-          </Project.Description>
-          <Project.Images imgSrcs={[fianiumProductPhotos]} imgAlts={['fianium photos']} />
-          <Project.Description>
-            <p>General photography</p>
-          </Project.Description>
-        </Project.Wrapper>
-
-        <Project.Wrapper title="Various Projects">
-          <Project.Header date="2011 - Current" />
-          <Project.Images imgSrcs={[eleri]} imgAlts={['eleri']} />
-          <Project.Description>
-            <p>Logo for a clothing brand for made-to-order womenswear</p>
-          </Project.Description>
-          <Project.Images imgSrcs={[funk]} imgAlts={['funk at the forge logo']} />
-          <Project.Description>
-            <p>Logo for a jazz, funk and blues night in Camden, London</p>
-          </Project.Description>
-          <Project.Images imgSrcs={[nexus]} imgAlts={['nexus mods']} />
-          <Project.Description>
-            <p>
-              Logo for{' '}
-              <a href="http://www.nexusmods.com" target="_blank" rel="noreferrer">
-                www.nexusmods.com
-              </a>
-            </p>
-          </Project.Description>
-        </Project.Wrapper>
+        <PrintProjects printProjects={printProjects} />
       </article>
     </>
   );
