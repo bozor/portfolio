@@ -1,26 +1,22 @@
-import { ReactNode } from "react";
-import { StaticImageData } from "next/image";
-
 export type Project = {
   title: string;
   technologies?: string;
   date: string;
   url?: string;
-  imgSrcs: StaticImageData[];
-  description: ReactNode;
+  imgSrcs: string[];
+  description: string[];
   extras?: {
-    imgSrc: StaticImageData;
-    caption: ReactNode;
+    imgSrc: string;
+    caption: string;
   }
 }
 
 type ProjectPrintItem = {
-  images:
-    {
-      srcs: StaticImageData[],
-      alts?: string[]
-    },
-  description: ReactNode;
+  images: {
+    srcs: string[],
+    alts?: string[]
+  },
+  description: string[];
 }
 
 export type ProjectPrint = {
