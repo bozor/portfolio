@@ -1,38 +1,62 @@
-@use '../styles/mixins.scss' as *;
+@use '../styles/shared.scss' as *;
 @use '../styles/variables.scss' as *;
 
 .wrap {
   display: flex;
   z-index: 10;
   position: absolute;
-  width: calc(100% - calc(calc(#{$margin} * 2)));
+  width: calc(100% - (#{$margin} * 2));
   top: calc(#{$margin} * 1.5 + #{$site-border-thickness});
   height: 34px;
+  gap: $padding-md;
 
-  &:after {
-    display: block;
+  &::before,
+  &::after {
     content: '';
     position: absolute;
-    background: rgba($alto, 0.65);
     bottom: 0;
     left: 0;
+  }
+
+  &::after {
+    display: block;
+    background: rgba($alto, 0.65);
     width: 100%;
     height: $nav-border-thickness;
   }
 
+  &::before {
+    content: '';
+    background: $pomegranate;
+    left: anchor(left);
+    right: anchor(right);
+    height: $nav-border-thickness;
+    z-index: 1;
+    position-anchor: --hovered-link;
+    opacity: 0;
+    transition: all 150ms ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
   @include for-md {
-    width: calc(100% - calc(calc(#{$margin} * 2) + calc(#{$site-border-thickness} * 2)));
+    width: calc(100% - (#{$margin} * 2 + #{$site-border-thickness} * 2));
     height: 40px;
   }
 
   @include for-lg {
     position: fixed;
     width: $nav-width-lg;
-    height: calc(100% - calc(calc(#{$margin-lg} * 4) + calc(#{$site-border-thickness} * 2)));
-    top: calc(calc(#{$margin-lg} * 2) + #{$site-border-thickness});
-    margin-left: calc(calc(#{$nav-width-lg} + #{$margin-lg}) * -1);
+    height: calc(100% - (#{$margin-lg} * 4 + #{$site-border-thickness} * 2));
+    top: calc(#{$margin-lg} * 2 + #{$site-border-thickness});
+    margin-left: calc((#{$nav-width-lg} + #{$margin-lg}) * -1);
+    gap: 0;
 
-    &:after {
+    &::after {
       top: 0;
       right: 0;
       left: auto;
@@ -40,46 +64,66 @@
       height: 100%;
       width: $nav-border-thickness;
     }
+
+    &::before {
+      top: anchor(top);
+      bottom: anchor(bottom);
+      left: auto;
+      right: 0;
+      width: $nav-border-thickness;
+      height: auto;
+    }
   }
 
   @include for-lg {
     flex-direction: column;
-    align-items: stretch;
   }
 
   .item {
-    position: relative;
-    margin-bottom: 0;
-    margin-right: $padding-md;
     border-bottom: $nav-border-thickness solid transparent;
     transition: 150ms all ease-in-out;
-    display: inline-block;
     font-size: $font-size-1;
     font-weight: 300;
     color: rgba($bandicoot, 0.75);
     text-decoration: none;
-    z-index: 1;
+    z-index: 2;
 
     @include for-lg {
-      margin-bottom: 0;
-      margin-right: 0;
       padding: $padding-sm 0;
       border-bottom: none;
       border-right: $nav-border-thickness solid transparent;
     }
 
     &.active {
-      @include nav-over-active;
-    }
-
-    &:active {
-      -webkit-tap-highlight-color: transparent;
+      border-bottom-color: $pomegranate;
+      border-right-color: $pomegranate;
+      color: $mako;
+      font-weight: 500;
     }
 
     &:hover {
-      border-right-color: $pomegranate;
+      border-bottom-color: $pomegranate;
       color: $mako;
       opacity: 1;
+    }
+
+    @include for-lg {
+      &:hover {
+        border-right-color: $pomegranate;
+      }
+    }
+
+    @supports (position-anchor: --hovered-link) {
+      &:hover {
+        border-bottom-color: transparent;
+        anchor-name: --hovered-link;
+      }
+
+      @include for-lg {
+        &:hover {
+          border-right-color: transparent;
+        }
+      }
     }
   }
 }

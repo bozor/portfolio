@@ -1,14 +1,11 @@
-import React from 'react';
-import Image from 'next/image';
-import { NextPage } from 'next';
+import { Metadata, NextPage } from 'next';
 import { format } from 'date-fns';
 
-import Header from '@components/Header';
-import Role from '@components/Role';
+import PageHome from '@/src/components/PageHome';
 
-import githubLogo from 'public/images/github.svg';
+import { Role } from '@/src/types/role';
 
-const roles = [
+const roles: Role[] = [
   {
     title: 'Senior React Developer',
     location: 'OMM, London, UK',
@@ -61,51 +58,7 @@ const getLastUpdated = async () => format(new Date(), "p 'on' PP");
 const Home: NextPage = async () => {
   const lastUpdated = await getLastUpdated();
 
-  const renderRoles = () => {
-    return roles.map((role, index) => {
-      return <Role key={index} title={role.title} location={role.location} dates={role.dates} description={role.description || null} />;
-    });
-  };
-
-  return (
-    <>
-      <Header text="Boris Grudinin" subtitle="A highly skilled senior frontend developer with two decades of experience" />
-
-      <article className="page-content">
-        <p className="intro">
-          I have been able to work on a wide array of different projects in varied environments which have helped me to broaden my skill
-          set. I am just as comfortable prototyping ideas in Adobe XD as I am turning them into web and mobile apps in Visual Studio Code. I
-          always look to challenge myself and to stay up to date with the latest trends and technologies in order to integrate them into my
-          solutions.
-        </p>
-
-        <h2>Experience</h2>
-
-        {renderRoles()}
-
-        <section className="clients">
-          <h2>Worked with</h2>
-          <p>Nike, JBL, PUMA, Crocs, Tommy Hilfiger, Dell, BP, Castrol</p>
-        </section>
-
-        <section className="skills">
-          <h2>Skills</h2>
-          <p>
-            Javascript (React, React-Native, Framer Motion, Next.js, Typescript, Storybook, Electron, Cypress), HTML (HTML5), CSS (SASS,
-            Less, CSS Modules), Adobe CC (Illustrator, InDesign, XD, Photoshop), Figma, GraphQL, Git Version Control, Android UI
-            Development.
-          </p>
-        </section>
-
-        <section className="credits">
-          <p className="small">
-            🖥️ Built using Next.js and SASS. Automatically deployed at {lastUpdated} using{' '}
-            <Image src={githubLogo} alt="github" width={12} height={12} /> actions.
-          </p>
-        </section>
-      </article>
-    </>
-  );
+  return <PageHome roles={roles} lastUpdated={lastUpdated} />;
 };
 
 export default Home;

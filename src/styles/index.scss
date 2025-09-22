@@ -1,7 +1,6 @@
 @forward 'variables';
-@forward 'mixins';
+@forward 'shared';
 @forward 'base';
-@forward 'pages';
 @forward 'typography';
 
 @import 'node_modules/modern-normalize/modern-normalize.css';

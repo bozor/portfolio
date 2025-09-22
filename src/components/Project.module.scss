@@ -1,0 +1,41 @@
+@use '../styles/variables.scss' as *;
+@use '../styles/shared.scss' as *;
+
+.date {
+  @extend %date;
+  transform: translate(0, -23px);
+  margin-bottom: 0px;
+
+  @include for-lg {
+    transform: translate(0, -30px);
+  }
+}
+
+.description {
+  position: relative;
+  display: inline-block;
+  transform: translate(5px, -12px);
+  background: $white;
+  padding: $padding-xs $padding-sm;
+  margin-right: 12px;
+  box-shadow: -2px -2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: $padding-xs;
+
+  @include for-lg {
+    transform: translate(14px, -20px);
+    padding: $padding-sm;
+    margin-right: 30px;
+  }
+
+  p {
+    margin-bottom: $padding-sm;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    display: inline-block;
+  }
+}
