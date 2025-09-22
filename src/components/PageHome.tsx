@@ -49,7 +49,7 @@ const PageHome = ({ roles, lastUpdated }: PageHomeProps) => {
       <section className={s.credits}>
         <p>
           🖥️ Built using Next.js and SASS. Automatically deployed at {lastUpdated} using{' '}
-          <Image src={githubLogo} alt="github" width={12} height={12} /> actions.
+          <Image src={githubLogo} alt="github" width={16} height={16} /> actions.
         </p>
       </section>
     </>
