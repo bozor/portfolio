@@ -110,7 +110,7 @@ const projects: TProject[] = [
     ]
   },
   {
-    title: 'Nike Bra &amp; Legging Finder',
+    title: 'Nike Bra & Legging Finder',
     technologies: 'React, Typescript, Framer Motion, Next.js, Electron, Mixpanel',
     date: '2023-2024',
     imgSrcs: [nikeBraLegging],
