@@ -13,3 +13,18 @@ export type TProject = {
     caption: ReactNode;
   }
 }
+
+type ProjectPrintItem = {
+  images:
+    {
+      srcs: StaticImageData[],
+      alts?: string[]
+    },
+  description: ReactNode;
+}
+
+export type TProjectPrint = {
+  title: string;
+  date: string;
+  items: ProjectPrintItem[]
+}
