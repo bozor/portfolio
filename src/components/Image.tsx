@@ -2,11 +2,11 @@
 
 import { motion } from 'framer-motion';
 
-import { default as NextImage, StaticImageData } from 'next/image';
+import { default as NextImage } from 'next/image';
 
 import s from './Image.module.scss';
 
-type ImageProps = { src: StaticImageData; alt: string };
+type ImageProps = { src: string; alt: string };
 type ImageLoaderProps = { src: string; width: number; quality?: number };
 
 const imageLoader = ({ src, width, quality }: ImageLoaderProps) => {

@@ -9,12 +9,12 @@ type ProjectsPrintProps = {
 
 const ProjectsPrint = ({ projectsPrint }: ProjectsPrintProps) => {
   return projectsPrint.map((project, i) => (
-    <Project.Wrapper title={project.title} key={i}>
+    <Project.Wrapper title={project.title} key={`${project.title.replaceAll(' ', '')}-${i}`}>
       <Project.Header date={project.date} />
       {project.items.map((item, j) => (
         <Fragment key={`item-${j}`}>
           <Project.Images imgSrcs={item.images.srcs} imgAlts={item.images.alts} />
-          <Project.Description>{item.description}</Project.Description>
+          <Project.Description content={item.description} />
         </Fragment>
       ))}
     </Project.Wrapper>
