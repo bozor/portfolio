@@ -1,15 +1,15 @@
-'use client'
+'use client';
 
 import { useScramble } from 'use-scramble';
 
 import s from './Header.module.scss';
 
 type HeaderProps = {
-  text: string
-  subtitle?: string
-}
+  text: string;
+  subtitle?: string;
+};
 
-const Header = ({text, subtitle} : HeaderProps) => {
+const Header = ({ text, subtitle }: HeaderProps) => {
   const { ref } = useScramble({
     text: text,
     speed: 0.8,
@@ -20,9 +20,9 @@ const Header = ({text, subtitle} : HeaderProps) => {
   return (
     <header className={s.wrap}>
       <h1 ref={ref} />
-      {subtitle && <h3>{subtitle}</h3>}
+      {subtitle && <span className={s.subtitle}>{subtitle}</span>}
     </header>
-  )
-}
+  );
+};
 
 export default Header;

@@ -1,8 +1,13 @@
 @use '../styles/variables.scss' as *;
+@use '../styles/shared.scss' as *;
 
 .wrap {
   position: relative;
   margin-bottom: $padding-lg;
+
+  .date {
+    @extend %date;
+  }
 
   p {
     margin: 0;
