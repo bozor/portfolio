@@ -15,6 +15,24 @@
   }
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0 0 $padding-lg;
+  padding: 0;
+  gap: $padding-md;
+
+  @include for-md {
+    flex-direction: row;
+  }
+
+  li {
+    font-size: $font-size-0;
+  }
+}
+
+.experience,
 .skills,
 .clients {
   margin-top: -$padding-sm;

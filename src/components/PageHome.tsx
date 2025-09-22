@@ -27,11 +27,29 @@ const PageHome = ({ roles, lastUpdated }: PageHomeProps) => {
         solutions.
       </p>
 
-      <h2>Experience</h2>
+      <h2>Get in touch</h2>
 
-      {roles.map((role, index) => (
-        <Role key={index} title={role.title} location={role.location} dates={role.dates} description={role.description || null} />
-      ))}
+      <ul className={s.contact}>
+        <li>
+          🔗{' '}
+          <a href="https://www.linkedin.com/in/borisgrudinin/" target="_blank">
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          📧 <a href="mailto:boris@grudinin.co.uk">boris@grudinin.co.uk</a>
+        </li>
+        <li>
+          📞 <a href="tel:07917356783">07917356783</a>
+        </li>
+      </ul>
+
+      <section className={s.experience}>
+        <h2>Experience</h2>
+        {roles.map((role, index) => (
+          <Role key={index} title={role.title} location={role.location} dates={role.dates} description={role.description || null} />
+        ))}
+      </section>
 
       <section className={s.clients}>
         <h2>Worked with</h2>
