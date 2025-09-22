@@ -47,7 +47,13 @@ const PageHome = ({ roles, lastUpdated }: PageHomeProps) => {
       <section className={s.experience}>
         <h2>Experience</h2>
         {roles.map((role, index) => (
-          <Role key={index} title={role.title} location={role.location} dates={role.dates} description={role.description || null} />
+          <Role
+            key={`${role.dates}-${index}`}
+            title={role.title}
+            location={role.location}
+            dates={role.dates}
+            description={role.description || null}
+          />
         ))}
       </section>
 
