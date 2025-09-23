@@ -1,6 +1,6 @@
 'use client';
 
-import { Children, createContext, Fragment, ReactNode, useContext } from 'react';
+import { createContext, ReactNode, useContext } from 'react';
 import { StaticImageData } from 'next/image';
 
 import Image from '@components/Image';
@@ -19,24 +19,24 @@ type HeaderProps = {
 
 type ImagesProps = {
   url?: string;
-  imgSrcs: StaticImageData[];
+  imgSrcs: string[];
   imgAlts?: string[];
 };
 
 type DescriptionProps = {
-  children: ReactNode;
+  content: string[];
 };
 
 type ExtrasProps = {
-  imgSrc: StaticImageData;
+  imgSrc: string;
   children: ReactNode;
 };
 
 const ProjectContext = createContext({ title: '' });
 const useProjectContext = () => useContext(ProjectContext);
 
-const renderImages = (imgSrcs: StaticImageData[], title: string, imgAlts?: string[]) => {
-  return imgSrcs.map((imgSrc, index) => <Image src={imgSrc} alt={(imgAlts && imgAlts[index]) || title} key={index} />);
+const renderImages = (imgSrcs: string[], title: string, imgAlts?: string[]) => {
+  return imgSrcs.map((imgSrc, index) => <Image src={imgSrc} alt={(imgAlts && imgAlts[index]) || title} key={`${title}-${index}`} />);
 };
 
 export const Wrapper = ({ title, children }: ProjectContextProps) => {
@@ -67,13 +67,13 @@ export const Images = ({ url, imgSrcs }: ImagesProps) => {
   );
 };
 
-export const Description = ({ children }: DescriptionProps) => {
-  const items = Children.toArray(children);
+export const Description = ({ content }: DescriptionProps) => {
+  const { title } = useProjectContext();
 
   return (
     <div className={s.description}>
-      {items.map((item, index) => (
-        <Fragment key={index}>{item}</Fragment>
+      {content.map((item, index) => (
+        <p key={`${title}-${index}-content`} dangerouslySetInnerHTML={{ __html: item }} />
       ))}
     </div>
   );
@@ -84,7 +84,9 @@ export const Extras = ({ imgSrc, children }: ExtrasProps) => {
   return (
     <>
       <Image src={imgSrc} alt={title} />
-      <div className={s.description}>{children}</div>
+      <div className={s.description}>
+        <p>{children}</p>
+      </div>
     </>
   );
 };
