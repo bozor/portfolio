@@ -9,6 +9,7 @@ import { Role as RoleType } from '../types/role';
 import githubLogo from 'public/images/github.svg';
 
 import s from './PageHome.module.scss';
+import Logos from './Logos';
 
 type PageHomeProps = {
   roles: RoleType[];
@@ -57,11 +58,6 @@ const PageHome = ({ roles, lastUpdated }: PageHomeProps) => {
         ))}
       </section>
 
-      <section className={s.clients}>
-        <h2>Worked with</h2>
-        <p>Nike, JBL, PUMA, Crocs, Tommy Hilfiger, Dell, BP, Castrol</p>
-      </section>
-
       <section className={s.skills}>
         <h2>Skills</h2>
         <p>
@@ -70,9 +66,14 @@ const PageHome = ({ roles, lastUpdated }: PageHomeProps) => {
         </p>
       </section>
 
+      <section className={s.clients}>
+        <h2>Worked with</h2>
+        <Logos />
+      </section>
+
       <section className={s.credits}>
         <p>
-          🖥️ Built using Next.js and SASS. Automatically deployed at {lastUpdated} using{' '}
+          🖥️ Built using React, Next.js and SASS. Automatically deployed at {lastUpdated} using{' '}
           <Image src={githubLogo} alt="github" width={16} height={16} /> actions.
         </p>
       </section>

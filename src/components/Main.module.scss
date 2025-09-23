@@ -52,8 +52,4 @@
   @include for-lg {
     padding: $margin-lg 0 0 calc(#{$nav-width-lg} + #{$margin-lg});
   }
-
-  img {
-    max-width: 100%;
-  }
 }
