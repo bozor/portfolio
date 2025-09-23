@@ -1,0 +1,25 @@
+@use '../styles/variables.scss' as *;
+@use '../styles/shared.scss' as *;
+
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: $padding-xs;
+
+  @include for-md {
+    gap: $padding-md;
+    padding-right: $padding-lg;
+  }
+}
+
+.logo {
+  position: relative;
+  width: 100%;
+  max-height: 95px;
+  aspect-ratio: 5/3;
+
+  img {
+    filter: grayscale(1);
+  }
+}
