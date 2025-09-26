@@ -3,13 +3,13 @@ import Image from 'next/image';
 
 import Header from '@components/Header';
 import Role from '@components/Role';
+import Logos from '@components/Logos';
 
 import { Role as RoleType } from '../types/role';
 
 import githubLogo from 'public/images/github.svg';
 
 import s from './PageHome.module.scss';
-import Logos from './Logos';
 
 type PageHomeProps = {
   roles: RoleType[];
